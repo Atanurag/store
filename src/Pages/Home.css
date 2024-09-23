@@ -1,0 +1,22 @@
+.home-item-section{
+padding:15px 10px;
+border: 1px solid black;
+background-color: white;
+border-top-right-radius: 12px;
+border-top-left-radius: 12px;
+
+}
+.home-item-section .input-box .ant-input-affix-wrapper-lg{
+    border-radius: 22px;
+    border-color: #444444;
+    background-color: white;
+    
+    }
+.home-item-section .input-box .ant-input-outlined:hover {
+    border-color: #444444;
+    background-color: #ffffff;
+}
+.home-item-section .input-box .ant-input-outlined:active {
+    border-color: #444444;
+    background-color: #ffffff;
+}
