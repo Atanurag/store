@@ -40,7 +40,7 @@ const Home = () => {
 
 <div className='input-box'>
                       <Input size="large" placeholder="Search For Items..." suffix={<SearchOutlined style={{backgroundColor:'white'}}/>} onChange={(e) => {
-                      
+                    
                       }}  />
                     </div>
 
