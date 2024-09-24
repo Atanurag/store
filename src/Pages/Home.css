@@ -37,6 +37,7 @@
         width:100px;
         border:1px solid black;
         position:relative;
+        background-color: #edeef0;
     }
     
     .home-item-section .card .image-container .cart-btn{
