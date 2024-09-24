@@ -46,7 +46,7 @@ const Home = () => {
 
 
 
-<div style={{display:'flex',justifyContent:'space-between',margin:'18px 0px '}}>
+<div style={{display:'flex',justifyContent:'space-between',margin:'20px 0px '}}>
   <p style={{fontSize:'16px',fontWeight:'bold'}}>Your Favourites</p>
   <p style={{fontSize:'14px',color:'#1677ff',textDecoration:'underline',fontWeight:'bold'}}>View All</p>
 </div>
@@ -92,14 +92,31 @@ const Home = () => {
 </div>
 
 
-<div style={{display:'flex',justifyContent:'space-between',margin:'18px 0px '}}>
+<div style={{display:'flex',justifyContent:'space-between',margin:'20px 0px '}}>
   <p style={{fontSize:'16px',fontWeight:'bold'}}>Shop by Category</p>
   <p style={{fontSize:'14px',color:'#1677ff',textDecoration:'underline',fontWeight:'bold'}}>View All</p>
 </div>
 
 
-<div></div>
 
+<div  classname='category-container' style={{display:'flex',justifyContent:'space-around', overflowX:'scroll'}}>
+
+{Array(5).fill('*').map((e,i)=>{
+  return (
+    <><div  className= 'category-card' style={{ marginRight:'9px',width:'100px',display:'flex',flexDirection:'column',gap:'6px'}}>
+
+    <div style={{borderRadius:'4px',height:'80px',width:'80px',border:'1px solid black'}}></div>
+    
+    <p style={{fontSize:'15px',fontWeight:'600'}}>Top seller</p>
+    </div>
+    </>
+  )
+})
+
+}
+
+
+</div>
 
 
 
