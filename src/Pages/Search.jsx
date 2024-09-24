@@ -5,11 +5,17 @@ const Search = () =>{
     return (<>
 
 <div style={{
+    
+    position:'fixed',
+    width:'100%',
+    top:'0',
+    zindex:'999',
   height: '80px',
   padding: '0 12px',
   display: 'flex',
   alignItems: 'center',
   justifyContent:'space-around',
+  background:'white',
   boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)'
 }} className='search-section'>
 
@@ -21,7 +27,24 @@ const Search = () =>{
                     </div>
 </div>
 
-<div  className='search-section-main'>
+<div  className='search-section-main' style={{marginTop:'100px'}}>
+
+
+{Array(5).fill('*').map((e,i)=>{
+    return (
+        <>
+<div  style={{ display:'flex',alignItems:'center',gap:'6px',margin:'12px'}}>
+
+<div style={{  backgroundColor: "#edeef0",borderRadius:'4px',height:'50px',width:'50px'}}></div>
+
+<p style={{fontSize:'12px',fontWeight:'600',color:'gray'}}>Top seller</p>
+</div>
+        </>
+    )
+})}
+
+
+
 
 
 
