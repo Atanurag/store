@@ -1,3 +1,4 @@
+
 import { InfoCircleOutlined ,CloseOutlined, MenuUnfoldOutlined, SearchOutlined, ShoppingOutlined } from '@ant-design/icons';
 import { Divider, Flex, Tag, Button, Layout, Input, Row, Col, Switch, Card, Badge } from 'antd';
 
@@ -11,9 +12,9 @@ const Home = () => {
 
 <div style={{padding:'4px',width:'100%',display:'flex',justifyContent:'space-between',border:'1px solid red'}}>
 
-<div style={{display:'flex',width:'60%',alignItems:'center',justifyContent:'space-between',border:'1px solid yellow'}}>
+<div style={{display:'flex',width:'240px',alignItems:'center',justifyContent:'space-between',border:'1px solid yellow'}}>
 
-<div style={{height:'50px',width:'50px',backgroundColor:'white'}}></div>
+<div style={{height:'70px',width:'70px',backgroundColor:'white',borderRadius:'4px'}}></div>
 <div style={{display:'flex',flexDirection:'column'}}>
 <p style={{color:"white",fontSize:'19px'}}> Hiramani Store <span style={{marginLeft:'10px'}}><InfoCircleOutlined  style={{fontSize:'14px'}}/></span></p>
 <p style={{textDecoration:'underline',color:'white',fontSize:'14px'}}>Chunabhati</p>
@@ -25,7 +26,7 @@ const Home = () => {
 </div>
 
 
-<div style={{display:'flex',width:'40%',border:'1px solid blue',justifyContent:'flex-end',gap:'20px'}}>
+<div style={{display:'flex',width:'30%',border:'1px solid blue',justifyContent:'flex-end',gap:'20px'}}>
     <span style={{position:'relative'}}> <ShoppingOutlined  style={{fontSize:'22px',color:'white'}}/><div style={{ position: 'absolute', background: 'red', top: 0, borderRadius: '50%', color: 'white', padding: '8px', height: '12px', width: '12px', fontWeight: '800', left: '16px', display: 'flex', justifyContent: "center", alignItems: 'center' }}>{5}</div>
   </span>
     <span> <MenuUnfoldOutlined style={{fontSize:'22px',color:'white'}} /></span>
@@ -38,7 +39,7 @@ const Home = () => {
 
 <div className='home-item-section'>
 
-<div className='input-box'>
+<div className='input-box' style={{margin:'15px'}}>
                       <Input size="large" placeholder="Search For Items..." suffix={<SearchOutlined style={{backgroundColor:'white'}}/>} onChange={(e) => {
                     
                       }}  />
@@ -46,12 +47,12 @@ const Home = () => {
 
 
 
-<div style={{display:'flex',justifyContent:'space-between',margin:'20px 0px '}}>
+<div style={{display:'flex',justifyContent:'space-between',margin:'20px 15px '}}>
   <p style={{fontSize:'16px',fontWeight:'bold'}}>Your Favourites</p>
   <p style={{fontSize:'14px',color:'#1677ff',textDecoration:'underline',fontWeight:'bold'}}>View All</p>
 </div>
 
-<div style={{display:'flex',justifyContent:'space-between'}}>
+<div style={{display:'flex',justifyContent:'space-between' ,margin:'15px'}}>
 
 {Array(3).fill('*').map((e,i)=>{
   return (<>
@@ -92,14 +93,14 @@ const Home = () => {
 </div>
 
 
-<div style={{display:'flex',justifyContent:'space-between',margin:'20px 0px '}}>
+<div style={{display:'flex',justifyContent:'space-between',margin:'20px 15px '}}>
   <p style={{fontSize:'16px',fontWeight:'bold'}}>Shop by Category</p>
   <p style={{fontSize:'14px',color:'#1677ff',textDecoration:'underline',fontWeight:'bold'}}>View All</p>
 </div>
 
 
 
-<div  classname='category-container' style={{display:'flex',justifyContent:'space-around', overflowX:'scroll'}}>
+<div  className='category-container' style={{display:'flex',justifyContent:'space-around', overflowX:'auto',margin:'15px'}}>
 
 {Array(5).fill('*').map((e,i)=>{
   return (
@@ -121,11 +122,50 @@ const Home = () => {
 
 
 
+{/* overflowX:'auto' */}
+<div style={{ height: 130, backgroundColor: "#edeef0" }}>
+  <div
+    style={{
+      display: "flex",
+      justifyContent: "space-between",
+      padding:'15px'
+      
+    }}
+  >
+    <p style={{ fontSize: 16, fontWeight: "bold" }}>Shop by Category</p>
+    <p
+      style={{
+        fontSize: 14,
+        color: "#1677ff",
+        textDecoration: "underline",
+        fontWeight: "bold"
+      }}
+    >
+      View All
+    </p>
+  </div>
+
+  
+<div style={{display:'flex',justifyContent:'space-around', overflowX:'auto',}}>
+
+<div style={{backgroundColor:'#b6babf',display:'flex',width:'200px',alignItems:'center',justifyContent:'space-between',borderRadius:'5px'}}>
+
+<div style={{height:'70px',width:'70px',backgroundColor:'white',borderRadius:'4px'}}></div>
+<div style={{display:'flex',flexDirection:'column',textAlign:'left',padding:'3px',gap:'3px'}}>
+<p style={{color:"white",fontSize:'12px'}}>Match Day Mania</p>
+<p style={{color:'white',fontSize:'15px',fontWeight:'bold'}}>Flat ₹ 125 Off</p>
+
+<span style={{fontSize:'13px'}}>On orders above ₹ 455</span>
+</div>
+
+
+</div>
+
+</div>
 
 
 
-
-
+</div>
 
 
 
