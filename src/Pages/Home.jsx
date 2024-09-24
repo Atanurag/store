@@ -106,7 +106,7 @@ const Home = () => {
   return (
     <><div  className= 'category-card' style={{ marginRight:'9px',width:'100px',display:'flex',flexDirection:'column',gap:'6px'}}>
 
-    <div style={{  backgroundColor: "#edeef0",borderRadius:'4px',height:'80px',width:'80px',border:'1px solid black'}}></div>
+    <div style={{  backgroundColor: "#edeef0",borderRadius:'4px',height:'80px',width:'80px'}}></div>
     
     <p style={{fontSize:'15px',fontWeight:'600'}}>Top seller</p>
     </div>
