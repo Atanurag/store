@@ -12,7 +12,7 @@ const Home = () => {
 
 <div style={{padding:'4px',width:'100%',display:'flex',justifyContent:'space-between',border:'1px solid red'}}>
 
-<div style={{display:'flex',width:'240px',alignItems:'center',justifyContent:'space-between',border:'1px solid yellow'}}>
+<div style={{display:'flex',width:'260px',alignItems:'center',justifyContent:'space-around',border:'1px solid yellow'}}>
 
 <div style={{height:'70px',width:'70px',backgroundColor:'white',borderRadius:'4px'}}></div>
 <div style={{display:'flex',flexDirection:'column'}}>
