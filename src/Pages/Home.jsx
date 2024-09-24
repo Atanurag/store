@@ -121,14 +121,13 @@ const Home = () => {
 
 
 
-
 {/* overflowX:'auto' */}
-<div style={{ height: 130, backgroundColor: "#edeef0" }}>
+<div style={{ height: 130, backgroundColor: "#edeef0",width:'100%',padding:'15px' }}>
   <div
     style={{
       display: "flex",
       justifyContent: "space-between",
-      padding:'15px'
+      margin:'10px 0'
       
     }}
   >
@@ -146,28 +145,38 @@ const Home = () => {
   </div>
 
   
-<div style={{display:'flex',justifyContent:'space-around', overflowX:'auto',}}>
+<div className='category-container' style={{display:'flex',justifyContent:'space-around', overflowX:'scroll',}}>
+{
+  Array(4).fill('*').map((e,i)=>{
+    return (
+      <><div className='offer-card'  style={{backgroundColor:'#b6babf',display:'flex',minWidth:'200px',alignItems:'center',justifyContent:'space-between',borderRadius:'5px',marginRight:'12px'}}>
 
-<div style={{backgroundColor:'#b6babf',display:'flex',width:'200px',alignItems:'center',justifyContent:'space-between',borderRadius:'5px'}}>
+      <div style={{height:'70px',width:'70px',backgroundColor:'white',borderRadius:'4px'}}></div>
+      <div style={{display:'flex',flexDirection:'column',textAlign:'left',padding:'3px',gap:'3px'}}>
+      <p style={{color:"white",fontSize:'12px'}}>Match Day Mania</p>
+      <p style={{color:'white',fontSize:'15px',fontWeight:'bold'}}>Flat ₹ 125 Off</p>
+      
+      <span style={{fontSize:'13px'}}>On orders above ₹ 455</span>
+      </div>
+      
+      
+      </div>
+      </>
+    )
+  })
 
-<div style={{height:'70px',width:'70px',backgroundColor:'white',borderRadius:'4px'}}></div>
-<div style={{display:'flex',flexDirection:'column',textAlign:'left',padding:'3px',gap:'3px'}}>
-<p style={{color:"white",fontSize:'12px'}}>Match Day Mania</p>
-<p style={{color:'white',fontSize:'15px',fontWeight:'bold'}}>Flat ₹ 125 Off</p>
+}
 
-<span style={{fontSize:'13px'}}>On orders above ₹ 455</span>
+
+
+
 </div>
 
 
-</div>
 
 </div>
 
-
-
-</div>
-
-
+gashsa
 
 
 
