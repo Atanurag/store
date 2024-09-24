@@ -57,7 +57,6 @@ const Home = () => {
   return (<>
   <div className='card'>
   <div className='image-container'>
-
     <div style={{position:'absolute',bottom:'3px',right:'3px'}}>
     <Button  type="primary" size={'small'} >+</Button>
     </div>
