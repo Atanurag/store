@@ -2,7 +2,7 @@
 import { InfoCircleOutlined ,CloseOutlined, MenuUnfoldOutlined, SearchOutlined, ShoppingOutlined } from '@ant-design/icons';
 import { Divider, Flex, Tag, Button, Layout, Input, Row, Col, Switch, Card, Badge } from 'antd';
 
-import './Home.css'
+import '../assests/css/Home.css'
 const Home = () => {
 
     return (

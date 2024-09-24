@@ -1,0 +1,23 @@
+.search-section .input-box {
+   width:100%;
+    
+    }
+.search-section .input-box .ant-input-affix-wrapper-lg{
+    border-radius: 22px;
+    border-color: #bfbdbd;
+    background-color: white;
+    
+    }
+.search-section .input-box .ant-input-outlined:hover {
+    border-color: #444444;
+    background-color: #ffffff;
+}
+.search-section .input-box .ant-input-outlined:active {
+    border-color: #444444;
+    background-color: #ffffff;
+}
+
+
+.search-section-main .category-container::-webkit-scrollbar {
+    display: none;
+  }
