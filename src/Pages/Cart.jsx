@@ -103,7 +103,7 @@ const Cart = () => {
           </Col>
           <Col className="gutter-row" span={9}>
             <div >
-              <span style={{ fontSize: '13px', fontWeight: 'bold' }}>Oreo Choco cream choclate</span>
+              <span style={{ fontSize: '13px', fontWeight: 'bold' }}>Premium Ratnagiri Mangoes</span>
 
               <div style={{ fontSize: '11px' }}>6 pieces</div>
             </div>
