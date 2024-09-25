@@ -52,7 +52,7 @@ const Cart =()=>{
 
 <Card
   style={{
-    width: 300,
+   margin:'12px',
     boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)', // updated box shadow
     borderRadius: 4, // add a subtle border radius
     
@@ -61,12 +61,16 @@ const Cart =()=>{
 >
 <Row gutter={8} style={{margin:' 0'}}>
       <Col className="gutter-row" span={4}>
-        <div style={style}>col-6</div>
+      <div style={{  backgroundColor: "#edeef0",borderRadius:'4px',height:'50px',width:'50px'}}></div>
+
       </Col>
-      <Col className="gutter-row" span={8}>
-        <div style={style}>col-6</div>
+      <Col className="gutter-row" span={12}>
+        <div >
+          <span>Oreo Choco cream choclate</span>
+          <span style={{fontSize:'12px'}}>6 pieces</span>
+          </div>
       </Col>
-      <Col className="gutter-row" span={8}>
+      <Col className="gutter-row" span={4}>
         <div style={style}>col-6</div>
       </Col>
       <Col className="gutter-row" span={4}>
