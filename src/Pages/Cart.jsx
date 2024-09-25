@@ -35,11 +35,11 @@ const Cart = () => {
           responsive={false}
           items={[
             {
-              title: 'Cart',
+              title: 'Menu',
 
             },
             {
-              title: 'Menu',
+              title: 'Cart',
 
 
             },
