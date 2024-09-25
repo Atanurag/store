@@ -60,15 +60,15 @@ const Cart =()=>{
   }}
 >
 <Row gutter={8} style={{margin:' 0'}}>
-      <Col className="gutter-row" span={4}>
-      <div style={{  backgroundColor: "#edeef0",borderRadius:'4px',height:'50px',width:'50px'}}></div>
+      <Col className="gutter-row" span={6}>
+      <div style={{  backgroundColor: "#edeef0",borderRadius:'4px',height:'60px',width:'60px'}}></div>
 
       </Col>
-      <Col className="gutter-row" span={12}>
+      <Col className="gutter-row" span={10}>
         <div >
-          <span>Oreo Choco cream choclate</span>
-          <br />
-          <span style={{fontSize:'12px'}}>6 pieces</span>
+          <span style={{fontSize:'13px',fontWeight:'bold'}}>Oreo Choco cream choclate</span>
+          
+          <div style={{fontSize:'11px'}}>6 pieces</div>
           </div>
       </Col>
       <Col className="gutter-row" span={4}>
