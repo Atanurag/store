@@ -64,15 +64,31 @@ const Cart =()=>{
       <div style={{  backgroundColor: "#edeef0",borderRadius:'4px',height:'60px',width:'60px'}}></div>
 
       </Col>
-      <Col className="gutter-row" span={11}>
+      <Col className="gutter-row" span={10}>
         <div >
           <span style={{fontSize:'13px',fontWeight:'bold'}}>Oreo Choco cream choclate</span>
           
           <div style={{fontSize:'11px'}}>6 pieces</div>
           </div>
       </Col>
-      <Col className="gutter-row" span={5}>
-        <div style={style}>col-6</div>
+      <Col className="gutter-row" span={6}>
+        <div  style={{
+          marginTop:'8px',
+          width:'80px',
+          height:'35px',
+  border:'1px solid red',
+    boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)', // updated box shadow
+    borderRadius: 15,
+    backgroundColor: '#fff',
+    display:'flex',
+    justifyContent:'space-around',
+    alignItems:'center'
+  }}>
+    <div style={{fontSize:'19px'}}>-</div>
+    6
+    <div style={{fontSize:'19px'}}>+</div>
+  
+  </div>
       </Col>
       <Col className="gutter-row" span={3}>
         <div style={style}>col-6</div>
