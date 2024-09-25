@@ -103,10 +103,10 @@ return (
   return (<>
   <div className='card'>
   <div className='image-container'>
-    <div style={{position:'absolute',bottom:'3px',right:'3px'}}>
+    {/* <div style={{position:'absolute',bottom:'3px',right:'3px'}}>
     <Button  type="primary" size={'small'} >+</Button>
-    </div>
-  {/* <div className='cart-btn'>
+    </div> */}
+  <div className='cart-btn'>
 
 <Button  type="primary" className='cart-btn-icon' >-</Button>
 
@@ -117,7 +117,7 @@ return (
 
 >+</Button>
 
-    </div> */}
+    </div>
 
   </div>
 
