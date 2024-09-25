@@ -49,7 +49,7 @@ const Home = () => {
 
 <div style={{display:'flex',justifyContent:'space-between',margin:'20px 15px '}}>
   <p style={{fontSize:'16px',fontWeight:'bold'}}>Your Favourites</p>
-  <p style={{fontSize:'14px',color:'#1677ff',textDecoration:'underline',fontWeight:'bold'}}>View All</p>
+  <Link to='/category' style={{fontSize:'14px',color:'#1677ff',textDecoration:'underline',fontWeight:'bold'}}>View All</Link>
 </div>
 
 <div style={{display:'flex',justifyContent:'space-between' ,margin:'15px'}}>

@@ -91,7 +91,7 @@ const Cart =()=>{
   </div>
       </Col>
       <Col className="gutter-row" span={3}>
-        <div >₹ 60</div>
+        <div style={{fontSize:'16px',fontWeight:'bold' }}>₹ 60</div>
       </Col>
     </Row>
     <Divider />
