@@ -1,7 +1,7 @@
 
 import { InfoCircleOutlined ,CloseOutlined, MenuUnfoldOutlined, SearchOutlined, ShoppingOutlined } from '@ant-design/icons';
 import { Divider, Flex, Tag, Button, Layout, Input, Row, Col, Switch, Card, Badge } from 'antd';
-
+import { Routes, Route, Link, useNavigate} from 'react-router-dom';
 import '../assests/css/Home.css'
 const Home = () => {
 
@@ -40,9 +40,9 @@ const Home = () => {
 <div className='home-item-section'>
 
 <div className='input-box' style={{margin:'15px'}}>
-                      <Input size="large" placeholder="Search For Items..." suffix={<SearchOutlined style={{backgroundColor:'white'}}/>} onChange={(e) => {
-                    
-                      }}  />
+  <Link to='/search'>
+<Input size="large" placeholder="Search For Items..."
+ suffix={<SearchOutlined style={{backgroundColor:'white'}}/>} /></Link>
                     </div>
 
 
