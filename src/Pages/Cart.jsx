@@ -29,7 +29,7 @@ const Cart = () => {
 
 
         <Steps
-          current={2}
+          current={1}
           labelPlacement="horizontal"
           size={'small'}
           responsive={false}
@@ -208,7 +208,7 @@ const Cart = () => {
       </div>
 
 
-      <Card
+      {/* <Card
         style={{
           margin: '12px',
           boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
@@ -259,7 +259,7 @@ const Cart = () => {
         }}> Resend OTP</Button>
          
        
-    </Card>
+    </Card> */}
 
   </div >
 

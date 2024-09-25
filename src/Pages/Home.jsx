@@ -1,6 +1,6 @@
 
 import { InfoCircleOutlined ,CloseOutlined, MenuUnfoldOutlined, SearchOutlined, ShoppingOutlined } from '@ant-design/icons';
-import { Divider, Flex, Tag, Button, Layout, Input, Row, Col, Switch, Card, Badge } from 'antd';
+import { Divider, Flex, Tag, Button,Tooltip, Layout, Input, Row, Col, Switch, Card, Badge } from 'antd';
 import { Routes, Route, Link, useNavigate} from 'react-router-dom';
 import '../assests/css/Home.css'
 const Home = () => {
@@ -16,7 +16,7 @@ const Home = () => {
 
 <div style={{height:'70px',width:'70px',backgroundColor:'white',borderRadius:'4px'}}></div>
 <div style={{display:'flex',flexDirection:'column'}}>
-<p style={{color:"white",fontSize:'19px'}}> Hiramani Store <span style={{marginLeft:'10px'}}><InfoCircleOutlined  style={{fontSize:'14px'}}/></span></p>
+<p style={{color:"white",fontSize:'19px'}}> Hiramani Store <span style={{marginLeft:'10px'}}><Tooltip title="welcome!" placement="top"> <InfoCircleOutlined  style={{fontSize:'14px'}}/></Tooltip></span></p>
 <p style={{textDecoration:'underline',color:'white',fontSize:'14px'}}>Chunabhati</p>
 
 <span style={{color:'rgb(90 194 100)',fontSize:'15px',marginTop:'4px'}}>Open | Till 8pm</span>
