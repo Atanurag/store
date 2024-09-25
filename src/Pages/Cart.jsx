@@ -214,6 +214,7 @@ const Cart = () => {
           borderRadius: 4,
           backgroundColor: '#fff',
         }}>
+          <p style={{ textAlign: 'center' ,marginBottom:'12px',fontWeight:'bold'}}>Please Verify Phone Number</p>
         <Input inputMode="numeric" placeholder='Phone Number' style={{fontSize:'16px', textAlign: 'center' }} onKeyDown={(event) => {
           if (!/[0-9]/.test(event.key) &&
             event.key !== "Backspace" && event.key !== "Delete"
@@ -226,7 +227,7 @@ const Cart = () => {
           }}
         //value={phoneNumber}
         />
-        <Button style={{width:'100%',marginTop:'15px',fontSize:'16px'}} type="primary" onClick={() => {
+        <Button style={{width:'100%',marginTop:'15px',fontSize:'16px',padding:'18px'}} type="primary" onClick={() => {
 
          // sendOtp(phoneNumber)
         }}>
