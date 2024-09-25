@@ -9,5 +9,12 @@
     padding: 10px;
     border-radius: 0 0 8px 8px;
 }
+.cart.ant-divider-horizontal {
+    display: flex;
+    clear: both;
+    width: 100%;
+    min-width: 100%;
+    margin: 2px 0;
+}
 
 

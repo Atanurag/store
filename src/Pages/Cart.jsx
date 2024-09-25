@@ -73,7 +73,7 @@ const Cart =()=>{
         <div style={style}>col-6</div>
       </Col>
     </Row>
-    <Divider ></Divider>
+    <Divider />
 </Card>
 
 
