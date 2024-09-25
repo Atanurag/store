@@ -76,22 +76,22 @@ const Cart =()=>{
           marginTop:'8px',
           width:'80px',
           height:'35px',
-  border:'1px solid red',
-    boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)', // updated box shadow
-    borderRadius: 15,
+          boxShadow: '0 0.5px 1px rgba(0, 0, 0, 0.3), 0 -0.5px 1px rgba(0, 0, 0, 0.3), 0.5px 0 1px rgba(0, 0, 0, 0.3), -0.5px 0 1px rgba(0, 0, 0, 0.3)', 
+          borderRadius: 15,
     backgroundColor: '#fff',
     display:'flex',
     justifyContent:'space-around',
-    alignItems:'center'
+    alignItems:'center',
+    color:'#1677ff'
   }}>
-    <div style={{fontSize:'19px',padding:'12px'}}>-</div>
+    <div style={{fontSize:'20px',padding:'12px',fontWeight:'bold'}}>-</div>
     6
-    <div style={{fontSize:'19px',padding:'12px'}}>+</div>
+    <div style={{fontSize:'19px',padding:'12px',fontWeight:'bold'}}>+</div>
   
   </div>
       </Col>
       <Col className="gutter-row" span={3}>
-        <div style={style}>col-6</div>
+        <div >₹ 60</div>
       </Col>
     </Row>
     <Divider />
