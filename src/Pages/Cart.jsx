@@ -67,6 +67,7 @@ const Cart =()=>{
       <Col className="gutter-row" span={12}>
         <div >
           <span>Oreo Choco cream choclate</span>
+          <br />
           <span style={{fontSize:'12px'}}>6 pieces</span>
           </div>
       </Col>
