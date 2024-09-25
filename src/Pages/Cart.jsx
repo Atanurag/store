@@ -214,7 +214,7 @@ const Cart = () => {
           borderRadius: 4,
           backgroundColor: '#fff',
         }}>
-        <Input inputMode="numeric" placeholder='Phone Number' style={{ textAlign: 'center' }} onKeyDown={(event) => {
+        <Input inputMode="numeric" placeholder='Phone Number' style={{fontSize:'14px',padding:'10PX', textAlign: 'center' }} onKeyDown={(event) => {
           if (!/[0-9]/.test(event.key) &&
             event.key !== "Backspace" && event.key !== "Delete"
           ) {
@@ -226,7 +226,7 @@ const Cart = () => {
           }}
         //value={phoneNumber}
         />
-        <Button type="primary" onClick={() => {
+        <Button style={{width:'100%',marginTop:'15px'}} type="primary" onClick={() => {
 
          // sendOtp(phoneNumber)
         }}>
