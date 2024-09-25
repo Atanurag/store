@@ -84,9 +84,9 @@ const Cart =()=>{
     justifyContent:'space-around',
     alignItems:'center'
   }}>
-    <div style={{fontSize:'19px'}}>-</div>
+    <div style={{fontSize:'19px',padding:'12px'}}>-</div>
     6
-    <div style={{fontSize:'19px'}}>+</div>
+    <div style={{fontSize:'19px',padding:'12px'}}>+</div>
   
   </div>
       </Col>
