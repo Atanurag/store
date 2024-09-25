@@ -9,7 +9,7 @@
     border-radius: 0 0 8px 8px;
 }
 
-.ant-divider-horizontal {
+.cart .ant-divider-horizontal {
     display: flex;
     clear: both;
     width: 100%;
