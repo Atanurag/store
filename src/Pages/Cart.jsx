@@ -247,12 +247,12 @@ const Cart = () => {
         <InputOTP  autoComplete="one-time-code" autoFocus={true}  className="custom-otp-input"
           inputMode="numeric" inputRegex={/^\d+$/}
         />
-        <Button style={{ margin: '12px 0' }} type="primary" onClick={() => {
+        <Button  style={{ width: '100%', marginTop: '15px', fontSize: '16px', padding: '18px' }} type="primary" onClick={() => {
 
           //verifyOtp(phoneNumber, otpValue)
         }}> Verify OTP</Button>
 
-        <Button onClick={() => {
+        <Button  style={{ width: '100%', marginTop: '15px', fontSize: '16px', padding: '18px' }} onClick={() => {
           // setOtpValue([]);
           // otpFocusRef.current[0].focus()
           // sendOtp(phoneNumber)

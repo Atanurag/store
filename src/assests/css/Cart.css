@@ -16,3 +16,22 @@
     min-width: 100%;
     margin: 12px 0;
 }
+
+
+.cart .custom-otp-input {
+    font-size: 19px;
+    font-weight: 400;
+    width: 38px;
+    height: 40px;
+    padding:0;
+  }
+  
+  .cart .custom-otp-input:focus {
+    border-color: #4096ff;
+    
+  }
+  
+  .cart.ant-input-outlined:focus{
+    border-color: #4096ff;
+   
+  }
