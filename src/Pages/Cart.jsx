@@ -55,16 +55,11 @@ const Cart =()=>{
     width: 300,
     boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)', // updated box shadow
     borderRadius: 4, // add a subtle border radius
-    padding: 16, // add some padding for better content spacing
+    
     backgroundColor: '#fff', // set a white background color
   }}
 >
-  <p>Card content</p>
-  <p>Card content</p>
-  <p>Card content</p>
-</Card>
-
-<Row gutter={8} style={{margin:'12px 0'}}>
+<Row gutter={8} style={{margin:' 0'}}>
       <Col className="gutter-row" span={4}>
         <div style={style}>col-6</div>
       </Col>
@@ -78,6 +73,9 @@ const Cart =()=>{
         <div style={style}>col-6</div>
       </Col>
     </Row>
+    <Divider ></Divider>
+</Card>
+
 
 
 
