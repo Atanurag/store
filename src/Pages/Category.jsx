@@ -61,11 +61,11 @@ const Category = ()=>{
 
 {Array(10).fill('*').map((e,i)=>{
 return (
-<><div  className= 'category-card' style={{ marginRight:'10px',width:'100px',display:'flex',flexDirection:'column',gap:'6px'}}>
+<><div  className= 'category-card' style={{ marginRight:'10px',width:'100px',display:'flex',flexDirection:'column',gap:'6px',alignItems:'start'}}>
 
 <div style={{  backgroundColor: "#edeef0",borderRadius:'4px',height:'50px',width:'50px'}}></div>
 
-<p style={{fontSize:'12px',fontWeight:'600',color:'gray', whiteSpace: 'nowrap', overflow: 'hidden'}}>Top sellerrewrerer</p>
+<p style={{fontSize:'12px',fontWeight:'600',color:'gray',textwrap:'wrap',width:'50px'}}>Abcdrf ere</p>
 </div>
 </>
 )
