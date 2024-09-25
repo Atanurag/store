@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { Divider, Flex, Tag, Button, Layout, Input, Row, Col, Switch, Steps, Card, Badge } from 'antd';
 import { ArrowLeftOutlined, InfoCircleOutlined, CloseOutlined, MenuUnfoldOutlined, SearchOutlined, ShoppingOutlined } from '@ant-design/icons';
 import { Routes, Route, Link, useNavigate, json } from 'react-router-dom';
+import { InputOTP } from "antd-input-otp";
 import '../assests/css/Cart.css'
 const Cart = () => {
   const navigate = useNavigate();
@@ -214,8 +215,8 @@ const Cart = () => {
           borderRadius: 4,
           backgroundColor: '#fff',
         }}>
-          <p style={{ textAlign: 'center' ,marginBottom:'12px',fontWeight:'bold'}}>Please Verify Phone Number</p>
-        <Input inputMode="numeric" placeholder='Phone Number' style={{fontSize:'16px', textAlign: 'center' }} onKeyDown={(event) => {
+        <p style={{ textAlign: 'center', marginBottom: '12px', fontWeight: 'bold' }}>Please Verify Phone Number</p>
+        <Input inputMode="numeric" placeholder='Phone Number' style={{ fontSize: '16px', textAlign: 'center' }} onKeyDown={(event) => {
           if (!/[0-9]/.test(event.key) &&
             event.key !== "Backspace" && event.key !== "Delete"
           ) {
@@ -227,17 +228,40 @@ const Cart = () => {
           }}
         //value={phoneNumber}
         />
-        <Button style={{width:'100%',marginTop:'15px',fontSize:'16px',padding:'18px'}} type="primary" onClick={() => {
+        <Button style={{ width: '100%', marginTop: '15px', fontSize: '16px', padding: '18px' }} type="primary" onClick={() => {
 
-         // sendOtp(phoneNumber)
+          // sendOtp(phoneNumber)
         }}>
           Confirm
         </Button>
       </Card>
 
+      <Card
+        style={{
+          margin: '12px',
+          boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
+          borderRadius: 4,
+          backgroundColor: '#fff',
+        }}>
+        <p style={{ textAlign: 'center', marginBottom: '12px', fontWeight: 'bold' }}>Please Enter OTP</p>
+        <InputOTP  autoComplete="one-time-code" autoFocus={true}  className="custom-otp-input"
+          inputMode="numeric" inputRegex={/^\d+$/}
+        />
+        <Button style={{ margin: '12px 0' }} type="primary" onClick={() => {
 
+          //verifyOtp(phoneNumber, otpValue)
+        }}> Verify OTP</Button>
 
-    </div>
+        <Button onClick={() => {
+          // setOtpValue([]);
+          // otpFocusRef.current[0].focus()
+          // sendOtp(phoneNumber)
+        }}> Resend OTP</Button>
+         
+       
+    </Card>
+
+  </div >
 
   </>)
 }
