@@ -64,7 +64,7 @@ const Cart =()=>{
       <div style={{  backgroundColor: "#edeef0",borderRadius:'4px',height:'60px',width:'60px'}}></div>
 
       </Col>
-      <Col className="gutter-row" span={10}>
+      <Col className="gutter-row" span={9}>
         <div >
           <span style={{fontSize:'13px',fontWeight:'bold'}}>Oreo Choco cream choclate</span>
           
@@ -90,14 +90,121 @@ const Cart =()=>{
   
   </div>
       </Col>
-      <Col className="gutter-row" span={3}>
-        <div style={{fontSize:'16px',fontWeight:'bold' }}>₹ 60</div>
+      <Col className="gutter-row" span={4}>
+        <div style={{fontSize:'16px',fontWeight:'bold',marginTop:'14px',textAlign:'right' }}>₹ 60</div>
       </Col>
     </Row>
     <Divider />
+    <Row gutter={8} style={{margin:' 0'}}>
+      <Col className="gutter-row" span={5}>
+      <div style={{  backgroundColor: "#edeef0",borderRadius:'4px',height:'60px',width:'60px'}}></div>
+
+      </Col>
+      <Col className="gutter-row" span={9}>
+        <div >
+          <span style={{fontSize:'13px',fontWeight:'bold'}}>Oreo Choco cream choclate</span>
+          
+          <div style={{fontSize:'11px'}}>6 pieces</div>
+          </div>
+      </Col>
+      <Col className="gutter-row" span={6}>
+        <div  style={{
+          marginTop:'8px',
+          width:'80px',
+          height:'35px',
+          boxShadow: '0 0.5px 1px rgba(0, 0, 0, 0.3), 0 -0.5px 1px rgba(0, 0, 0, 0.3), 0.5px 0 1px rgba(0, 0, 0, 0.3), -0.5px 0 1px rgba(0, 0, 0, 0.3)', 
+          borderRadius: 15,
+    backgroundColor: '#fff',
+    display:'flex',
+    justifyContent:'space-around',
+    alignItems:'center',
+    color:'#1677ff'
+  }}>
+    <div style={{fontSize:'20px',padding:'12px',fontWeight:'bold'}}>-</div>
+    6
+    <div style={{fontSize:'19px',padding:'12px',fontWeight:'bold'}}>+</div>
+  
+  </div>
+      </Col>
+      <Col className="gutter-row" span={4}>
+        <div style={{fontSize:'16px',fontWeight:'bold',marginTop:'14px',textAlign:'right' }}>₹ 60</div>
+      </Col>
+    </Row>
+    <Divider />
+    <Row gutter={8} style={{margin:' 0'}}>
+      <Col className="gutter-row" span={5}>
+      <div style={{  backgroundColor: "#edeef0",borderRadius:'4px',height:'60px',width:'60px'}}></div>
+
+      </Col>
+      <Col className="gutter-row" span={9}>
+        <div >
+          <span style={{fontSize:'13px',fontWeight:'bold'}}>Oreo Choco cream choclate</span>
+          
+          <div style={{fontSize:'11px'}}>6 pieces</div>
+          </div>
+      </Col>
+      <Col className="gutter-row" span={6}>
+        <div  style={{
+          marginTop:'8px',
+          width:'80px',
+          height:'35px',
+          boxShadow: '0 0.5px 1px rgba(0, 0, 0, 0.3), 0 -0.5px 1px rgba(0, 0, 0, 0.3), 0.5px 0 1px rgba(0, 0, 0, 0.3), -0.5px 0 1px rgba(0, 0, 0, 0.3)', 
+          borderRadius: 15,
+    backgroundColor: '#fff',
+    display:'flex',
+    justifyContent:'space-around',
+    alignItems:'center',
+    color:'#1677ff'
+  }}>
+    <div style={{fontSize:'20px',padding:'12px',fontWeight:'bold'}}>-</div>
+    6
+    <div style={{fontSize:'19px',padding:'12px',fontWeight:'bold'}}>+</div>
+  
+  </div>
+      </Col>
+      <Col className="gutter-row" span={4}>
+        <div style={{fontSize:'16px',fontWeight:'bold',marginTop:'14px',textAlign:'right' }}>₹ 60</div>
+      </Col>
+    </Row>
+    <Divider />
+    <Link to ='/' style={{marginTop:'12px',textDecoration:'underline'}}>+ Add More Items</Link>
 </Card>
 
 
+
+
+<Card
+  style={{
+   margin:'12px',
+    boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)', // updated box shadow
+    borderRadius: 4, // add a subtle border radius
+    
+    backgroundColor: '#fff', // set a white background color
+  }}
+>
+<p style={{fontWeight:'bold',fontSize:'15px'}}>Bill Details</p>
+<div style={{display:'flex',justifyContent:'space-between',marginTop:'10px'}}>
+  <p style={{fontWeight:'bold',fontSize:'14px'}}>Item Total</p>
+  <p style={{fontWeight:'bold',fontSize:'14px'}}>₹ 240</p>
+  </div>
+  <Divider />
+  <div style={{display:'flex',justifyContent:'space-between',marginTop:'10px'}}>
+  <p style={{fontWeight:'bold',fontSize:'14px',textDecoration:'underline'}}>GST Charges</p>
+  <p style={{fontWeight:'bold',fontSize:'14px'}}>₹ 10</p>
+  </div>
+  <Divider />
+  <div style={{display:'flex',justifyContent:'space-between',marginTop:'10px'}}>
+  <p style={{fontWeight:'bold',fontSize:'14px'}}>To Pay</p>
+  <p style={{fontWeight:'bold',fontSize:'14px'}}>₹ 250</p>
+  </div>
+</Card>
+
+
+<div style={{backgroundColor:'#1677ff',height:'40px',display:'flex',justifyContent:'space-around',alignItems:'center',width:'90%',borderRadius:'4px',margin:'auto'}}>
+
+<span style={{color:'white',fontWeight:'bold'}}>Make Payment</span>
+<span style={{color:'white',fontWeight:'bold'}}>₹ 50</span>
+  </div>
 
 
 </div>
