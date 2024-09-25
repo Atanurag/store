@@ -1,0 +1,6 @@
+.cart .ant-steps-vertical > .ant-steps-item:not(:last-child) > .ant-steps-item-container > .ant-steps-item-tail{
+
+    transform: rotate(90deg) scaleX(-1);
+    top: -30px;
+    left: 44px;
+}
