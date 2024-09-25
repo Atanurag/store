@@ -1,5 +1,4 @@
-.cart .ant-steps-vertical > .ant-steps-item:not(:last-child) > .ant-steps-item-container > .ant-steps-item-tail{
-
+.cart .ant-steps-vertical>.ant-steps-item:not(:last-child)>.ant-steps-item-container>.ant-steps-item-tail {
     transform: rotate(90deg) scaleX(-1);
     top: -30px;
     left: 44px;
@@ -9,6 +8,7 @@
     padding: 10px;
     border-radius: 0 0 8px 8px;
 }
+
 .cart.ant-divider-horizontal {
     display: flex;
     clear: both;
@@ -16,5 +16,3 @@
     min-width: 100%;
     margin: 2px 0;
 }
-
-
