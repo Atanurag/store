@@ -10,44 +10,69 @@ const Category = ()=>{
 
    <div style={{height:'100px',backgroundColor:'#444444',padding:'0 12px',display:'flex',alignItems:'end'}}>
 
-<div style={{padding:'4px',width:'100%',display:'flex',justifyContent:'space-between',border:'1px solid red'}}>
+<div style={{padding:'4px 0',width:'100%',display:'flex',justifyContent:'space-between'}}>
 
 
 <div style={{height:'40px',width:'40px',backgroundColor:'white',borderRadius:'4px'}}></div>
 
-<div>
+<div style={{marginLeft:'4px'}}>
 <Select
     className="select-dropdown"
   //style={{border:'none'}}
-    showSearch
-    placeholder="Select a person"
+    
+    placeholder="Select category"
     optionFilterProp="label"
     
    
     options={[
       {
         value: 'jack',
-        label: 'Jack',
+        label: 'Dry Fruits',
       },
       {
         value: 'lucy',
-        label: 'Lucy',
+        label: 'Soft Drinks',
       },
       {
         value: 'tom',
-        label: 'Tom',
+        label: 'Abc',
       },
     ]}
   />
 </div>
 
-<div style={{display:'flex',border:'1px solid blue',justifyContent:'flex-end',gap:'20px' ,alignItems:'center'}}>
+<div style={{display:'flex',justifyContent:'flex-end',gap:'20px' ,alignItems:'center'}}>
     <span style={{position:'relative'}}>
         <ShoppingOutlined  style={{fontSize:'22px',color:'white'}}/><div style={{ position: 'absolute', background: 'red', top: 0, borderRadius: '50%', color: 'white', padding: '8px', height: '12px', width: '12px', fontWeight: '800', left: '16px', display: 'flex', justifyContent: "center", alignItems: 'center' }}>{5}</div>
   </span>
     <span> <MenuUnfoldOutlined style={{fontSize:'22px',color:'white'}} /></span>
 </div>
 </div>
+
+</div>
+
+
+
+
+
+
+
+<div  className='category-container' style={{display:'flex',justifyContent:'space-around', overflowX:'auto',margin:'15px 20px'}}>
+
+{Array(10).fill('*').map((e,i)=>{
+return (
+<><div  className= 'category-card' style={{ marginRight:'10px',width:'100px',display:'flex',flexDirection:'column',gap:'6px'}}>
+
+<div style={{  backgroundColor: "#edeef0",borderRadius:'4px',height:'50px',width:'50px'}}></div>
+
+<p style={{fontSize:'12px',fontWeight:'600',color:'gray', whiteSpace: 'nowrap', overflow: 'hidden'}}>Top sellerrewrerer</p>
+</div>
+</>
+)
+})
+
+}
+
 
 </div>
 
