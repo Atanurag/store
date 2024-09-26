@@ -131,7 +131,7 @@ const Category = ()=>{
 <div style={{display:'flex',justifyContent:'flex-end',gap:'20px' ,alignItems:'center'}}>
    {totalItems > 0 && <span style={{position:'relative'}}>
         <ShoppingOutlined  style={{fontSize:'22px',color:'white'}}/>
-         <div style={{ position: 'absolute', background: 'red', top: 0, borderRadius: '50%', color: 'white', padding: '8px', height: '12px', width: '12px', fontWeight:600, left: '16px', display: 'flex', justifyContent: "center", alignItems: 'center' ,fontFamily: 'Poppins, sans-serif'}}>{totalItems}</div>
+        <div style={{ position: 'absolute', background: 'red', top:'-4px', borderRadius: '50%', color: 'white', padding: '10px', fontSize:'13px',height: '12px', width: '12px', fontWeight:600, left: '13px', display: 'flex', justifyContent: "center", alignItems: 'center' ,fontFamily: 'Poppins, sans-serif'}}>{totalItems}</div>
 
   </span>}
     <span> <MenuUnfoldOutlined style={{fontSize:'22px',color:'white'}} /></span>

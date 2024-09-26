@@ -1,11 +1,13 @@
-import {useState,useEffect} from 'react';
+import React, {useState,useEffect,useContext} from 'react';
 import { InfoCircleOutlined ,CloseOutlined, MenuUnfoldOutlined, SearchOutlined, ShoppingOutlined } from '@ant-design/icons';
 import { Divider, Flex, Tag, Button,Tooltip, Layout, Input, Row, Col, Switch, Card, Badge } from 'antd';
 import { Routes, Route, Link, useNavigate} from 'react-router-dom';
+import { CartContext } from '../components/CartContext';
 import '../assests/css/Home.css'
 const Home = () => {
 
-  const [json,setJson]= useState([
+  const {cart,totalItems,totalAmount,addToCart,removeFromCart} = useContext(CartContext);
+  const [items,setItems]= useState([
     {
       name: 'Masala Dosa',
       description: 'Dosa stuffed with spiced potato filling',
@@ -34,10 +36,7 @@ const Home = () => {
         img: 'https://img.freepik.com/premium-photo/sago-delight-sabudana-wada-vada-classic-indian-snack-vertical-mobile-wallpaper_896558-36481.jpg',
       },]
   )
-  const [cart,setCart] =useState([]);
-useEffect(()=>{
-console.log(cart)
-},[cart])
+  //const [cart,setCart] =useState([]);
     return (
         <>
 <div className='home-main'>
@@ -60,8 +59,11 @@ console.log(cart)
 
 
 <div style={{display:'flex',width:'30%',border:'1px solid blue',justifyContent:'flex-end',gap:'20px'}}>
-    <span style={{position:'relative'}}> <ShoppingOutlined  style={{fontSize:'22px',color:'white'}}/><div style={{ position: 'absolute', background: 'red', top: 0, borderRadius: '50%', color: 'white', padding: '8px', height: '12px', width: '12px', fontWeight:600, left: '16px', display: 'flex', justifyContent: "center", alignItems: 'center' ,fontFamily: 'Poppins, sans-serif'}}>{5}</div>
-  </span>
+{totalItems > 0 && <span style={{position:'relative'}}>
+        <ShoppingOutlined  style={{fontSize:'22px',color:'white'}}/>
+         <div style={{ position: 'absolute', background: 'red', top:'-4px', borderRadius: '50%', color: 'white', padding: '10px', fontSize:'13px',height: '12px', width: '12px', fontWeight:600, left: '13px', display: 'flex', justifyContent: "center", alignItems: 'center' ,fontFamily: 'Poppins, sans-serif'}}>{totalItems}</div>
+
+  </span>}
     <span> <MenuUnfoldOutlined style={{fontSize:'22px',color:'white'}} /></span>
 </div>
 </div>
@@ -87,62 +89,54 @@ console.log(cart)
 
 <div style={{display:'flex',justifyContent:'space-between' ,margin:'15px'}}>
 
-{json.map((e,i)=>{
+{items.map((e,i)=>{
   return (<>
   <div className='card'>
   <div className='image-container'>
- 
-    <img  src={e.img} alt=""  style={{display: 'block',height:'100%',width:'100%',objectFit:'cover',borderRadius:'4px'}}/>
-    {e.quantity < 1 ?
+  <img  src={e.img} alt=""  style={{display: 'block',height:'100%',width:'100%',objectFit:'cover',borderRadius:'4px'}}/>
+  {e.quantity < 1?
      <><div style={{position:'absolute',bottom:'3px',right:'3px'}}>
-    <Button style={{paddingBottom:'1px',fontWeight:'bold'}}  type="primary" size={'small'} onClick={()=>{
-      setJson((js)=>
-      js.map((si,ind)=>{
-        if(si.name === e.name){
-          return {
-            ...si,
-            quantity : 1
+    <Button style={{paddingBottom:'1px',fontWeight:'bold'}} type="primary" size={'small'} onClick={()=>{
+      
+        setItems((js)=>
+        js.map((si,ind)=>{
+          if(si.name === e.name){
+            return {
+              ...si,
+              quantity : 1
+            }
           }
-        }
-        return si;
-      })
-      )
-      setCart([...cart, {...e,quantity:1}])
+          return si;
+        })
+        )
+      addToCart(e);
+      //console.log(cart)
     }}>+</Button>
     </div></>:<>
     <div className='cart-btn'>
-<Button  type="primary" className='cart-btn-icon' onClick={()=>{
-      setJson((js)=>
-      js.map((si,ind)=>{
-        if(si.name === e.name){
-          return {
-            ...si,
-            quantity : si.quantity-=1
-          }
+
+<Button type="primary" className='cart-btn-icon' onClick={()=>{
+    setItems((js)=>
+    js.map((si,ind)=>{
+      if(si.name === e.name){
+        return {
+          ...si,
+          quantity : si.quantity-=1
         }
-        return si;
-      })
-      )
-      setCart((prevCart) =>
-      prevCart.map((data) => {
-        if (data.name === e.name) {
-          return { ...data, quantity: data.quantity - 1 };
-        }
-        return data;
-      }).filter((data) => data.quantity > 0)
-    );
+      }
+      return si;
+    })
+    )
 
-
-
-
+    removeFromCart(e);
     }}>-</Button>
 
       <div className='cart-quantity'>
       {e.quantity}
       </div>
-      <Button  type="primary" className='cart-btn-icon'  
+      <Button   type="primary" className='cart-btn-icon'  
                 onClick={()=>{
-                  setJson((js)=>
+                  setItems((js)=>
                   js.map((si,ind)=>{
                     if(si.name === e.name){
                       return {
@@ -153,18 +147,7 @@ console.log(cart)
                     return si;
                   })
                   )
-
-
-                  setCart((pr)=>pr.map((data)=>{
-                    if(data.name === e.name){
-                      return{
-                        ...data,
-                        quantity:data.quantity+=1
-                      }
-                    }
-                    return data;
-                  }))
-                  
+                  addToCart(e);
 
                 }}
 >+</Button>
@@ -283,16 +266,17 @@ console.log(cart)
 
 
 
-<Link to='/cart'>
+{ totalItems > 0 && <Link to='/cart'>
 <div style={{ left: '50%',transform: 'translateX(-50%)',position:'fixed',bottom :'10px',zIndex:'99999', backgroundColor:'#1677ff',height:'50px',display:'flex',justifyContent:'space-around',alignItems:'center',width:'90%',borderRadius:'4px'}}>
 
-<span style={{position:'relative'}}> <ShoppingOutlined  style={{fontSize:'22px',color:'white'}}/><div style={{ position: 'absolute', background: 'white', top: 0, borderRadius: '50%', color: 'red', padding: '8px', height: '12px', width: '12px', fontWeight:600, left: '16px', display: 'flex', justifyContent: "center", alignItems: 'center' ,fontFamily: 'Poppins, sans-serif'}}>{5}</div></span>
+<span style={{position:'relative'}}> <ShoppingOutlined  style={{fontSize:'22px',color:'white'}}/>         <div style={{ position: 'absolute', background: 'white', top:'-4px', borderRadius: '50%', color: 'red', padding: '10px', fontSize:'13px',height: '12px', width: '12px', fontWeight:600, left: '13px', display: 'flex', justifyContent: "center", alignItems: 'center' ,fontFamily: 'Poppins, sans-serif'}}>{totalItems}</div>
+</span>
 
 <span style={{color:'white',fontWeigt:500,fontFamily: 'Poppins, sans-serif'}}>View your cart</span>
-<span style={{color:'white',fontWeigt:500,fontFamily: 'Poppins, sans-serif'}}>₹ 50</span>
+<span style={{color:'white',fontWeigt:500,fontFamily: 'Poppins, sans-serif'}}>₹ {totalAmount}</span>
 
   </div>
-  </Link>
+  </Link>}
 
 
 </div>
