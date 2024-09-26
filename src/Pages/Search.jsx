@@ -5,9 +5,9 @@ import { Routes, Route, Link, useNavigate, json } from 'react-router-dom';
 import '../assests/css/Search.css'
 const Search = () =>{
 
-const [recentSearch, setRecentSearch] = useState(true);
+const [recentSearch, setRecentSearch] = useState(false);
 const [searchedResult, setSearchedResult] = useState(false);
-const [searchedCategory, setSearchedCategory] = useState(false);
+const [searchedCategory, setSearchedCategory] = useState(true);
 const navigate = useNavigate();
 
     return (<>
@@ -46,32 +46,32 @@ const navigate = useNavigate();
 {Array(6).fill('*').map((e,i)=>{
 return (<>
 <div className='card'>
-<div className='image-container'>
-  <div style={{position:'absolute',bottom:'3px',right:'3px'}}>
-  <Button  type="primary" size={'small'} >+</Button>
-  </div>
-{/* <div className='cart-btn'>
+  <div className='image-container'>
+    <div style={{position:'absolute',bottom:'3px',right:'3px'}}>
+    <Button  type="primary" size={'small'} >+</Button>
+    </div>
+  {/* <div className='cart-btn'>
 
 <Button  type="primary" className='cart-btn-icon' >-</Button>
 
-    <div className='cart-quantity'>
-    6
-    </div>
-    <Button  type="primary" className='cart-btn-icon'  
+      <div className='cart-quantity'>
+      6
+      </div>
+      <Button  type="primary" className='cart-btn-icon'  
 
 >+</Button>
 
-  </div> */}
+    </div> */}
 
-</div>
+  </div>
 
 <div style={{width:'100px'}}>
-<p style={{fontSize:'12px',color:'gray',fontWeight:'bold'}}>Britiania</p>
-<span style={{fontSize:'14px',fontWeight:'bold'}}>Bourbon Cream Buscuits</span>
-<div style={{display:'flex',justifyContent:'space-between'}}>
-  <span style={{fontSize:'16px',fontWeight:'bold'}}>₹ 25</span>
-  <span style={{fontSize:'12px',color:'gray',fontWeight:'bold'}}>100 g</span>
-</div>
+  <p style={{fontSize:'10px',color:'gray',fontFamily: 'Poppins, sans-serif'}}>Britiania</p>
+  <span style={{fontSize:'12px',fontWeight:500,fontFamily: 'Poppins, sans-serif'}}>Bourbon Cream Buscuits</span>
+  <div style={{display:'flex',justifyContent:'space-between'}}>
+    <span style={{fontSize:'14px',fontWeight:600,fontFamily: 'Poppins, sans-serif'}}>₹ 25</span>
+    <span style={{fontSize:'10px',color:'gray',fontWeight:600,fontFamily: 'Poppins, sans-serif'}}>100 g</span>
+  </div>
 </div>
 
 
@@ -104,7 +104,7 @@ Array(5).fill('*').map((e,i)=>{
 
 <div style={{  backgroundColor: "#edeef0",borderRadius:'4px',height:'50px',width:'50px'}}></div>
 
-<p style={{fontSize:'12px',fontWeight:'600',color:'gray'}}>Top seller</p>
+<p style={{fontSize:'10px',fontWeight:600,fontFamily: 'Poppins, sans-serif',color:'gray'}}>Top seller</p>
 </div>
       </>
   )
