@@ -7,6 +7,7 @@ import { CartContext } from '../components/CartContext';
 import '../assests/css/Cart.css'
 const Cart = () => {
   const {cart,totalItems,totalAmount,addToCart,removeFromCart} = useContext(CartContext);
+  const [currentProgress, setCurrentProgress] = useState( cart.length > 0 ? 1:0)
   const navigate = useNavigate();
   const style = {
     background: '#0092ff',
@@ -30,7 +31,7 @@ const Cart = () => {
 
 
         <Steps
-          current={1}
+          current={currentProgress}
           labelPlacement="horizontal"
           size={'small'}
           responsive={false}
@@ -52,7 +53,7 @@ const Cart = () => {
         /></div>
 
 
-      <Card
+      {cart.length > 0 ?  <><Card
         style={{
           margin: '12px',
           boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)', // updated box shadow
@@ -67,7 +68,9 @@ const Cart = () => {
     <>
      <Row gutter={8} style={{ margin: ' 0' }}>
           <Col className="gutter-row" span={5}>
-            <div style={{ backgroundColor: "#edeef0", borderRadius: '4px', height: '60px', width: '60px' }}></div>
+            <div style={{ backgroundColor: "#edeef0", borderRadius: '4px', height: '60px', width: '60px' }}>
+            <img  src={e.img} alt=""  style={{display: 'block',height:'100%',width:'100%',objectFit:'cover',borderRadius:'4px'}}/>
+            </div>
 
           </Col>
           <Col className="gutter-row" span={9}>
@@ -263,7 +266,15 @@ const Cart = () => {
 
         <span style={{ color:'white',fontWeigt:500,fontFamily: 'Poppins, sans-serif' }}>Make Payment</span>
         <span style={{color:'white',fontWeigt:500,fontFamily: 'Poppins, sans-serif' }}>₹ {totalAmount}</span>
-      </div>
+      </div> </> :<div  style={{
+  position: 'absolute',
+  bottom: 5,
+  left: 0,
+  right: 0,
+  textAlign: 'center',
+}}>
+  <Button type='primary' style={{margin: 'auto'}}>Please add Items to cart</Button>
+</div> }
 
 
       {/* <Card
