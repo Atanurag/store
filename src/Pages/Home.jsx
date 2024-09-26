@@ -6,16 +6,15 @@ import '../assests/css/Home.css'
 const Home = () => {
 
   const [json,setJson]= useState([
-      {
-        name: 'Dosa',
-        description:
-          'A thin, crispy crepe made from fermented rice and lentil batter',
-        price: 50,
-        isVeg: true,
-        tag: 'Classic',
-        quantity: 0,
-        img: 'https://t3.ftcdn.net/jpg/02/72/47/94/360_F_272479453_Kl30iWCD9WWhlU8BNORRtNUR1ADxXTCh.jpg',
-      },
+    {
+      name: 'Masala Dosa',
+      description: 'Dosa stuffed with spiced potato filling',
+      price: 60,
+      isVeg: true,
+      tag: 'Main Course',
+      quantity: 0,
+      img: 'https://media.istockphoto.com/id/183321245/photo/south-indian-crepe-masala-dosa.jpg?s=612x612&w=0&k=20&c=c6Z7P5uovp2M9JVS0rlS8nCKRL73QkTYRyL7FK348Os=',
+    },
       {
         name: 'Pav Bhaji',
         description: 'Spiced mixture of mashed vegetables in a thick gravy served with pav',
