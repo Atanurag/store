@@ -209,8 +209,8 @@ const Cart = () => {
 
       <div style={{ padding: '0px 12px', backgroundColor: '#1677ff', height: '40px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '94%', borderRadius: '4px', margin: '12px auto' }}>
 
-        <span style={{ color: 'white', fontWeight: 'bold' }}>Make Payment</span>
-        <span style={{ color: 'white', fontWeight: 'bold' }}>₹ 250</span>
+        <span style={{ color:'white',fontWeigt:500,fontFamily: 'Poppins, sans-serif' }}>Make Payment</span>
+        <span style={{color:'white',fontWeigt:500,fontFamily: 'Poppins, sans-serif' }}>₹ 250</span>
       </div>
 
 
