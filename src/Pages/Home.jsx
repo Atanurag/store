@@ -173,10 +173,10 @@ const Home = () => {
 
 
 <div style={{ left: '50%',transform: 'translateX(-50%)',position:'fixed',bottom :'10px',zIndex:'99999', backgroundColor:'#1677ff',height:'50px',display:'flex',justifyContent:'space-around',alignItems:'center',width:'90%',borderRadius:'4px'}}>
-<span style={{position:'relative'}}> <ShoppingOutlined  style={{fontSize:'22px',color:'white'}}/><div style={{ position: 'absolute', background: 'white', top: 0, borderRadius: '50%', color: 'red', padding: '8px', height: '12px', width: '12px', fontWeight: '800', left: '16px', display: 'flex', justifyContent: "center", alignItems: 'center' }}>{5}</div></span>
+<span style={{position:'relative'}}> <ShoppingOutlined  style={{fontSize:'22px',color:'white'}}/><div style={{ position: 'absolute', background: 'white', top: 0, borderRadius: '50%', color: 'red', padding: '8px', height: '12px', width: '12px', fontWeight:600, left: '16px', display: 'flex', justifyContent: "center", alignItems: 'center' ,fontFamily: 'Poppins, sans-serif'}}>{5}</div></span>
 
-<span style={{color:'white',fontWeight:'bold'}}>View your cart</span>
-<span style={{color:'white',fontWeight:'bold'}}>₹ 50</span>
+<span style={{color:'white',fontWeigt:500,fontFamily: 'Poppins, sans-serif'}}>View your cart</span>
+<span style={{color:'white',fontWeigt:500,fontFamily: 'Poppins, sans-serif'}}>₹ 50</span>
   </div>
 
 
