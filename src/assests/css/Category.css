@@ -131,15 +131,15 @@
 }
 
 .category-item-section .card .image-container .cart-btn {
-    right: 2px;
-    bottom: 3px;
+    /* right: 2px; */
+    bottom: 0;
     border-radius: 3px;
     position: absolute;
     display: flex;
     align-items: center;
     background-color: #1677ff;
-    height: 16px;
-    width: 94px;
+    height: 20px;
+    width: 100%;
 }
 
 .category-item-section .card .image-container .cart-btn .cart-btn-icon {

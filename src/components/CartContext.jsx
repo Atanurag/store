@@ -1,24 +1,35 @@
-import { createContext, useState } from 'react';
+import { createContext, useState,useEffect } from 'react';
 
 const CartContext = createContext();
 
 const CartProvider = ({ children }) => {
-  const [cart, setCart] = useState([45]);
+  const [cart, setCart] = useState([]);
 
+  useEffect(()=>{
+    console.log(cart)
+  },[cart])
   const addToCart = (item) => {
-    const existingItem = cart.find((i) => i.id === item.id);
+    const existingItem = cart.find((i) => i.name === item.name);
     if (existingItem) {
       setCart(
-        cart.map((i) => (i.id === item.id ? { ...i, quantity: i.quantity + 1 } : i))
+        cart.map((i) => (i.name === item.name ? { ...i, quantity: i.quantity += 1 } : i))
       );
     } else {
       setCart([...cart, { ...item, quantity: 1 }]);
     }
   };
 
-  const removeFromCart = (itemId) => {
-    setCart(cart.filter((i) => i.id !== itemId));
+  const removeFromCart = (item) => {
+    setCart((prevCart) =>
+    prevCart.map((data) => {
+      if (data.name === item.name) {
+        return { ...data, quantity: data.quantity - 1 };
+      }
+      return data;
+    }).filter((data) => data.quantity > 0)
+  );
   };
+
 
   const updateQuantity = (itemId, quantity) => {
     setCart(
