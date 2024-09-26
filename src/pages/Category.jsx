@@ -6,8 +6,8 @@ import '../assests/css/Category.css'
 import { CartContext } from '../components/CartContext';
 const Category = ()=>{
   // cart, addToCart, removeFromCart, updateQuantity 
-  const {cart,addToCart,removeFromCart} = useContext(CartContext);
-  console.log(cart)
+  const {cart,totalItems,addToCart,removeFromCart} = useContext(CartContext);
+  console.log(cart,totalItems)
   const [items,setItems] = useState([{
     name: 'Sambar',
     description: 'Lentil and vegetable stew',
@@ -129,9 +129,11 @@ const Category = ()=>{
 </div>
 
 <div style={{display:'flex',justifyContent:'flex-end',gap:'20px' ,alignItems:'center'}}>
-    <span style={{position:'relative'}}>
-        <ShoppingOutlined  style={{fontSize:'22px',color:'white'}}/><div style={{ position: 'absolute', background: 'red', top: 0, borderRadius: '50%', color: 'white', padding: '8px', height: '12px', width: '12px', fontWeight:600, left: '16px', display: 'flex', justifyContent: "center", alignItems: 'center' ,fontFamily: 'Poppins, sans-serif'}}>{5}</div>
-  </span>
+   {totalItems > 0 && <span style={{position:'relative'}}>
+        <ShoppingOutlined  style={{fontSize:'22px',color:'white'}}/>
+         <div style={{ position: 'absolute', background: 'red', top: 0, borderRadius: '50%', color: 'white', padding: '8px', height: '12px', width: '12px', fontWeight:600, left: '16px', display: 'flex', justifyContent: "center", alignItems: 'center' ,fontFamily: 'Poppins, sans-serif'}}>{totalItems}</div>
+
+  </span>}
     <span> <MenuUnfoldOutlined style={{fontSize:'22px',color:'white'}} /></span>
 </div>
 </div>
