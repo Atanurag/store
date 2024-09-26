@@ -74,7 +74,7 @@ const Cart = () => {
           </Col>
           <Col className="gutter-row" span={6}>
             <div style={{
-              marginTop: '8px',
+              marginTop: '10px',
               marginLeft:'9px',
               width: '75px',
               height: '30px',
@@ -112,7 +112,7 @@ const Cart = () => {
           </Col>
           <Col className="gutter-row" span={6}>
             <div style={{
-              marginTop: '8px',
+              marginTop: '10px',
               marginLeft:'9px',
               width: '75px',
               height: '30px',
@@ -150,7 +150,7 @@ const Cart = () => {
           </Col>
           <Col className="gutter-row" span={6}>
             <div style={{
-              marginTop: '8px',
+              marginTop: '10px',
               marginLeft:'9px',
               width: '75px',
               height: '30px',
