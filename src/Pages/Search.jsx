@@ -31,7 +31,7 @@ const navigate = useNavigate();
    navigate(-1)
 }} />
 <div className='input-box' style={{margin:'15px'}}>
-                      <Input  autoFocus size="large" placeholder="Search For Items..." suffix={<SearchOutlined style={{backgroundColor:'white'}}/>} onChange={(e) => {
+                      <Input  autoFocus size="large" placeholder="Search For Items..." suffix={<SearchOutlined style={{backgroundColor:'white',fontWeight:500,fontFamily: 'Poppins, sans-serif'}}/>} onChange={(e) => {
                     
                       }}  />
                     </div>
