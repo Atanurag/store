@@ -103,6 +103,8 @@ return (
   return (<>
   <div className='card'>
   <div className='image-container'>
+{/* <img style={{height:'100%',width:'100%',objectFit:'cover',borderRadius:'4px'}} src={'https://t3.ftcdn.net/jpg/02/72/47/94/360_F_272479453_Kl30iWCD9WWhlU8BNORRtNUR1ADxXTCh.jpg'}></img>, */}
+
     <div style={{position:'absolute',bottom:'3px',right:'3px'}}>
     <Button  type="primary" size={'small'} >+</Button>
     </div>

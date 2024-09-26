@@ -92,6 +92,8 @@ console.log(cart)
   return (<>
   <div className='card'>
   <div className='image-container'>
+ 
+    <img  src={e.img} alt=""  style={{display: 'block',height:'100%',width:'100%',objectFit:'cover',borderRadius:'4px'}}/>
     {e.quantity < 1 ?
      <><div style={{position:'absolute',bottom:'3px',right:'3px'}}>
     <Button  type="primary" size={'small'} onClick={()=>{
