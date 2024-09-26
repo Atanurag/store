@@ -19,8 +19,8 @@ const Cart = () => {
         }} />
 
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'start', marginLeft: '19px' }}>
-          <p style={{ fontSize: '16px',fontWeight:600,fontFamily: 'Poppins, sans-serif', }}>Review Cart</p>
-          <p>Hiramani Store | Chunabhati</p>
+          <p style={{ fontSize: '14px',fontWeight:500,fontFamily: 'Poppins, sans-serif', }}>Review Cart</p>
+          <p style={{fontSize: '12px',fontWeight:500,fontFamily: 'Poppins, sans-serif', }}>Hiramani Store | Chunabhati</p>
         </div>
       </div>
 
