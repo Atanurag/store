@@ -15,11 +15,11 @@ const Home = () => {
 <div style={{display:'flex',width:'260px',alignItems:'center',justifyContent:'space-around',border:'1px solid yellow'}}>
 
 <div style={{height:'70px',width:'70px',backgroundColor:'white',borderRadius:'4px'}}></div>
-<div style={{display:'flex',flexDirection:'column'}}>
-<p style={{color:"white",fontSize:'19px'}}> Hiramani Store <span style={{marginLeft:'10px'}}><Tooltip title="welcome!" placement="top"> <InfoCircleOutlined  style={{fontSize:'14px'}}/></Tooltip></span></p>
-<p style={{textDecoration:'underline',color:'white',fontSize:'14px'}}>Chunabhati</p>
+<div style={{display:'flex',flexDirection:'column',justifyContent:'space-between'}}>
+<p style={{color:"white",fontSize:'15px',fontFamily: 'Poppins, sans-serif'}}> Hiramani Store <span style={{marginLeft:'10px'}}><Tooltip title="welcome!" placement="top"> <InfoCircleOutlined  style={{fontSize:'14px'}}/></Tooltip></span></p>
+<p style={{textDecoration:'underline',color:'white',fontSize:'12px',fontFamily: 'Poppins, sans-serif'}}>Chunabhati</p>
 
-<span style={{color:'rgb(90 194 100)',fontSize:'15px',marginTop:'4px'}}>Open | Till 8pm</span>
+<span style={{color:'rgb(90 194 100)',fontSize:'14px',marginTop:'4px',fontFamily: 'Poppins, sans-serif'}}>Open | Till 8pm</span>
 </div>
 
 
@@ -48,7 +48,7 @@ const Home = () => {
 
 
 <div style={{display:'flex',justifyContent:'space-between',margin:'20px 15px '}}>
-  <p style={{fontSize:'16px',fontWeight:'bold'}}>Your Favourites</p>
+  <p style={{fontSize:'14px',fontWeight:'bold',fontFamily: 'Poppins, sans-serif'}}>Your Favourites</p>
   <Link to='/category' style={{fontSize:'14px',color:'#1677ff',textDecoration:'underline',fontWeight:'bold'}}>View All</Link>
 </div>
 
