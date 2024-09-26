@@ -48,8 +48,8 @@ const Home = () => {
 
 
 <div style={{display:'flex',justifyContent:'space-between',margin:'20px 15px '}}>
-  <p style={{fontSize:'14px',fontWeight:'bold',fontFamily: 'Poppins, sans-serif'}}>Your Favourites</p>
-  <Link to='/category' style={{fontSize:'14px',color:'#1677ff',textDecoration:'underline',fontWeight:'bold'}}>View All</Link>
+  <p style={{fontSize:'15px',fontWeight:600,fontFamily: 'Poppins, sans-serif'}}>Your Favourites</p>
+  <Link to='/category' style={{fontWeight:500,fontSize:'13px',color:'#1677ff',textDecoration:'underline',fontFamily: 'Poppins, sans-serif'}}>View All</Link>
 </div>
 
 <div style={{display:'flex',justifyContent:'space-between' ,margin:'15px'}}>
@@ -77,11 +77,11 @@ const Home = () => {
   </div>
 
 <div style={{width:'100px'}}>
-  <p style={{fontSize:'12px',color:'gray',fontWeight:'bold'}}>Britiania</p>
-  <span style={{fontSize:'14px',fontWeight:'bold'}}>Bourbon Cream Buscuits</span>
+  <p style={{fontSize:'10px',color:'gray',fontFamily: 'Poppins, sans-serif'}}>Britiania</p>
+  <span style={{fontSize:'12px',fontWeight:500,fontFamily: 'Poppins, sans-serif'}}>Bourbon Cream Buscuits</span>
   <div style={{display:'flex',justifyContent:'space-between'}}>
-    <span style={{fontSize:'16px',fontWeight:'bold'}}>₹ 25</span>
-    <span style={{fontSize:'12px',color:'gray',fontWeight:'bold'}}>100 g</span>
+    <span style={{fontSize:'14px',fontWeight:600,fontFamily: 'Poppins, sans-serif'}}>₹ 25</span>
+    <span style={{fontSize:'10px',color:'gray',fontWeight:600,fontFamily: 'Poppins, sans-serif'}}>100 g</span>
   </div>
 </div>
 
@@ -94,8 +94,8 @@ const Home = () => {
 
 
 <div style={{display:'flex',justifyContent:'space-between',margin:'20px 15px '}}>
-  <p style={{fontSize:'16px',fontWeight:'bold'}}>Shop by Category</p>
-  <p style={{fontSize:'14px',color:'#1677ff',textDecoration:'underline',fontWeight:'bold'}}>View All</p>
+  <p style={{fontSize:'15px',fontWeight:600,fontFamily: 'Poppins, sans-serif'}}>Shop by Category</p>
+  <Link to='/category' style={{fontWeight:500,fontSize:'13px',color:'#1677ff',textDecoration:'underline',fontFamily: 'Poppins, sans-serif'}}>View All</Link>
 </div>
 
 
@@ -108,7 +108,7 @@ const Home = () => {
 
     <div style={{  backgroundColor: "#edeef0",borderRadius:'4px',height:'80px',width:'80px'}}></div>
     
-    <p style={{fontSize:'15px',fontWeight:'600'}}>Top seller</p>
+    <p style={{fontSize:'12px',fontWeight:500,fontFamily: 'Poppins, sans-serif'}}>Top seller</p>
     </div>
     </>
   )
@@ -132,17 +132,9 @@ const Home = () => {
       
     }}
   >
-    <p style={{ fontSize: 16, fontWeight: "bold" }}>Crazy Deals</p>
-    <p
-      style={{
-        fontSize: 14,
-        color: "#1677ff",
-        textDecoration: "underline",
-        fontWeight: "bold"
-      }}
-    >
-      View All
-    </p>
+    <p style={{fontSize:'15px',fontWeight:600,fontFamily: 'Poppins, sans-serif'}}>Crazy Deals</p>
+    <Link to='/category' style={{fontWeight:500,fontSize:'13px',color:'#1677ff',textDecoration:'underline',fontFamily: 'Poppins, sans-serif'}}>View All</Link>
+
   </div>
 
   
@@ -154,10 +146,10 @@ const Home = () => {
 
       <div style={{ backgroundColor: "#edeef0",height:'70px',width:'70px',backgroundColor:'white',borderRadius:'4px'}}></div>
       <div style={{display:'flex',flexDirection:'column',textAlign:'left',padding:'5px',gap:'3px'}}>
-      <p style={{fontSize:'12px'}}>Match Day Mania</p>
-      <p style={{fontSize:'15px',fontWeight:'bold'}}>Flat ₹ 125 Off</p>
+      <p style={{fontSize:'10px',fontFamily: 'Poppins, sans-serif'}}>Match Day Mania</p>
+      <p style={{fontSize:'12px',fontWeight:600,fontFamily: 'Poppins, sans-serif'}}>Flat ₹ 125 Off</p>
       
-      <span style={{fontSize:'13px'}}>On orders above ₹ 455</span>
+      <span style={{fontSize:'10px',fontFamily: 'Poppins, sans-serif'}}>On orders above ₹ 455</span>
       </div>
       
       
