@@ -75,7 +75,7 @@ const Cart = () => {
           <Col className="gutter-row" span={6}>
             <div style={{
               marginTop: '8px',
-              marginleft:'9px',
+              marginLeft:'9px',
               width: '75px',
               height: '30px',
               boxShadow: '0 0.5px 1px rgba(0, 0, 0, 0.3), 0 -0.5px 1px rgba(0, 0, 0, 0.3), 0.5px 0 1px rgba(0, 0, 0, 0.3), -0.5px 0 1px rgba(0, 0, 0, 0.3)',
@@ -105,32 +105,34 @@ const Cart = () => {
           </Col>
           <Col className="gutter-row" span={9}>
             <div >
-              <span style={{ fontSize: '13px', fontWeight: 'bold' }}>Premium Ratnagiri Mangoes</span>
+              <span style={{ fontSize: '12px', fontWeight:600,fontFamily: 'Poppins, sans-serif',  }}>Oreo Choco cream choclate</span>
 
-              <div style={{ fontSize: '11px' }}>6 pieces</div>
+              <div style={{ fontSize: '10px',fontFamily: 'Poppins, sans-serif' }}>6 pieces</div>
             </div>
           </Col>
           <Col className="gutter-row" span={6}>
             <div style={{
               marginTop: '8px',
-              width: '80px',
-              height: '35px',
+              marginLeft:'9px',
+              width: '75px',
+              height: '30px',
               boxShadow: '0 0.5px 1px rgba(0, 0, 0, 0.3), 0 -0.5px 1px rgba(0, 0, 0, 0.3), 0.5px 0 1px rgba(0, 0, 0, 0.3), -0.5px 0 1px rgba(0, 0, 0, 0.3)',
               borderRadius: 15,
               backgroundColor: '#fff',
               display: 'flex',
               justifyContent: 'space-around',
               alignItems: 'center',
-              color: '#1677ff'
+              color: '#1677ff',
+             
             }}>
-              <div style={{ fontSize: '20px', padding: '12px', fontWeight: 'bold' }}>-</div>
+              <div style={{ fontSize: '16px', padding: '10px',  fontWeight:600,fontFamily: 'Poppins, sans-serif',  }}>-</div>
               6
-              <div style={{ fontSize: '19px', padding: '12px', fontWeight: 'bold' }}>+</div>
+              <div style={{ fontSize: '16px', padding: '10px',  fontWeight:600,fontFamily: 'Poppins, sans-serif',}}>+</div>
 
             </div>
           </Col>
           <Col className="gutter-row" span={4}>
-            <div style={{ fontSize: '16px', fontWeight: 'bold', marginTop: '14px', textAlign: 'right' }}>₹ 60</div>
+            <div style={{ fontSize: '16px', fontWeight:600,fontFamily: 'Poppins, sans-serif', marginTop: '14px', textAlign: 'right' }}>₹ 60</div>
           </Col>
         </Row>
         <Divider />
@@ -141,36 +143,38 @@ const Cart = () => {
           </Col>
           <Col className="gutter-row" span={9}>
             <div >
-              <span style={{ fontSize: '13px', fontWeight: 'bold' }}>Oreo Choco cream choclate</span>
+              <span style={{ fontSize: '12px', fontWeight:600,fontFamily: 'Poppins, sans-serif',  }}>Oreo Choco cream choclate</span>
 
-              <div style={{ fontSize: '11px' }}>6 pieces</div>
+              <div style={{ fontSize: '10px',fontFamily: 'Poppins, sans-serif' }}>6 pieces</div>
             </div>
           </Col>
           <Col className="gutter-row" span={6}>
             <div style={{
               marginTop: '8px',
-              width: '80px',
-              height: '35px',
+              marginLeft:'9px',
+              width: '75px',
+              height: '30px',
               boxShadow: '0 0.5px 1px rgba(0, 0, 0, 0.3), 0 -0.5px 1px rgba(0, 0, 0, 0.3), 0.5px 0 1px rgba(0, 0, 0, 0.3), -0.5px 0 1px rgba(0, 0, 0, 0.3)',
               borderRadius: 15,
               backgroundColor: '#fff',
               display: 'flex',
               justifyContent: 'space-around',
               alignItems: 'center',
-              color: '#1677ff'
+              color: '#1677ff',
+             
             }}>
-              <div style={{ fontSize: '20px', padding: '12px', fontWeight: 'bold' }}>-</div>
+              <div style={{ fontSize: '16px', padding: '10px',  fontWeight:600,fontFamily: 'Poppins, sans-serif',  }}>-</div>
               6
-              <div style={{ fontSize: '19px', padding: '12px', fontWeight: 'bold' }}>+</div>
+              <div style={{ fontSize: '16px', padding: '10px',  fontWeight:600,fontFamily: 'Poppins, sans-serif',}}>+</div>
 
             </div>
           </Col>
           <Col className="gutter-row" span={4}>
-            <div style={{ fontSize: '16px', fontWeight: 'bold', marginTop: '14px', textAlign: 'right' }}>₹ 60</div>
+            <div style={{ fontSize: '16px', fontWeight:600,fontFamily: 'Poppins, sans-serif', marginTop: '14px', textAlign: 'right' }}>₹ 60</div>
           </Col>
         </Row>
         <Divider />
-        <Link to='/' style={{ marginTop: '12px', textDecoration: 'underline' }}>+ Add More Items</Link>
+        <Link to='/' style={{ marginTop: '12px', textDecoration: 'underline',fontFamily: 'Poppins, sans-serif', }}>+ Add More Items</Link>
       </Card>
 
 
@@ -185,20 +189,20 @@ const Cart = () => {
           backgroundColor: '#fff', // set a white background color
         }}
       >
-        <p style={{ fontWeight: 'bold', fontSize: '15px' }}>Bill Details</p>
+        <p style={{ fontWeight: 600, fontSize: '15px',fontFamily: 'Poppins, sans-serif', }}>Bill Details</p>
         <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '10px' }}>
-          <p style={{ fontWeight: 'bold', fontSize: '14px' }}>Item Total</p>
-          <p style={{ fontWeight: 'bold', fontSize: '14px' }}>₹ 240</p>
+          <p style={{ fontWeight: 500, fontSize: '14px',fontFamily: 'Poppins, sans-serif', }}>Item Total</p>
+          <p style={{ fontWeight: 500, fontSize: '14px',fontFamily: 'Poppins, sans-serif'}}>₹ 240</p>
         </div>
         <Divider />
         <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '10px' }}>
-          <p style={{ fontWeight: 'bold', fontSize: '14px', textDecoration: 'underline' }}>GST Charges</p>
-          <p style={{ fontWeight: 'bold', fontSize: '14px' }}>₹ 10</p>
+          <p style={{ fontWeight: 500, fontSize: '14px',fontFamily: 'Poppins, sans-serif', textDecoration: 'underline' }}>GST Charges</p>
+          <p style={{ fontWeight: 500, fontSize: '14px',fontFamily: 'Poppins, sans-serif',}}>₹ 10</p>
         </div>
         <Divider />
         <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '10px' }}>
-          <p style={{ fontWeight: 'bold', fontSize: '14px' }}>To Pay</p>
-          <p style={{ fontWeight: 'bold', fontSize: '14px' }}>₹ 250</p>
+          <p style={{ fontWeight: 500, fontSize: '14px',fontFamily: 'Poppins, sans-serif', }}>To Pay</p>
+          <p style={{ fontWeight: 500, fontSize: '14px',fontFamily: 'Poppins, sans-serif',}}>₹ 250</p>
         </div>
       </Card>
 
