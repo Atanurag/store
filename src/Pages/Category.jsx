@@ -43,7 +43,7 @@ const Category = ()=>{
 
 <div style={{display:'flex',justifyContent:'flex-end',gap:'20px' ,alignItems:'center'}}>
     <span style={{position:'relative'}}>
-        <ShoppingOutlined  style={{fontSize:'22px',color:'white'}}/><div style={{ position: 'absolute', background: 'red', top: 0, borderRadius: '50%', color: 'white', padding: '8px', height: '12px', width: '12px', fontWeight: '800', left: '16px', display: 'flex', justifyContent: "center", alignItems: 'center' }}>{5}</div>
+        <ShoppingOutlined  style={{fontSize:'22px',color:'white'}}/><div style={{ position: 'absolute', background: 'red', top: 0, borderRadius: '50%', color: 'white', padding: '8px', height: '12px', width: '12px', fontWeight:600, left: '16px', display: 'flex', justifyContent: "center", alignItems: 'center' ,fontFamily: 'Poppins, sans-serif'}}>{5}</div>
   </span>
     <span> <MenuUnfoldOutlined style={{fontSize:'22px',color:'white'}} /></span>
 </div>
@@ -65,7 +65,7 @@ return (
 
 <div style={{  backgroundColor: "#edeef0",borderRadius:'4px',height:'50px',width:'50px'}}></div>
 
-<p style={{fontSize:'12px',fontWeight:'600',color:'gray',textwrap:'wrap',width:'50px'}}>Abcdrf ere</p>
+<p style={{fontSize:'10px',fontWeight:600,fontFamily: 'Poppins, sans-serif',color:'gray'}}>Abcdrf ere</p>
 </div>
 </>
 )
@@ -94,7 +94,7 @@ return (
 
 
 <div style={{display:'flex',justifyContent:'space-between',margin:'20px 15px '}}>
-  <p style={{fontSize:'16px',fontWeight:'bold'}}>Dry Fruits</p>
+  <p style={{fontSize:'15px',fontWeight:600,fontFamily: 'Poppins, sans-serif'}}>Dry Fruits</p>
 </div>
 
 <div style={{display:'flex',justifyContent:'space-between' ,margin:'15px',flexWrap:'wrap'}}>
@@ -122,11 +122,11 @@ return (
   </div>
 
 <div style={{width:'100px'}}>
-  <p style={{fontSize:'12px',color:'gray',fontWeight:'bold'}}>Britiania</p>
-  <span style={{fontSize:'14px',fontWeight:'bold'}}>Bourbon Cream Buscuits</span>
+  <p style={{fontSize:'10px',color:'gray',fontFamily: 'Poppins, sans-serif'}}>Britiania</p>
+  <span style={{fontSize:'12px',fontWeight:500,fontFamily: 'Poppins, sans-serif'}}>Bourbon Cream Buscuits</span>
   <div style={{display:'flex',justifyContent:'space-between'}}>
-    <span style={{fontSize:'16px',fontWeight:'bold'}}>₹ 25</span>
-    <span style={{fontSize:'12px',color:'gray',fontWeight:'bold'}}>100 g</span>
+    <span style={{fontSize:'14px',fontWeight:600,fontFamily: 'Poppins, sans-serif'}}>₹ 25</span>
+    <span style={{fontSize:'10px',color:'gray',fontWeight:600,fontFamily: 'Poppins, sans-serif'}}>100 g</span>
   </div>
 </div>
 
