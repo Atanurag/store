@@ -5,9 +5,9 @@ import { Routes, Route, Link, useNavigate, json } from 'react-router-dom';
 import '../assests/css/Search.css'
 const Search = () =>{
 
-const [recentSearch, setRecentSearch] = useState(false);
+const [recentSearch, setRecentSearch] = useState(true);
 const [searchedResult, setSearchedResult] = useState(false);
-const [searchedCategory, setSearchedCategory] = useState(true);
+const [searchedCategory, setSearchedCategory] = useState(false);
 const navigate = useNavigate();
 
     return (<>
