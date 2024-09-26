@@ -1,10 +1,44 @@
-
+import {useState,useEffect} from 'react';
 import { InfoCircleOutlined ,CloseOutlined, MenuUnfoldOutlined, SearchOutlined, ShoppingOutlined } from '@ant-design/icons';
 import { Divider, Flex, Tag, Button,Tooltip, Layout, Input, Row, Col, Switch, Card, Badge } from 'antd';
 import { Routes, Route, Link, useNavigate} from 'react-router-dom';
 import '../assests/css/Home.css'
 const Home = () => {
 
+  const [json,setJson]= useState([
+      {
+        name: 'Dosa',
+        description:
+          'A thin, crispy crepe made from fermented rice and lentil batter',
+        price: 50,
+        isVeg: true,
+        tag: 'Classic',
+        quantity: 0,
+        img: 'https://t3.ftcdn.net/jpg/02/72/47/94/360_F_272479453_Kl30iWCD9WWhlU8BNORRtNUR1ADxXTCh.jpg',
+      },
+      {
+        name: 'Pav Bhaji',
+        description: 'Spiced mixture of mashed vegetables in a thick gravy served with pav',
+        price: 40,
+        isVeg: true,
+        tag: 'Classic',
+        quantity: 0,
+        img: 'https://w0.peakpx.com/wallpaper/805/956/HD-wallpaper-food-delicious-food-food-holidays-indian-indian-food-pav-bhaji-spicy-food-street-food.jpg',
+      },
+      {
+        name: 'Vada',
+        description: 'Lentil fritters',
+        price: 20,
+        isVeg: true,
+        tag: 'Classic',
+        quantity: 0,
+        img: 'https://img.freepik.com/premium-photo/sago-delight-sabudana-wada-vada-classic-indian-snack-vertical-mobile-wallpaper_896558-36481.jpg',
+      },]
+  )
+  const [cart,setCart] =useState([]);
+useEffect(()=>{
+console.log(cart)
+},[cart])
     return (
         <>
 <div className='home-main'>
@@ -54,13 +88,91 @@ const Home = () => {
 
 <div style={{display:'flex',justifyContent:'space-between' ,margin:'15px'}}>
 
-{Array(3).fill('*').map((e,i)=>{
+{json.map((e,i)=>{
   return (<>
   <div className='card'>
   <div className='image-container'>
-    <div style={{position:'absolute',bottom:'3px',right:'3px'}}>
-    <Button  type="primary" size={'small'} >+</Button>
+    {e.quantity < 1 ?
+     <><div style={{position:'absolute',bottom:'3px',right:'3px'}}>
+    <Button  type="primary" size={'small'} onClick={()=>{
+      setJson((js)=>
+      js.map((si,ind)=>{
+        if(si.name === e.name){
+          return {
+            ...si,
+            quantity : 1
+          }
+        }
+        return si;
+      })
+      )
+      setCart([...cart, {...e,quantity:1}])
+    }}>+</Button>
+    </div></>:<>
+    <div className='cart-btn'>
+
+<Button  type="primary" className='cart-btn-icon' onClick={()=>{
+      setJson((js)=>
+      js.map((si,ind)=>{
+        if(si.name === e.name){
+          return {
+            ...si,
+            quantity : si.quantity-=1
+          }
+        }
+        return si;
+      })
+      )
+      setCart((prevCart) =>
+      prevCart.map((data) => {
+        if (data.name === e.name) {
+          return { ...data, quantity: data.quantity - 1 };
+        }
+        return data;
+      }).filter((data) => data.quantity > 0)
+    );
+
+
+
+
+    }}>-</Button>
+
+      <div className='cart-quantity'>
+      {e.quantity}
+      </div>
+      <Button  type="primary" className='cart-btn-icon'  
+                onClick={()=>{
+                  setJson((js)=>
+                  js.map((si,ind)=>{
+                    if(si.name === e.name){
+                      return {
+                        ...si,
+                        quantity : si.quantity+=1
+                      }
+                    }
+                    return si;
+                  })
+                  )
+
+
+                  setCart((pr)=>pr.map((data)=>{
+                    if(data.name === e.name){
+                      return{
+                        ...data,
+                        quantity:data.quantity+=1
+                      }
+                    }
+                    return data;
+                  }))
+                  
+
+                }}
+>+</Button>
+
     </div>
+    </>
+    
+  }
   {/* <div className='cart-btn'>
 
 <Button  type="primary" className='cart-btn-icon' >-</Button>
@@ -77,10 +189,10 @@ const Home = () => {
   </div>
 
 <div style={{width:'100px'}}>
-  <p style={{fontSize:'10px',color:'gray',fontFamily: 'Poppins, sans-serif'}}>Britiania</p>
-  <span style={{fontSize:'12px',fontWeight:500,fontFamily: 'Poppins, sans-serif'}}>Bourbon Cream Buscuits</span>
+  <p style={{fontSize:'10px',color:'gray',fontFamily: 'Poppins, sans-serif'}}>{e.tag}</p>
+  <span style={{fontSize:'12px',fontWeight:500,fontFamily: 'Poppins, sans-serif'}}>{e.name}</span>
   <div style={{display:'flex',justifyContent:'space-between'}}>
-    <span style={{fontSize:'14px',fontWeight:600,fontFamily: 'Poppins, sans-serif'}}>₹ 25</span>
+    <span style={{fontSize:'14px',fontWeight:600,fontFamily: 'Poppins, sans-serif'}}>₹ {e.price}</span>
     <span style={{fontSize:'10px',color:'gray',fontWeight:600,fontFamily: 'Poppins, sans-serif'}}>100 g</span>
   </div>
 </div>
