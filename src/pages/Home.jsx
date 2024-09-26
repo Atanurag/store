@@ -15,6 +15,7 @@ const Home = () => {
       isVeg: true,
       tag: 'Main Course',
       quantity: 0,
+      gram:'100 g',
       img: 'https://media.istockphoto.com/id/183321245/photo/south-indian-crepe-masala-dosa.jpg?s=612x612&w=0&k=20&c=c6Z7P5uovp2M9JVS0rlS8nCKRL73QkTYRyL7FK348Os=',
     },
       {
@@ -24,16 +25,19 @@ const Home = () => {
         isVeg: true,
         tag: 'Classic',
         quantity: 0,
+        gram:'100 g',
         img: 'https://w0.peakpx.com/wallpaper/805/956/HD-wallpaper-food-delicious-food-food-holidays-indian-indian-food-pav-bhaji-spicy-food-street-food.jpg',
       },
       {
-        name: 'Vada',
-        description: 'Lentil fritters',
-        price: 20,
+        name: 'Filter Coffee',
+        description:
+          'Strong coffee brewed in a traditional South Indian filter',
+        price: 1,
         isVeg: true,
-        tag: 'Classic',
+        tag: 'Beverage',
         quantity: 0,
-        img: 'https://img.freepik.com/premium-photo/sago-delight-sabudana-wada-vada-classic-indian-snack-vertical-mobile-wallpaper_896558-36481.jpg',
+        gram:'20 g',
+        img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbJz_8ItU9p_au1RhX_uEZXEXpaAOB1nSCPQ&s'
       },]
   )
   //const [cart,setCart] =useState([]);
@@ -176,7 +180,7 @@ const Home = () => {
   <span style={{fontSize:'12px',fontWeight:500,fontFamily: 'Poppins, sans-serif'}}>{e.name}</span>
   <div style={{display:'flex',justifyContent:'space-between'}}>
     <span style={{fontSize:'14px',fontWeight:600,fontFamily: 'Poppins, sans-serif'}}>₹ {e.price}</span>
-    <span style={{fontSize:'10px',color:'gray',fontWeight:600,fontFamily: 'Poppins, sans-serif'}}>100 g</span>
+    <span style={{fontSize:'10px',color:'gray',fontWeight:600,fontFamily: 'Poppins, sans-serif'}}>{e.gram}</span>
   </div>
 </div>
 
