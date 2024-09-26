@@ -6,7 +6,7 @@ import '../assests/css/Category.css'
 import { CartContext } from '../components/CartContext';
 const Category = ()=>{
   // cart, addToCart, removeFromCart, updateQuantity 
-  const {cart,totalItems,addToCart,removeFromCart} = useContext(CartContext);
+  const {cart,totalItems,totalAmount,addToCart,removeFromCart} = useContext(CartContext);
   console.log(cart,totalItems)
   const [items,setItems] = useState([{
     name: 'Sambar',

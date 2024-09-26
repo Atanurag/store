@@ -1,11 +1,12 @@
-import React from 'react';
-import { useState } from 'react';
+import React,{ useContext,useState } from 'react';
 import { Divider, Flex, Tag, Button, Layout, Input, Row, Col, Switch, Steps, Card, Badge } from 'antd';
 import { ArrowLeftOutlined, InfoCircleOutlined, CloseOutlined, MenuUnfoldOutlined, SearchOutlined, ShoppingOutlined } from '@ant-design/icons';
 import { Routes, Route, Link, useNavigate, json } from 'react-router-dom';
 import { InputOTP } from "antd-input-otp";
+import { CartContext } from '../components/CartContext';
 import '../assests/css/Cart.css'
 const Cart = () => {
+  const {cart,totalItems,totalAmount,addToCart,removeFromCart} = useContext(CartContext);
   const navigate = useNavigate();
   const style = {
     background: '#0092ff',
@@ -60,7 +61,58 @@ const Cart = () => {
           backgroundColor: '#fff', // set a white background color
         }}
       >
-        <Row gutter={8} style={{ margin: ' 0' }}>
+
+{cart.map((e,i)=>{
+  return (
+    <>
+     <Row gutter={8} style={{ margin: ' 0' }}>
+          <Col className="gutter-row" span={5}>
+            <div style={{ backgroundColor: "#edeef0", borderRadius: '4px', height: '60px', width: '60px' }}></div>
+
+          </Col>
+          <Col className="gutter-row" span={9}>
+            <div >
+              <span style={{ fontSize: '12px', fontWeight:600,fontFamily: 'Poppins, sans-serif',  }}>{e.name}</span>
+
+              <div style={{ fontSize: '10px',fontFamily: 'Poppins, sans-serif' }}>{e.quantity} pieces</div>
+            </div>
+          </Col>
+          <Col className="gutter-row" span={6}>
+            <div style={{
+              marginTop: '10px',
+              
+              width: '75px',
+              height: '30px',
+              boxShadow: '0 0.5px 1px rgba(0, 0, 0, 0.3), 0 -0.5px 1px rgba(0, 0, 0, 0.3), 0.5px 0 1px rgba(0, 0, 0, 0.3), -0.5px 0 1px rgba(0, 0, 0, 0.3)',
+              borderRadius: 15,
+              backgroundColor: '#fff',
+              display: 'flex',
+              justifyContent: 'space-around',
+              alignItems: 'center',
+              color: '#1677ff',
+             
+            }}>
+              <div style={{ fontSize: '16px', padding: '10px',  fontWeight:600,fontFamily: 'Poppins, sans-serif',  }} onClick={()=>{
+                removeFromCart(e);
+              }}>-</div>
+              {e.quantity}
+              <div style={{ fontSize: '16px', padding: '10px',  fontWeight:600,fontFamily: 'Poppins, sans-serif',}} onClick={()=>{
+                addToCart(e);
+              }}>+</div>
+
+            </div>
+          </Col>
+          <Col className="gutter-row" span={4}>
+            <div style={{ fontSize: '16px', fontWeight:600,fontFamily: 'Poppins, sans-serif', marginTop: '14px', textAlign: 'right' }}>₹ {e.quantity * e.price}</div>
+          </Col>
+        </Row>
+        <Divider />
+    </>
+  )
+})}
+
+
+        {/* <Row gutter={8} style={{ margin: ' 0' }}>
           <Col className="gutter-row" span={5}>
             <div style={{ backgroundColor: "#edeef0", borderRadius: '4px', height: '60px', width: '60px' }}></div>
 
@@ -173,7 +225,7 @@ const Cart = () => {
             <div style={{ fontSize: '16px', fontWeight:600,fontFamily: 'Poppins, sans-serif', marginTop: '14px', textAlign: 'right' }}>₹ 60</div>
           </Col>
         </Row>
-        <Divider />
+        <Divider /> */}
         <Link to='/' style={{ marginTop: '12px', textDecoration: 'underline',fontFamily: 'Poppins, sans-serif', }}>+ Add More Items</Link>
       </Card>
 
@@ -192,17 +244,17 @@ const Cart = () => {
         <p style={{ fontWeight: 600, fontSize: '15px',fontFamily: 'Poppins, sans-serif', }}>Bill Details</p>
         <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '10px' }}>
           <p style={{ fontWeight: 500, fontSize: '14px',fontFamily: 'Poppins, sans-serif', }}>Item Total</p>
-          <p style={{ fontWeight: 500, fontSize: '14px',fontFamily: 'Poppins, sans-serif'}}>₹ 240</p>
+          <p style={{ fontWeight: 500, fontSize: '14px',fontFamily: 'Poppins, sans-serif'}}>₹ {totalAmount}</p>
         </div>
         <Divider />
         <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '10px' }}>
           <p style={{ fontWeight: 500, fontSize: '14px',fontFamily: 'Poppins, sans-serif', textDecoration: 'underline' }}>GST Charges</p>
-          <p style={{ fontWeight: 500, fontSize: '14px',fontFamily: 'Poppins, sans-serif',}}>₹ 10</p>
+          <p style={{ fontWeight: 500, fontSize: '14px',fontFamily: 'Poppins, sans-serif',}}>₹ 0</p>
         </div>
         <Divider />
         <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '10px' }}>
           <p style={{ fontWeight: 500, fontSize: '14px',fontFamily: 'Poppins, sans-serif', }}>To Pay</p>
-          <p style={{ fontWeight: 500, fontSize: '14px',fontFamily: 'Poppins, sans-serif',}}>₹ 250</p>
+          <p style={{ fontWeight: 500, fontSize: '14px',fontFamily: 'Poppins, sans-serif',}}>₹ {totalAmount}</p>
         </div>
       </Card>
 
@@ -210,7 +262,7 @@ const Cart = () => {
       <div style={{ padding: '0px 12px', backgroundColor: '#1677ff', height: '40px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '94%', borderRadius: '4px', margin: '12px auto' }}>
 
         <span style={{ color:'white',fontWeigt:500,fontFamily: 'Poppins, sans-serif' }}>Make Payment</span>
-        <span style={{color:'white',fontWeigt:500,fontFamily: 'Poppins, sans-serif' }}>₹ 250</span>
+        <span style={{color:'white',fontWeigt:500,fontFamily: 'Poppins, sans-serif' }}>₹ {totalAmount}</span>
       </div>
 
 
