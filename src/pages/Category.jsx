@@ -193,7 +193,7 @@ return (
   <img  src={e.img} alt=""  style={{display: 'block',height:'100%',width:'100%',objectFit:'cover',borderRadius:'4px'}}/>
   {e.quantity  <1?
      <><div style={{position:'absolute',bottom:'3px',right:'3px'}}>
-    <Button  type="primary" size={'small'} onClick={()=>{
+    <Button style={{paddingBottom:'3px',fontWeight:'bold'}} type="primary" size={'small'} onClick={()=>{
       
         setItems((js)=>
         js.map((si,ind)=>{
@@ -212,7 +212,7 @@ return (
     </div></>:<>
     <div className='cart-btn'>
 
-<Button  type="primary" className='cart-btn-icon' onClick={()=>{
+<Button type="primary" className='cart-btn-icon' onClick={()=>{
     setItems((js)=>
     js.map((si,ind)=>{
       if(si.name === e.name){
@@ -231,7 +231,7 @@ return (
       <div className='cart-quantity'>
       {e.quantity}
       </div>
-      <Button  type="primary" className='cart-btn-icon'  
+      <Button   type="primary" className='cart-btn-icon'  
                 onClick={()=>{
                   setItems((js)=>
                   js.map((si,ind)=>{

@@ -58,7 +58,7 @@
 }
 
 .home-item-section .card .image-container .cart-btn .cart-btn-icon {
-
+    padding-bottom:7px;
     font-weight: bold;
     height: 16px;
     width: 2px;
