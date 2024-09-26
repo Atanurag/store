@@ -1,11 +1,15 @@
+import React,{ useContext } from 'react';
 import { InfoCircleOutlined ,CloseOutlined, MenuUnfoldOutlined, SearchOutlined, ShoppingOutlined } from '@ant-design/icons';
 import { Routes, Route, Link, useNavigate} from 'react-router-dom';
 import { Divider, Flex, Tag, Button, Layout, Input, Row, Col, Switch, Card, Badge, Select } from 'antd';
 import '../assests/css/Category.css'
+import { CartProvider } from '../components/CartContext';
 const Category = ()=>{
+  cart, addToCart, removeFromCart, updateQuantity 
+  const {cart} = useContext(CartProvider) ;
     return (<>
     <div className='category'>
-
+{cart[0]}
     
 
    <div style={{height:'100px',backgroundColor:'#444444',padding:'0 12px',display:'flex',alignItems:'end'}}>
