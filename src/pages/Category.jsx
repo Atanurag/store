@@ -13,7 +13,7 @@ const Category = ()=>{
     description: 'Lentil and vegetable stew',
     price: 40,
     isVeg: true,
-    tag: 'Accompaniment',
+    tag: 'Abcd tag',
     quantity: 0,
     img: 'https://c1.staticflickr.com/5/4610/27981857169_5234a6db7d_b.jpg',
   },
