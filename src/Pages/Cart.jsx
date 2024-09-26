@@ -67,32 +67,34 @@ const Cart = () => {
           </Col>
           <Col className="gutter-row" span={9}>
             <div >
-              <span style={{ fontSize: '13px', fontWeight: 'bold' }}>Oreo Choco cream choclate</span>
+              <span style={{ fontSize: '12px', fontWeight:600,fontFamily: 'Poppins, sans-serif',  }}>Oreo Choco cream choclate</span>
 
-              <div style={{ fontSize: '11px' }}>6 pieces</div>
+              <div style={{ fontSize: '10px',fontFamily: 'Poppins, sans-serif' }}>6 pieces</div>
             </div>
           </Col>
           <Col className="gutter-row" span={6}>
             <div style={{
               marginTop: '8px',
-              width: '80px',
-              height: '35px',
+              marginleft:'9px',
+              width: '75px',
+              height: '30px',
               boxShadow: '0 0.5px 1px rgba(0, 0, 0, 0.3), 0 -0.5px 1px rgba(0, 0, 0, 0.3), 0.5px 0 1px rgba(0, 0, 0, 0.3), -0.5px 0 1px rgba(0, 0, 0, 0.3)',
               borderRadius: 15,
               backgroundColor: '#fff',
               display: 'flex',
               justifyContent: 'space-around',
               alignItems: 'center',
-              color: '#1677ff'
+              color: '#1677ff',
+             
             }}>
-              <div style={{ fontSize: '20px', padding: '12px', fontWeight: 'bold' }}>-</div>
+              <div style={{ fontSize: '16px', padding: '10px',  fontWeight:600,fontFamily: 'Poppins, sans-serif',  }}>-</div>
               6
-              <div style={{ fontSize: '19px', padding: '12px', fontWeight: 'bold' }}>+</div>
+              <div style={{ fontSize: '16px', padding: '10px',  fontWeight:600,fontFamily: 'Poppins, sans-serif',}}>+</div>
 
             </div>
           </Col>
           <Col className="gutter-row" span={4}>
-            <div style={{ fontSize: '16px', fontWeight: 'bold', marginTop: '14px', textAlign: 'right' }}>₹ 60</div>
+            <div style={{ fontSize: '16px', fontWeight:600,fontFamily: 'Poppins, sans-serif', marginTop: '14px', textAlign: 'right' }}>₹ 60</div>
           </Col>
         </Row>
         <Divider />
