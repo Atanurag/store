@@ -214,14 +214,14 @@ const Cart = () => {
       </div>
 
 
-      <Card
+      {/* <Card
         style={{
           margin: '12px',
           boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
           borderRadius: 4,
           backgroundColor: '#fff',
         }}>
-        <p style={{ textAlign: 'center', marginBottom: '12px', color:'white',fontWeigt:500,fontFamily: 'Poppins, sans-serif' }}>Please Verify Phone Number</p>
+        <p style={{ textAlign: 'center', marginBottom: '12px', fontWeight: 600 ,fontFamily: 'Poppins, sans-serif'}}>Please Verify Phone Number</p>
         <Input inputMode="numeric" placeholder='Phone Number' style={{ fontSize: '16px', textAlign: 'center' }} onKeyDown={(event) => {
           if (!/[0-9]/.test(event.key) &&
             event.key !== "Backspace" && event.key !== "Delete"
@@ -249,7 +249,7 @@ const Cart = () => {
           borderRadius: 4,
           backgroundColor: '#fff',
         }}>
-        <p style={{ textAlign: 'center', marginBottom: '12px', fontWeight: 'bold' }}>Please Enter OTP</p>
+        <p style={{ textAlign: 'center', marginBottom: '12px', fontWeight: 600 ,fontFamily: 'Poppins, sans-serif'}}>Please Enter OTP</p>
         <InputOTP  autoComplete="one-time-code" autoFocus={true}  className="custom-otp-input"
           inputMode="numeric" inputRegex={/^\d+$/}
         />
@@ -258,14 +258,14 @@ const Cart = () => {
           //verifyOtp(phoneNumber, otpValue)
         }}> Verify OTP</Button>
 
-        <Button  style={{ width: '100%', marginTop: '15px', fontSize: '16px', padding: '18px',color:'white',fontFamily: 'Poppins, sans-serif' }} onClick={() => {
+        <Button  style={{ width: '100%', marginTop: '15px', fontSize: '16px', padding: '18px',fontFamily: 'Poppins, sans-serif' }} onClick={() => {
           // setOtpValue([]);
           // otpFocusRef.current[0].focus()
           // sendOtp(phoneNumber)
         }}> Resend OTP</Button>
          
        
-    </Card>
+    </Card> */}
 
   </div >
 
