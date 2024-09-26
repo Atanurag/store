@@ -117,7 +117,7 @@ Array(5).fill('*').map((e,i)=>{
 
 { recentSearch && <>
 <div style={{display:'flex',justifyContent:'space-between',margin:'20px 15px '}}>
-<p style={{fontSize:'14px',fontWeight:'bold'}}>Your Recent Searches</p>
+<p style={{fontSize:'14px',fontWeight:600,fontFamily: 'Poppins, sans-serif'}}>Your Recent Searches</p>
 
 </div>
 
@@ -131,11 +131,13 @@ return (
 
 <div style={{
 borderRadius: '30px',
-padding: '8px',
+padding: '6px',
 border: '1px solid black',
 textAlign: 'center',
 marginRight: '12px',
-whiteSpace: 'nowrap' 
+whiteSpace: 'nowrap',
+fontFamily: 'Poppins, sans-serif',
+fontSize:'14px'
 }}>Chilly Sause</div>    
 
 
@@ -157,7 +159,7 @@ whiteSpace: 'nowrap'
 
 
 <div style={{display:'flex',justifyContent:'space-between',margin:'20px 15px '}}>
-<p style={{fontSize:'14px',fontWeight:'bold'}}>Popular Searches</p>
+<p style={{fontSize:'14px',fontWeight:600,fontFamily: 'Poppins, sans-serif'}}>Popular Searches</p>
 
 </div>
 
@@ -171,11 +173,13 @@ return (
 
 <div style={{
 borderRadius: '30px',
-padding: '8px',
+padding: '6px',
 border: '1px solid black',
 textAlign: 'center',
 marginRight: '12px',
-whiteSpace: 'nowrap' 
+whiteSpace: 'nowrap',
+fontFamily: 'Poppins, sans-serif',
+fontSize:'14px'
 }}>Chilly Sause</div>    
 
 
@@ -196,7 +200,7 @@ whiteSpace: 'nowrap'
 
 
 <div style={{display:'flex',justifyContent:'space-between',margin:'20px 15px '}}>
-<p style={{fontSize:'14px',fontWeight:'bold'}}>Popular Brands</p>
+<p  style={{fontSize:'14px',fontWeight:600,fontFamily: 'Poppins, sans-serif'}}>Popular Brands</p>
 
 </div>
 
@@ -210,7 +214,7 @@ return (
 
 <div style={{  backgroundColor: "#edeef0",borderRadius:'4px',height:'50px',width:'50px'}}></div>
 
-<p style={{fontSize:'12px',fontWeight:'600',color:'gray'}}>Top seller</p>
+<p style={{fontSize:'10px',fontWeight:600,fontFamily: 'Poppins, sans-serif',color:'gray'}}>Top seller</p>
 </div>
 </>
 )
@@ -225,7 +229,7 @@ return (
 
 
 <div style={{display:'flex',justifyContent:'space-between',margin:'20px 15px '}}>
-<p style={{fontSize:'14px',fontWeight:'bold'}}>Popular Categories</p>
+<p style={{fontSize:'14px',fontWeight:600,fontFamily: 'Poppins, sans-serif'}}>Popular Categories</p>
 
 </div>
 
@@ -239,7 +243,7 @@ return (
 
 <div style={{  backgroundColor: "#edeef0",borderRadius:'4px',height:'50px',width:'50px'}}></div>
 
-<p style={{fontSize:'12px',fontWeight:'600',color:'gray'}}>Top seller</p>
+<p style={{fontSize:'10px',fontWeight:600,fontFamily: 'Poppins, sans-serif',color:'gray'}}>Top seller</p>
 </div>
 </>
 )
