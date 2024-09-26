@@ -42,9 +42,9 @@ const Home = () => {
 <div className='home-main'>
 <div style={{height:'150px',backgroundColor:'#444444',padding:'0 12px',display:'flex',alignItems:'center'}}>
 
-<div style={{padding:'4px',width:'100%',display:'flex',justifyContent:'space-between',border:'1px solid red'}}>
+<div style={{padding:'4px',width:'100%',display:'flex',justifyContent:'space-between'}}>
 
-<div style={{display:'flex',width:'230px',alignItems:'center',justifyContent:'space-around',border:'1px solid yellow'}}>
+<div style={{display:'flex',width:'230px',alignItems:'center',justifyContent:'space-around'}}>
 
 <div style={{height:'70px',width:'70px',backgroundColor:'white',borderRadius:'4px'}}></div>
 <div style={{display:'flex',flexDirection:'column',justifyContent:'space-between'}}>
@@ -58,7 +58,7 @@ const Home = () => {
 </div>
 
 
-<div style={{display:'flex',width:'30%',border:'1px solid blue',justifyContent:'flex-end',gap:'20px'}}>
+<div style={{display:'flex',width:'30%',justifyContent:'flex-end',gap:'20px'}}>
 {totalItems > 0 && <span style={{position:'relative'}}>
         <ShoppingOutlined  style={{fontSize:'22px',color:'white'}}/>
          <div style={{ position: 'absolute', background: 'red', top:'-4px', borderRadius: '50%', color: 'white', padding: '10px', fontSize:'13px',height: '12px', width: '12px', fontWeight:600, left: '13px', display: 'flex', justifyContent: "center", alignItems: 'center' ,fontFamily: 'Poppins, sans-serif'}}>{totalItems}</div>
@@ -217,7 +217,7 @@ const Home = () => {
 
 
 {/* overflowX:'auto' */}
-<div style={{ height: 150, backgroundColor: "#edeef0",width:'100%',padding:'20px 15px', marginBottom:'40px'}}>
+<div style={{ height: 150, backgroundColor: "#edeef0",width:'100%',padding:'20px 15px', marginBottom:totalItems > 0 ? '40px':'5px'}}>
   <div
     style={{
       display: "flex",
