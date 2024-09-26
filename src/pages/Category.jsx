@@ -195,7 +195,7 @@ return (
   <img  src={e.img} alt=""  style={{display: 'block',height:'100%',width:'100%',objectFit:'cover',borderRadius:'4px'}}/>
   {e.quantity  <1?
      <><div style={{position:'absolute',bottom:'3px',right:'3px'}}>
-    <Button style={{paddingBottom:'3px',fontWeight:'bold'}} type="primary" size={'small'} onClick={()=>{
+    <Button style={{paddingBottom:'2px',fontWeight:'bold'}} type="primary" size={'small'} onClick={()=>{
       
         setItems((js)=>
         js.map((si,ind)=>{
