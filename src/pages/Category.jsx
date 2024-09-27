@@ -134,7 +134,13 @@ const Category = ()=>{
          <div style={{ position: 'absolute', background: 'red', top:'-10px', borderRadius: '50%', color: 'white', padding: '10px', fontSize:'13px',height: '12px', width: '12px', fontWeight:600, left: '13px', display: 'flex', justifyContent: "center", alignItems: 'center' ,fontFamily: 'Poppins, sans-serif'}}>{totalItems}</div>
 
   </span></Link>}
-    <span> <MenuUnfoldOutlined style={{fontSize:'22px',color:'white'}} /></span>
+    <span>
+    <svg style={{fontSize:'22px',color:'white',height:'26px'}} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+</svg>
+
+       {/* <MenuUnfoldOutlined style={{fontSize:'22px',color:'white'}} />*/}
+       </span> 
 </div>
 </div>
 
