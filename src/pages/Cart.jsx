@@ -312,7 +312,8 @@ const Cart = () => {
           Confirm
         </Button>
         <div style={{display:'flex',justifyContent:'flex-end',margin:'20px 15px '}} onClick={()=>{
-        setShowCart(true)
+        setShowCart(true);
+        setCurrentProgress(1);
       }}>
   <p style={{fontWeight:500,fontSize:'13px',color:'#1677ff',textDecoration:'underline',fontFamily: 'Poppins, sans-serif'}}> <ArrowLeftOutlined style={{marginRight:'4px'}}/>  Back to Cart</p>
 </div>
