@@ -60,7 +60,7 @@ const Cart = () => {
           margin: '12px',
           boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)', // updated box shadow
           borderRadius: 4, // add a subtle border radius
-
+          transition: 'background-color 300ms', 
           backgroundColor: '#fff', // set a white background color
         }}
       >
