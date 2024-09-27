@@ -262,7 +262,7 @@ const Home = () => {
 
 
 
-<div  className='category-container' style={{display:'flex',justifyContent:'space-around', overflowX:'auto',marginTop:'15px',marginLeft:'15px',marginRight:'15px',marginBottom:totalItems > 0 ? '40px':'15px'}}>
+<div  className='category-container' style={{display:'flex',justifyContent:'space-around', overflowX:'auto',marginTop:'15px',marginLeft:'15px',marginRight:'15px',marginBottom:totalItems > 0 ? '50px':'15px'}}>
 
 {Array(5).fill('*').map((e,i)=>{
   return (
