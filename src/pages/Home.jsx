@@ -86,6 +86,66 @@ const Home = () => {
 
 
 
+
+
+
+
+{/* overflowX:'auto' */}
+<div style={{ height: 150, backgroundColor: "#edeef0",width:'100%',padding:'20px 15px', }}>
+  <div
+    style={{
+      display: "flex",
+      justifyContent: "space-between",
+      marginTop:'2px',
+      marginBottom:'15px'
+      
+    }}
+  >
+    <p style={{fontSize:'15px',fontWeight:600,fontFamily: 'Poppins, sans-serif'}}>Crazy Deals</p>
+    <Link to='/category' style={{fontWeight:500,fontSize:'13px',color:'#1677ff',textDecoration:'underline',fontFamily: 'Poppins, sans-serif'}}>View All</Link>
+
+  </div>
+
+  
+<div className='category-container' style={{display:'flex',justifyContent:'space-around', overflowX:'scroll'}}>
+{
+  Array(4).fill('*').map((e,i)=>{
+    return (
+      <><div className='offer-card'  style={{backgroundColor:'rgb(209 209 209)',display:'flex',minWidth:'200px',alignItems:'center',justifyContent:'space-between',borderRadius:'5px',marginRight:'12px'}}>
+
+      <div style={{ backgroundColor: "#edeef0",height:'70px',width:'70px',backgroundColor:'white',borderRadius:'4px'}}></div>
+      <div style={{display:'flex',flexDirection:'column',textAlign:'left',padding:'5px',gap:'3px'}}>
+      <p style={{fontSize:'10px',fontFamily: 'Poppins, sans-serif'}}>Match Day Mania</p>
+      <p style={{fontSize:'12px',fontWeight:600,fontFamily: 'Poppins, sans-serif'}}>Flat ₹ 125 Off</p>
+      
+      <span style={{fontSize:'10px',fontFamily: 'Poppins, sans-serif'}}>On orders above ₹ 455</span>
+      </div>
+      
+      
+      </div>
+      </>
+    )
+  })
+
+}
+
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
 <div style={{display:'flex',justifyContent:'space-between',margin:'20px 15px '}}>
   <p style={{fontSize:'15px',fontWeight:600,fontFamily: 'Poppins, sans-serif'}}>Your Favourites</p>
   <Link to='/category' style={{fontWeight:500,fontSize:'13px',color:'#1677ff',textDecoration:'underline',fontFamily: 'Poppins, sans-serif'}}>View All</Link>
@@ -202,7 +262,7 @@ const Home = () => {
 
 
 
-<div  className='category-container' style={{display:'flex',justifyContent:'space-around', overflowX:'auto',margin:'15px'}}>
+<div  className='category-container' style={{display:'flex',justifyContent:'space-around', overflowX:'auto',marginTop:'15px',marginLeft:'15px',marginRight:'15px',marginBottom:totalItems > 0 ? '40px':'15px'}}>
 
 {Array(5).fill('*').map((e,i)=>{
   return (
@@ -222,54 +282,6 @@ const Home = () => {
 </div>
 
 
-
-{/* overflowX:'auto' */}
-<div style={{ height: 150, backgroundColor: "#edeef0",width:'100%',padding:'20px 15px', marginBottom:totalItems > 0 ? '40px':'5px'}}>
-  <div
-    style={{
-      display: "flex",
-      justifyContent: "space-between",
-      marginTop:'2px',
-      marginBottom:'15px'
-      
-    }}
-  >
-    <p style={{fontSize:'15px',fontWeight:600,fontFamily: 'Poppins, sans-serif'}}>Crazy Deals</p>
-    <Link to='/category' style={{fontWeight:500,fontSize:'13px',color:'#1677ff',textDecoration:'underline',fontFamily: 'Poppins, sans-serif'}}>View All</Link>
-
-  </div>
-
-  
-<div className='category-container' style={{display:'flex',justifyContent:'space-around', overflowX:'scroll'}}>
-{
-  Array(4).fill('*').map((e,i)=>{
-    return (
-      <><div className='offer-card'  style={{backgroundColor:'rgb(209 209 209)',display:'flex',minWidth:'200px',alignItems:'center',justifyContent:'space-between',borderRadius:'5px',marginRight:'12px'}}>
-
-      <div style={{ backgroundColor: "#edeef0",height:'70px',width:'70px',backgroundColor:'white',borderRadius:'4px'}}></div>
-      <div style={{display:'flex',flexDirection:'column',textAlign:'left',padding:'5px',gap:'3px'}}>
-      <p style={{fontSize:'10px',fontFamily: 'Poppins, sans-serif'}}>Match Day Mania</p>
-      <p style={{fontSize:'12px',fontWeight:600,fontFamily: 'Poppins, sans-serif'}}>Flat ₹ 125 Off</p>
-      
-      <span style={{fontSize:'10px',fontFamily: 'Poppins, sans-serif'}}>On orders above ₹ 455</span>
-      </div>
-      
-      
-      </div>
-      </>
-    )
-  })
-
-}
-
-
-
-
-</div>
-
-
-
-</div>
 
 
 
