@@ -6,40 +6,40 @@ import { CartContext } from '../components/CartContext';
 import '../assests/css/Home.css'
 const Home = () => {
 
-  const {cart,totalItems,totalAmount,addToCart,removeFromCart} = useContext(CartContext);
-  const [items,setItems]= useState([
-    {
-      name: 'Masala Dosa',
-      description: 'Dosa stuffed with spiced potato filling',
-      price: 60,
-      isVeg: true,
-      tag: 'Main Course',
-      quantity: 0,
-      gram:'100 g',
-      img: 'https://media.istockphoto.com/id/183321245/photo/south-indian-crepe-masala-dosa.jpg?s=612x612&w=0&k=20&c=c6Z7P5uovp2M9JVS0rlS8nCKRL73QkTYRyL7FK348Os=',
-    },
-      {
-        name: 'Pav Bhaji',
-        description: 'Spiced mixture of mashed vegetables in a thick gravy served with pav',
-        price: 40,
-        isVeg: true,
-        tag: 'Classic',
-        quantity: 0,
-        gram:'100 g',
-        img: 'https://w0.peakpx.com/wallpaper/805/956/HD-wallpaper-food-delicious-food-food-holidays-indian-indian-food-pav-bhaji-spicy-food-street-food.jpg',
-      },
-      {
-        name: 'Filter Coffee',
-        description:
-          'Strong coffee brewed in a traditional South Indian filter',
-        price: 1,
-        isVeg: true,
-        tag: 'Beverage',
-        quantity: 0,
-        gram:'20 g',
-        img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbJz_8ItU9p_au1RhX_uEZXEXpaAOB1nSCPQ&s'
-      },]
-  )
+  const {items,cart,totalItems,totalAmount,addToCart,removeFromCart,increaseItemToOne,increaseItem ,decreaseItem} = useContext(CartContext);
+  // const [items,setItems]= useState([
+  //   {
+  //     name: 'Masala Dosa',
+  //     description: 'Dosa stuffed with spiced potato filling',
+  //     price: 60,
+  //     isVeg: true,
+  //     tag: 'Main Course',
+  //     quantity: 0,
+  //     gram:'100 g',
+  //     img: 'https://media.istockphoto.com/id/183321245/photo/south-indian-crepe-masala-dosa.jpg?s=612x612&w=0&k=20&c=c6Z7P5uovp2M9JVS0rlS8nCKRL73QkTYRyL7FK348Os=',
+  //   },
+  //     {
+  //       name: 'Pav Bhaji',
+  //       description: 'Spiced mixture of mashed vegetables in a thick gravy served with pav',
+  //       price: 40,
+  //       isVeg: true,
+  //       tag: 'Classic',
+  //       quantity: 0,
+  //       gram:'100 g',
+  //       img: 'https://w0.peakpx.com/wallpaper/805/956/HD-wallpaper-food-delicious-food-food-holidays-indian-indian-food-pav-bhaji-spicy-food-street-food.jpg',
+  //     },
+  //     {
+  //       name: 'Filter Coffee',
+  //       description:
+  //         'Strong coffee brewed in a traditional South Indian filter',
+  //       price: 1,
+  //       isVeg: true,
+  //       tag: 'Beverage',
+  //       quantity: 0,
+  //       gram:'20 g',
+  //       img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbJz_8ItU9p_au1RhX_uEZXEXpaAOB1nSCPQ&s'
+  //     },]
+  // )
   //const [cart,setCart] =useState([]);
     return (
         <>
@@ -102,37 +102,39 @@ const Home = () => {
      <><div style={{position:'absolute',bottom:'3px',right:'3px'}}>
     <Button style={{paddingBottom:'1px',fontWeight:'bold'}} type="primary" size={'small'} onClick={()=>{
       
-        setItems((js)=>
-        js.map((si,ind)=>{
-          if(si.name === e.name){
-            return {
-              ...si,
-              quantity : 1
-            }
-          }
-          return si;
-        })
-        )
+        // setItems((js)=>
+        // js.map((si,ind)=>{
+        //   if(si.name === e.name){
+        //     return {
+        //       ...si,
+        //       quantity : 1
+        //     }
+        //   }
+        //   return si;
+        // })
+        // )
       addToCart(e);
+      increaseItemToOne(e);
       //console.log(cart)
     }}>+</Button>
     </div></>:<>
     <div className='cart-btn'>
 
 <Button type="primary" className='cart-btn-icon' onClick={()=>{
-    setItems((js)=>
-    js.map((si,ind)=>{
-      if(si.name === e.name){
-        return {
-          ...si,
-          quantity : si.quantity-=1
-        }
-      }
-      return si;
-    })
-    )
+    // setItems((js)=>
+    // js.map((si,ind)=>{
+    //   if(si.name === e.name){
+    //     return {
+    //       ...si,
+    //       quantity : si.quantity-=1
+    //     }
+    //   }
+    //   return si;
+    // })
+    // )
 
     removeFromCart(e);
+    decreaseItem(e);
     }}>-</Button>
 
       <div className='cart-quantity'>
@@ -140,18 +142,19 @@ const Home = () => {
       </div>
       <Button   type="primary" className='cart-btn-icon'  
                 onClick={()=>{
-                  setItems((js)=>
-                  js.map((si,ind)=>{
-                    if(si.name === e.name){
-                      return {
-                        ...si,
-                        quantity : si.quantity+=1
-                      }
-                    }
-                    return si;
-                  })
-                  )
+                  // setItems((js)=>
+                  // js.map((si,ind)=>{
+                  //   if(si.name === e.name){
+                  //     return {
+                  //       ...si,
+                  //       quantity : si.quantity+=1
+                  //     }
+                  //   }
+                  //   return si;
+                  // })
+                  // )
                   addToCart(e);
+                  increaseItem(e);
 
                 }}
 >+</Button>
