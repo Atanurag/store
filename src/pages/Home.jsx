@@ -7,6 +7,17 @@ import '../assests/css/Home.css'
 const Home = () => {
 
   const {items,cart,totalItems,totalAmount,addToCart,removeFromCart,increaseItemToOne,increaseItem ,decreaseItem} = useContext(CartContext);
+  const isDesktop = () => {
+    const userAgent = navigator.userAgent;
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent);
+    return !isMobile;
+  };
+  // if(isDesktop()){
+  //   alert('pepepe')
+  // }
+  // else{
+    
+  // }
   // const [items,setItems]= useState([
   //   {
   //     name: 'Masala Dosa',
