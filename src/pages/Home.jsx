@@ -153,7 +153,7 @@ const Home = () => {
 
 <div style={{display:'flex',justifyContent:'space-between' ,margin:'15px'}}>
 
-{items.map((e,i)=>{
+{items.slice(0,3).map((e,i)=>{
   return (<>
   <div className='card'>
   <div className='image-container'>
