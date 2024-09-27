@@ -183,7 +183,7 @@ return (
 
 
 <div style={{display:'flex',justifyContent:'space-between',margin:'20px 15px '}}>
-  <p style={{fontSize:'15px',fontWeight:600,fontFamily: 'Poppins, sans-serif'}}>Dry Fruits</p>
+  <p style={{fontSize:'15px',fontWeight:600,fontFamily: 'Poppins, sans-serif'}}>Abc Items</p>
 </div>
 {/* addToCart */}
 <div style={{display:'flex',justifyContent:'space-between' ,margin:'9px',flexWrap:'wrap'}}>
