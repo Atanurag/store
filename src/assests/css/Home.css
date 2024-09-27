@@ -65,6 +65,7 @@
 }
 
 .home-item-section .card .image-container .cart-btn .cart-quantity {
+    font-family: 'Poppins', sans-serif;
     color: white;
     width: 50px;
     font-weight: 500;
