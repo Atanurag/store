@@ -8,11 +8,13 @@ import '../assests/css/Cart.css'
 const Cart = () => {
   const {cart,totalItems,totalAmount,addToCart,removeFromCart} = useContext(CartContext);
   const [currentProgress, setCurrentProgress] = useState( cart.length > 0 ? 1:0)
+  const [showCart, setShowCart] = useState(true);
   const navigate = useNavigate();
   const style = {
     background: '#0092ff',
     padding: '8px 0',
   };
+  
   return (<>
     <div className='cart'>
       <div style={{ color: 'white', height: '100px', backgroundColor: '#444444', padding: '0 12px', display: 'flex', alignItems: 'center', justifyContent: 'start', }}>
@@ -53,7 +55,7 @@ const Cart = () => {
         /></div>
 
 
-      {cart.length > 0 ?  <><Card
+      {cart.length > 0 && showCart ?  <><Card
         style={{
           margin: '12px',
           boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)', // updated box shadow
@@ -262,22 +264,27 @@ const Cart = () => {
       </Card>
 
 
-      <div style={{ padding: '0px 12px', backgroundColor: '#1677ff', height: '40px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '94%', borderRadius: '4px', margin: '12px auto' }}>
+      <div style={{ padding: '0px 12px', backgroundColor: '#1677ff', height: '40px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '94%', borderRadius: '4px', margin: '12px auto' }} onClick={()=>{
+        setShowCart(false)
+      }}>
 
         <span style={{ color:'white',fontWeigt:500,fontFamily: 'Poppins, sans-serif' }}>Make Payment</span>
         <span style={{color:'white',fontWeigt:500,fontFamily: 'Poppins, sans-serif' }}>₹ {totalAmount}</span>
-      </div> </> :<div  style={{
-  position: 'absolute',
-  bottom: 5,
-  left: 0,
-  right: 0,
-  textAlign: 'center',
-}}>
-  <Button type='primary' style={{margin: 'auto'}}>Please add Items to cart</Button>
-</div> }
+      </div> </> :
+      ''
+//       <div  style={{
+//   position: 'absolute',
+//   bottom: 5,
+//   left: 0,
+//   right: 0,
+//   textAlign: 'center',
+// }}>
+//   <Button type='primary' style={{margin: 'auto'}}>Please add Items to cart</Button>
+// </div>
+ }
 
 
-      {/* <Card
+      {!showCart  && <Card
         style={{
           margin: '12px',
           boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
@@ -303,9 +310,14 @@ const Cart = () => {
         }}>
           Confirm
         </Button>
-      </Card>
+        <div style={{display:'flex',justifyContent:'flex-end',margin:'20px 15px '}} onClick={()=>{
+        setShowCart(true)
+      }}>
+  <p style={{fontWeight:500,fontSize:'13px',color:'#1677ff',textDecoration:'underline',fontFamily: 'Poppins, sans-serif'}}> <ArrowLeftOutlined style={{marginRight:'4px'}}/>  Back to Cart</p>
+</div>
+      </Card>}
 
-      <Card
+      {/* <Card
         style={{
           margin: '12px',
           boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
@@ -327,7 +339,9 @@ const Cart = () => {
           // sendOtp(phoneNumber)
         }}> Resend OTP</Button>
          
-       
+         <div style={{display:'flex',justifyContent:'flex-end',margin:'20px 15px '}}>
+  <p style={{fontWeight:500,fontSize:'13px',color:'#1677ff',textDecoration:'underline',fontFamily: 'Poppins, sans-serif'}}> <ArrowLeftOutlined style={{marginRight:'4px'}}/>  Back to Cart</p>
+</div>
     </Card> */}
 
   </div >
