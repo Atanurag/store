@@ -111,7 +111,7 @@ const Home = () => {
 {
   Array(4).fill('*').map((e,i)=>{
     return (
-      <><div className='offer-card'  style={{backgroundColor:'rgb(209 209 209)',display:'flex',minWidth:'200px',alignItems:'center',justifyContent:'space-between',borderRadius:'5px',marginRight:'12px'}}>
+      <><div key={i} className='offer-card'  style={{backgroundColor:'rgb(209 209 209)',display:'flex',minWidth:'200px',alignItems:'center',justifyContent:'space-between',borderRadius:'5px',marginRight:'12px'}}>
 
       <div style={{ backgroundColor: "#edeef0",height:'70px',width:'70px',backgroundColor:'white',borderRadius:'4px'}}></div>
       <div style={{display:'flex',flexDirection:'column',textAlign:'left',padding:'5px',gap:'3px'}}>
@@ -155,7 +155,7 @@ const Home = () => {
 
 {items.slice(0,3).map((e,i)=>{
   return (<>
-  <div className='card'>
+  <div key={i} className='card'>
   <div className='image-container'>
   <img  src={e.img} alt=""  style={{display: 'block',height:'100%',width:'100%',objectFit:'cover',borderRadius:'4px'}}/>
   {e.quantity < 1?
@@ -266,7 +266,7 @@ const Home = () => {
 
 {Array(5).fill('*').map((e,i)=>{
   return (
-    <><div  className= 'category-card' style={{ marginRight:'9px',width:'100px',display:'flex',flexDirection:'column',gap:'6px'}}>
+    <><div key={i} className= 'category-card' style={{ marginRight:'9px',width:'100px',display:'flex',flexDirection:'column',gap:'6px'}}>
 
     <div style={{  backgroundColor: "#edeef0",borderRadius:'4px',height:'80px',width:'80px'}}></div>
     

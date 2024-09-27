@@ -150,7 +150,7 @@ const Category = ()=>{
 
 {items.slice(3).map((e,i)=>{
 return (
-<><div  className= 'category-card' style={{ marginRight:'10px',width:'100px',display:'flex',flexDirection:'column',gap:'6px',alignItems:'start'}}>
+<><div key={i}  className= 'category-card' style={{ marginRight:'10px',width:'100px',display:'flex',flexDirection:'column',gap:'6px',alignItems:'start'}}>
 
 <div style={{  backgroundColor: "#edeef0",borderRadius:'4px',height:'50px',width:'50px'}}></div>
 
@@ -190,7 +190,7 @@ return (
 
 {items.slice(3).map((e,i)=>{
   return (<>
-  <div className='card'>
+  <div key={i} className='card'>
   <div className='image-container'>
   <img  src={e.img} alt=""  style={{display: 'block',height:'100%',width:'100%',objectFit:'cover',borderRadius:'4px'}}/>
   {e.quantity  <1?
