@@ -186,7 +186,7 @@ return (
   <p style={{fontSize:'15px',fontWeight:600,fontFamily: 'Poppins, sans-serif'}}>Dry Fruits</p>
 </div>
 {/* addToCart */}
-<div style={{display:'flex',justifyContent:'space-between' ,margin:'15px',flexWrap:'wrap'}}>
+<div style={{display:'flex',justifyContent:'space-between' ,margin:'9px',flexWrap:'wrap'}}>
 
 {items.slice(3).map((e,i)=>{
   return (<>

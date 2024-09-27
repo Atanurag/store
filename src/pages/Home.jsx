@@ -152,7 +152,7 @@ const Home = () => {
   <Link to='/category' style={{fontWeight:500,fontSize:'13px',color:'#1677ff',textDecoration:'underline',fontFamily: 'Poppins, sans-serif'}}>View All</Link>
 </div>
 
-<div style={{display:'flex',justifyContent:'space-between' ,margin:'15px'}}>
+<div style={{display:'flex',justifyContent:'space-between' ,margin:'9px'}}>
 
 {items.slice(0,3).map((e,i)=>{
   return (<>
