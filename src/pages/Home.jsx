@@ -238,7 +238,7 @@ const Home = () => {
 
   </div>
 
-<div style={{width:'100px'}}>
+<div style={{width:'110px'}}>
   <p style={{fontSize:'10px',color:'gray',fontFamily: 'Poppins, sans-serif'}}>{e.tag}</p>
   <span style={{fontSize:'12px',fontWeight:500,fontFamily: 'Poppins, sans-serif'}}>{e.name}</span>
   <div style={{display:'flex',justifyContent:'space-between'}}>
