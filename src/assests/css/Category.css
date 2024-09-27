@@ -149,6 +149,9 @@
     width: 2px;
 }
 
+.category-item-section .card .image-container .cart-btn .ant-btn-primary.ant-btn-solid:not(:disabled):not(.ant-btn-disabled):hover {
+    background: none;
+}
 .category-item-section .card .image-container .cart-btn .cart-quantity {
     font-family: 'Poppins', sans-serif;
     color: white;
