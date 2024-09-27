@@ -195,7 +195,7 @@ return (
   <img  src={e.img} alt=""  style={{display: 'block',height:'100%',width:'100%',objectFit:'cover',borderRadius:'4px'}}/>
   {e.quantity  <1?
      <><div style={{position:'absolute',bottom:'3px',right:'3px'}}>
-    <Button style={{paddingBottom:'1px',fontWeight:'bold'}} type="primary" size={'small'} onClick={()=>{
+    <Button style={{paddingBottom:'0.5px',fontWeight:'bold'}} type="primary" size={'small'} onClick={()=>{
       
         // setItems((js)=>
         // js.map((si,ind)=>{
@@ -274,7 +274,7 @@ return (
 
   </div>
 
-<div style={{width:'100px'}}>
+<div style={{width:'110px'}}>
   <p style={{fontSize:'10px',color:'gray',fontFamily: 'Poppins, sans-serif'}}>{e.tag}</p>
   <span style={{fontSize:'12px',fontWeight:500,fontFamily: 'Poppins, sans-serif'}}>{e.name}</span>
   <div style={{display:'flex',justifyContent:'space-between'}}>
