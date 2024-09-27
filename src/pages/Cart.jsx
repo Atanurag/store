@@ -266,6 +266,7 @@ const Cart = () => {
 
       <div style={{ padding: '0px 12px', backgroundColor: '#1677ff', height: '40px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '94%', borderRadius: '4px', margin: '12px auto' }} onClick={()=>{
         setShowCart(false)
+        setCurrentProgress(2);
       }}>
 
         <span style={{ color:'white',fontWeigt:500,fontFamily: 'Poppins, sans-serif' }}>Make Payment</span>
