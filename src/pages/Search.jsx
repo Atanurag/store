@@ -11,7 +11,8 @@ const [searchedCategory, setSearchedCategory] = useState(false);
 const navigate = useNavigate();
 //practise
 const [userInput, setUserInput] = useState('');
-const [userSearched, setUserSearched] = useState([])
+const [userSearched, setUserSearched] = useState([]);
+const [userItems, setUserItems] = useState([]);
 const getSearched = ()=>{
 
   fetch(`https://api.disneyapi.dev/character?name=${userInput}`).then((e)=>e.json()).then((data)=>{
@@ -21,6 +22,13 @@ setRecentSearch(false)
   })
 }
 
+const getRelatedItem = (userClicked)=>{
+  fetch(`https://api.disneyapi.dev/character?name=${userClicked}`).then((e)=>e.json()).then((data)=>{
+    setUserItems(data.data)
+    console.log(data)
+    //setRecentSearch(false)
+      })
+}
     return (<>
 <div style={{
     
@@ -52,10 +60,10 @@ setRecentSearch(false)
 <div  className='search-section-main' style={{marginTop:'100px'}}>
 
 {
-  searchedCategory && 
+  userItems.length > 0 && 
   <div style={{display:'flex',justifyContent:'space-between' ,margin:'15px',flexWrap:'wrap'}}>
 
-{Array(6).fill('*').map((e,i)=>{
+{userItems.map((e,i)=>{
 return (<>
 <div className='card'>
   <div className='image-container'>
@@ -108,15 +116,17 @@ return (<>
 
 
 
-{userSearched.length > 0 &&
+{(userSearched.length > 0 && userItems.length == 0)&&
 userSearched.map((e,i)=>{
   return (
       <>
-<div  style={{ display:'flex',alignItems:'center',gap:'6px',margin:'12px',padding:'4px'}} className='search-item'>
+<div  style={{ display:'flex',alignItems:'center',gap:'6px',margin:'12px',padding:'4px'}} className='search-item' onClick={()=>{
+  getRelatedItem(e.name)
+}}>
 
 <div style={{  backgroundColor: "#edeef0",borderRadius:'4px',height:'50px',width:'50px'}}></div>
 
-<p style={{fontSize:'10px',fontWeight:600,fontFamily: 'Poppins, sans-serif',color:'gray'}}>Top seller</p>
+<p style={{fontSize:'10px',fontWeight:600,fontFamily: 'Poppins, sans-serif',color:'gray'}}>{e.name}</p>
 </div>
       </>
   )
