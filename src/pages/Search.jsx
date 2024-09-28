@@ -8,13 +8,16 @@ const Search = () =>{
 const [recentSearch, setRecentSearch] = useState(true);
 const [searchedResult, setSearchedResult] = useState(false);
 const [searchedCategory, setSearchedCategory] = useState(false);
-const [userInput, setUserInput] = useState('');
 const navigate = useNavigate();
-
+//practise
+const [userInput, setUserInput] = useState('');
+const [userSearched, setUserSearched] = useState([])
 const getSearched = ()=>{
 
   fetch(`https://api.disneyapi.dev/character?name=${userInput}`).then((e)=>e.json()).then((data)=>{
 console.log(data)
+setUserSearched(data.data)
+setRecentSearch(false)
   })
 }
 
@@ -105,8 +108,8 @@ return (<>
 
 
 
-{searchedResult &&
-Array(5).fill('*').map((e,i)=>{
+{userSearched.length > 0 &&
+userSearched.map((e,i)=>{
   return (
       <>
 <div  style={{ display:'flex',alignItems:'center',gap:'6px',margin:'12px',padding:'4px'}} className='search-item'>
