@@ -364,9 +364,35 @@ const Cart = () => {
           <p style={{ fontWeight: 500, fontSize: '14px',fontFamily: 'Poppins, sans-serif', }}>Order Id</p>
           <p style={{ fontWeight: 500, fontSize: '14px',fontFamily: 'Poppins, sans-serif'}}>IGHBE5854</p>
         </div>
-
+        <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '10px' }}>
+          <p style={{ fontWeight: 500, fontSize: '14px',fontFamily: 'Poppins, sans-serif', }}>Total</p>
+          <p style={{ fontWeight: 500, fontSize: '14px',fontFamily: 'Poppins, sans-serif'}}>₹ 40</p>
+        </div>
       </Card>
-
+      
+      <Card
+        style={{
+          margin: '12px',
+          boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
+          borderRadius: 4,
+          backgroundColor: '#fff',
+        }}
+        size="small"
+      title="Order IGHBE5854"
+      >
+         <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '10px' }}>
+          <p style={{ fontWeight: 500, fontSize: '14px',fontFamily: 'Poppins, sans-serif', }}>Order Status</p>
+          <p style={{ fontWeight: 500, fontSize: '14px',fontFamily: 'Poppins, sans-serif'}}>Success</p>
+        </div>
+        <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '10px' }}>
+          <p style={{ fontWeight: 500, fontSize: '14px',fontFamily: 'Poppins, sans-serif', }}>Order Id</p>
+          <p style={{ fontWeight: 500, fontSize: '14px',fontFamily: 'Poppins, sans-serif'}}>IGHBE5854</p>
+        </div>
+        <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '10px' }}>
+          <p style={{ fontWeight: 500, fontSize: '14px',fontFamily: 'Poppins, sans-serif', }}>Total</p>
+          <p style={{ fontWeight: 500, fontSize: '14px',fontFamily: 'Poppins, sans-serif'}}>₹ 40</p>
+        </div>
+      </Card>
   </div >
 
   </>)
