@@ -8,10 +8,17 @@ const Search = () =>{
 const [recentSearch, setRecentSearch] = useState(true);
 const [searchedResult, setSearchedResult] = useState(false);
 const [searchedCategory, setSearchedCategory] = useState(false);
+const [userInput, setUserInput] = useState('');
 const navigate = useNavigate();
 
-    return (<>
+const getSearched = ()=>{
 
+  fetch(`https://api.disneyapi.dev/character?name=${userInput}`).then((e)=>e.json()).then((data)=>{
+console.log(data)
+  })
+}
+
+    return (<>
 <div style={{
     
     position:'fixed',
@@ -32,7 +39,9 @@ const navigate = useNavigate();
 }} />
 <div className='input-box' style={{margin:'15px'}}>
                       <Input  autoFocus size="large" placeholder="Search For Items..." suffix={<SearchOutlined style={{backgroundColor:'white',fontWeight:500,fontFamily: 'Poppins, sans-serif'}}/>} onChange={(e) => {
-                    
+                      setUserInput(e.target.value)
+                      getSearched();
+                      // console.log(e.target.value.length)
                       }}  />
                     </div>
 </div>
