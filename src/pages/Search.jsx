@@ -63,7 +63,7 @@ const getRelatedItem = (userClicked)=>{
   userItems.length > 0 && 
   <div style={{display:'flex',justifyContent:'space-between' ,margin:'15px',flexWrap:'wrap'}}>
 
-{userItems.map((e,i)=>{
+{[userItems].map((e,i)=>{
 return (<>
 <div className='card'>
   <div className='image-container'>
