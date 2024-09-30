@@ -181,7 +181,7 @@ return (
   <p style={{fontSize:'15px',fontWeight:600,fontFamily: 'Poppins, sans-serif'}}>{dummyChoice}</p>
 </div>
 {/* addToCart */}
-<div style={{display:'flex',justifyContent:'space-between' ,margin:'9px',flexWrap:'wrap'}}>
+<div style={{display:'flex',justifyContent:'space-between' ,marginTop:'9px', marginLeft:'9px',marginRight:'9px',flexWrap:'wrap' ,marginBottom: totalItems >0?'54px':'9px'}}>
 
 {items.filter(e=>e.tag === dummyChoice).map((e,i)=>{
   return (<>
@@ -288,6 +288,20 @@ return (
 
 
 </div>
+
+
+{ totalItems > 0 && <Link to='/cart'>
+<div style={{ left: '50%',transform: 'translateX(-50%)',position:'fixed',bottom :'10px',zIndex:'99999', backgroundColor:'#1677ff',height:'50px',display:'flex',justifyContent:'space-around',alignItems:'center',width:'90%',borderRadius:'4px'}}>
+
+<span style={{position:'relative'}}> <ShoppingOutlined  style={{fontSize:'22px',color:'white'}}/>         <div style={{ position: 'absolute', background: 'white', top:'-4px', borderRadius: '50%', color: 'red', padding: '10px', fontSize:'13px',height: '12px', width: '12px', fontWeight:600, left: '13px', display: 'flex', justifyContent: "center", alignItems: 'center' ,fontFamily: 'Poppins, sans-serif'}}>{totalItems}</div>
+</span>
+
+<span style={{color:'white',fontWeigt:500,fontFamily: 'Poppins, sans-serif'}}>View your cart</span>
+<span style={{color:'white',fontWeigt:500,fontFamily: 'Poppins, sans-serif'}}>₹ {totalAmount}</span>
+
+  </div>
+  </Link>}
+
 
 
 </div>

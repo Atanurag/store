@@ -18,6 +18,7 @@ const App = () => {
   //   return;
   // }
   
+  //category + search page huge change
   return(
     <CartProvider>
     <Routes>
