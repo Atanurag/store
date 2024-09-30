@@ -82,24 +82,12 @@ return (<>
 <div key={i} className='card'>
   <div className='image-container'>
   <img  src={e.img} alt=""  style={{display: 'block',height:'100%',width:'100%',objectFit:'cover',borderRadius:'4px'}}/>
-  {e.quantity < 1?
+  {e.quantity < 1 ?
      <><div style={{position:'absolute',bottom:'3px',right:'3px'}}>
     <Button style={{paddingBottom:'0.5px',fontWeight:'bold'}} type="primary" size={'small'} onClick={()=>{
-      
-        // setItems((js)=>
-        // js.map((si,ind)=>{
-        //   if(si.name === e.name){
-        //     return {
-        //       ...si,
-        //       quantity : 1
-        //     }
-        //   }
-        //   return si;
-        // })
-        // )
       addToCart(e);
       increaseItemToOne(e);
-      //console.log(cart)
+      console.log(e)
     }}>+</Button>
     </div></>:<>
     <div className='cart-btn'>
