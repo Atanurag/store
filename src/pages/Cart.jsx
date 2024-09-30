@@ -6,7 +6,7 @@ import { InputOTP } from "antd-input-otp";
 import { CartContext } from '../components/CartContext';
 import '../assests/css/Cart.css'
 const Cart = () => {
-  const {cart,totalItems,totalAmount,addToCart,removeFromCart} = useContext(CartContext);
+  const {items,cart,totalItems,totalAmount,addToCart,removeFromCart,increaseItemToOne,increaseItem ,decreaseItem} = useContext(CartContext);
   const [currentProgress, setCurrentProgress] = useState( cart.length > 0 ? 1:0)
   const [showCart, setShowCart] = useState(true);
   const navigate = useNavigate();
@@ -98,10 +98,12 @@ const Cart = () => {
             }}>
               <div style={{ fontSize: '16px', padding: '10px',  fontWeight:600,fontFamily: 'Poppins, sans-serif',  }} onClick={()=>{
                 removeFromCart(e);
+                decreaseItem(e);
               }}>-</div>
               {e.quantity}
               <div style={{ fontSize: '16px', padding: '10px',  fontWeight:600,fontFamily: 'Poppins, sans-serif',}} onClick={()=>{
                 addToCart(e);
+                increaseItem(e);
               }}>+</div>
 
             </div>
