@@ -1,14 +1,17 @@
-import {useState} from 'react';
+import React, {useState,useEffect,useContext} from 'react';
 import { Divider, Flex, Tag, Button, Layout, Input, Row, Col, Switch, Card, Badge } from 'antd';
 import { ArrowLeftOutlined ,InfoCircleOutlined ,CloseOutlined, MenuUnfoldOutlined, SearchOutlined, ShoppingOutlined } from '@ant-design/icons';
 import { Routes, Route, Link, useNavigate, json } from 'react-router-dom';
 import '../assests/css/Search.css'
+import { CartContext } from '../components/CartContext';
 const Search = () =>{
 
 const [recentSearch, setRecentSearch] = useState(true);
 const [searchedResult, setSearchedResult] = useState(false);
 const [searchedCategory, setSearchedCategory] = useState(false);
 const navigate = useNavigate();
+const {items,cart,totalItems,totalAmount,addToCart,removeFromCart,increaseItemToOne,increaseItem ,decreaseItem} = useContext(CartContext);
+
 //practise
 const [userInput, setUserInput] = useState('');
 const [userSearched, setUserSearched] = useState([]);
@@ -23,11 +26,12 @@ setRecentSearch(false)
 }
 
 const getRelatedItem = (userClicked)=>{
-  fetch(`https://api.disneyapi.dev/character?name=${userClicked}`).then((e)=>e.json()).then((data)=>{
-    setUserItems(data.data)
-    console.log(data)
-    //setRecentSearch(false)
-      })
+  setUserItems(items.filter((e,i)=>e.name === userClicked))
+  // fetch(`https://api.disneyapi.dev/character?name=${userClicked}`).then((e)=>e.json()).then((data)=>{
+  //   setUserItems(data.data)
+  //   console.log(data)
+  //   //setRecentSearch(false)
+  //     })
 }
     return (<>
 <div style={{
@@ -67,7 +71,7 @@ const getRelatedItem = (userClicked)=>{
 return (<>
 <div key={i} className='card'>
   <div className='image-container'>
-  <img  src={e.imageUrl} alt=""  style={{display: 'block',height:'100%',width:'100%',objectFit:'cover',borderRadius:'4px'}}/>
+  <img  src={e.img} alt=""  style={{display: 'block',height:'100%',width:'100%',objectFit:'cover',borderRadius:'4px'}}/>
   {e.quantity < 1?
      <><div style={{position:'absolute',bottom:'3px',right:'3px'}}>
     <Button style={{paddingBottom:'0.5px',fontWeight:'bold'}} type="primary" size={'small'} onClick={()=>{
@@ -210,7 +214,7 @@ userSearched.map((e,i)=>{
 
 <div  className='category-container' style={{display:'flex',justifyContent:'space-around', overflowX:'auto',margin:'15px'}}>
 
-{Array(5).fill('*').map((e,i)=>{
+{items.slice(3).map((e,i)=>{
 return (
 <>
 
@@ -223,7 +227,9 @@ marginRight: '12px',
 whiteSpace: 'nowrap',
 fontFamily: 'Poppins, sans-serif',
 fontSize:'14px'
-}}>Chilly Sause</div>    
+}} onClick={()=>{
+  getRelatedItem(e.name);
+}}   >{e.name}</div>    
 
 
 </>
@@ -252,7 +258,7 @@ fontSize:'14px'
 
 <div  className='category-container' style={{display:'flex',justifyContent:'space-around', overflowX:'auto',margin:'15px'}}>
 
-{Array(5).fill('*').map((e,i)=>{
+{items.slice(3).map((e,i)=>{
 return (
 <>
 
@@ -265,7 +271,7 @@ marginRight: '12px',
 whiteSpace: 'nowrap',
 fontFamily: 'Poppins, sans-serif',
 fontSize:'14px'
-}}>Chilly Sause</div>    
+}}>{e.name}</div>    
 
 
 </>
@@ -293,13 +299,13 @@ fontSize:'14px'
 
 <div  className='category-container' style={{display:'flex',justifyContent:'space-around', overflowX:'auto',margin:'15px'}}>
 
-{Array(5).fill('*').map((e,i)=>{
+{items.slice(4).map((e,i)=>{
 return (
 <><div  className= 'category-card' style={{ marginRight:'9px',width:'100px',display:'flex',flexDirection:'column',gap:'6px'}}>
 
 <div style={{  backgroundColor: "#edeef0",borderRadius:'4px',height:'50px',width:'50px'}}></div>
 
-<p style={{fontSize:'10px',fontWeight:600,fontFamily: 'Poppins, sans-serif',color:'gray'}}>Top seller</p>
+<p style={{fontSize:'10px',fontWeight:600,fontFamily: 'Poppins, sans-serif',color:'gray'}}>{e.name}</p>
 </div>
 </>
 )
@@ -322,13 +328,13 @@ return (
 
 <div  className='category-container' style={{display:'flex',justifyContent:'space-around', overflowX:'auto',margin:'15px'}}>
 
-{Array(5).fill('*').map((e,i)=>{
+{items.slice(4).map((e,i)=>{
 return (
 <><div  className= 'category-card' style={{ marginRight:'9px',width:'100px',display:'flex',flexDirection:'column',gap:'6px'}}>
 
 <div style={{  backgroundColor: "#edeef0",borderRadius:'4px',height:'50px',width:'50px'}}></div>
 
-<p style={{fontSize:'10px',fontWeight:600,fontFamily: 'Poppins, sans-serif',color:'gray'}}>Top seller</p>
+<p style={{fontSize:'10px',fontWeight:600,fontFamily: 'Poppins, sans-serif',color:'gray'}}>{e.name}</p>
 </div>
 </>
 )
