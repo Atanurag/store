@@ -40,6 +40,7 @@ const CartProvider = ({ children }) => {
             isVeg: true,
             tag: 'Abcd tag',
             quantity: 0,
+            gram:'20 g',
             img: 'https://c1.staticflickr.com/5/4610/27981857169_5234a6db7d_b.jpg',
           },
           {
@@ -49,6 +50,7 @@ const CartProvider = ({ children }) => {
             isVeg: true,
             tag: 'Soup',
             quantity: 0,
+            gram:'20 g',
             img: 'https://media.istockphoto.com/id/1076130942/photo/green-peas-curry-matar-masala-north-indian-punjabi-cuisine-vegetarian-food.jpg?s=612x612&w=0&k=20&c=MfYEe2DJGAzJ7kvNcfhWaqfW1Ci80N-rt5HLImHKlk0=',
           },
           {
@@ -59,6 +61,7 @@ const CartProvider = ({ children }) => {
             isVeg: true,
             tag: 'Main Course',
             quantity: 0,
+            gram:'20 g',
             img: 'https://images.pexels.com/photos/17869140/pexels-photo-17869140/free-photo-of-plate-of-small-uttapam.jpeg',
           },
           {
@@ -68,6 +71,7 @@ const CartProvider = ({ children }) => {
             isVeg: true,
             tag: 'Main Course',
             quantity: 0,
+            gram:'20 g',
             img: 'https://media.istockphoto.com/id/183321245/photo/south-indian-crepe-masala-dosa.jpg?s=612x612&w=0&k=20&c=c6Z7P5uovp2M9JVS0rlS8nCKRL73QkTYRyL7FK348Os=',
           },
           {
@@ -77,6 +81,7 @@ const CartProvider = ({ children }) => {
             isVeg: true,
             tag: 'Main Course',
             quantity: 0,
+            gram:'20 g',
             img: 'https://media.istockphoto.com/id/1460788339/photo/south-indian-vegetarian-breakfast.jpg?s=612x612&w=0&k=20&c=_h9ObiAsvzhew_Mir9JHtSOwlvIUWj8awcvl-uStEfU=',
           },
           {
@@ -86,6 +91,7 @@ const CartProvider = ({ children }) => {
             isVeg: true,
             tag: 'Side Dish',
             quantity: 0,
+            gram:'20 g',
             img: 'https://media.istockphoto.com/id/178612386/photo/puri-patty-curry-breakfast.jpg?s=612x612&w=0&k=20&c=NQnyqbzDfFu8o9c-PABAJH0HPEUqfFDDGxZRspoOApo=',
           },
           {
@@ -95,6 +101,7 @@ const CartProvider = ({ children }) => {
             isVeg: false,
             tag: 'Non-Veg',
             quantity: 0,
+            gram:'20 g',
             img: 'https://media.istockphoto.com/id/1128177492/photo/potato-dumpling-stuffed-with-greaves.jpg?s=612x612&w=0&k=20&c=OkoBgV2Jeo9fUDaIl8qRoKZUAjh5Sdn9cVghSwlm60g=',
           },
           {
@@ -104,6 +111,7 @@ const CartProvider = ({ children }) => {
             isVeg: true,
             tag: 'Side Dish',
             quantity: 0,
+            gram:'20 g',
             img: 'https://media.istockphoto.com/id/1459336670/photo/image-of-asian-street-food-at-market-stall-for-sale-uludu-wade-dhal-vada-savoury-indian.jpg?s=612x612&w=0&k=20&c=mzbqFp371DUi_0PfHgymmsygTRDNVwFdeU21wtzoJXk=',
           },
           {
@@ -113,6 +121,7 @@ const CartProvider = ({ children }) => {
             isVeg: false,
             tag: 'Non-Veg',
             quantity: 0,
+            gram:'20 g',
             img: 'https://media.istockphoto.com/id/477108743/photo/chettinad-chicken.jpg?s=612x612&w=0&k=20&c=PkKlNaLCdESAmmFyk20LYtbanJaeDn9Ym-FtmHqTV7U=',
           }])
     const [cart, setCart] = useState([]);
