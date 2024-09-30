@@ -7,8 +7,20 @@ import Home from './pages/Home.jsx';
 import Search from './pages/Search.jsx';
 import Category from './pages/Category.jsx';
 import Cart from './pages/Cart.jsx';
-const App = () => (
-  <CartProvider>
+const App = () => {
+  const isDesktop = () => {
+    const userAgent = navigator.userAgent;
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent);
+    return !isMobile;
+  };
+  if(isDesktop()){
+    alert('pepepe')
+  }
+  else{
+    
+  }
+  return(
+    <CartProvider>
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/search" element={<Search />} />
@@ -16,5 +28,8 @@ const App = () => (
       <Route path="/cart" element={<Cart />} />
     </Routes>
   </CartProvider>
-);
+  );
+}
+ 
+;
 export default App;
