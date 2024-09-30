@@ -1,4 +1,4 @@
-import React,{ useContext,useState } from 'react';
+import React,{ useContext,useEffect,useState } from 'react';
 import { Divider, Flex, Tag, Button, Layout, Input, Row, Col, Switch, Steps, Card, Badge } from 'antd';
 import { ArrowLeftOutlined, InfoCircleOutlined, CloseOutlined, MenuUnfoldOutlined, SearchOutlined, ShoppingOutlined } from '@ant-design/icons';
 import { Routes, Route, Link, useNavigate, json } from 'react-router-dom';
@@ -183,7 +183,11 @@ const [forNowHidePayBtn, setForNowHidePayBtn] = useState(false)
         }
 
 
-
+useEffect(()=>{
+if(cart?.length < 1){
+  setCurrentProgress(0);
+}
+},[cart])
   
   return (<>
     <div className='cart'>
