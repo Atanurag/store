@@ -205,7 +205,7 @@ userSearched.map((e,i)=>{
       </>
   )
 })
-: userInput.length > 0 &&( <p style={{textAlign:'center',fontSize:'12px'}}>No Items Found</p>)
+: (userInput.length > 0 && !recentSearch)  &&( <p style={{textAlign:'center',fontSize:'12px'}}>No Items Found</p>)
 }
 
 
