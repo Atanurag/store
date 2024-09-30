@@ -183,7 +183,9 @@ return (<>
 
 
 
-{(userSearched.length > 0 && userInput.length > 0)&&
+{
+(userSearched.length > 0 && userInput.length > 0 && !recentSearch)
+?
 userSearched.map((e,i)=>{
   return (
       <>
@@ -200,6 +202,7 @@ userSearched.map((e,i)=>{
       </>
   )
 })
+: <p style={{textAlign:'center',fontSize:'12px'}}>No Items Found</p>
 }
 
 
