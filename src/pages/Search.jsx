@@ -20,11 +20,14 @@ const [userItems, setUserItems] = useState([]);
 const getSearched = ()=>{
 
 
-setUserSearched(items.filter(e=>e.name.includes(userInput) || e.name === userInput))
-console.log(items.filter(e=>e.name.includes(userInput) || e.name === userInput))
+setUserSearched(items.filter(e=>e.name.toLowerCase().includes(userInput.toLowerCase()) || e.name.toLowerCase() === userInput.toLowerCase()))
+// console.log(items.filter(e=>e.name.toLowerCase().includes(userInput.toLowerCase()) || e.name.toLowerCase() === userInput.toLowerCase()))
 setRecentSearch(false)
 
 }
+useEffect(()=>{
+console.log(userSearched)
+},[userSearched])
 
 const getRelatedItem = (userClicked)=>{
   setUserItems(items.filter((e,i)=>e.name === userClicked))
@@ -202,8 +205,10 @@ userSearched.map((e,i)=>{
       </>
   )
 })
-: <p style={{textAlign:'center',fontSize:'12px'}}>No Items Found</p>
+: userInput.length > 0 &&( <p style={{textAlign:'center',fontSize:'12px'}}>No Items Found</p>)
 }
+
+
 
 
 
