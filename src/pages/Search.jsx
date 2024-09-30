@@ -5,24 +5,25 @@ import { Routes, Route, Link, useNavigate, json } from 'react-router-dom';
 import '../assests/css/Search.css'
 import { CartContext } from '../components/CartContext';
 const Search = () =>{
+  const {items,cart,totalItems,totalAmount,addToCart,removeFromCart,increaseItemToOne,increaseItem ,decreaseItem} = useContext(CartContext);
 
 const [recentSearch, setRecentSearch] = useState(true);
 const [searchedResult, setSearchedResult] = useState(false);
 const [searchedCategory, setSearchedCategory] = useState(false);
 const navigate = useNavigate();
-const {items,cart,totalItems,totalAmount,addToCart,removeFromCart,increaseItemToOne,increaseItem ,decreaseItem} = useContext(CartContext);
 
 //practise
 const [userInput, setUserInput] = useState('');
 const [userSearched, setUserSearched] = useState([]);
 const [userItems, setUserItems] = useState([]);
+
 const getSearched = ()=>{
 
-  fetch(`https://api.disneyapi.dev/character?name=${userInput}`).then((e)=>e.json()).then((data)=>{
-console.log(data)
-setUserSearched(data.data)
+
+setUserSearched(items.filter(e=>e.name.includes(userInput) || e.name === userInput))
+console.log(items.filter(e=>e.name.includes(userInput) || e.name === userInput))
 setRecentSearch(false)
-  })
+
 }
 
 const getRelatedItem = (userClicked)=>{
@@ -55,8 +56,8 @@ const getRelatedItem = (userClicked)=>{
 }} />
 <div className='input-box' style={{margin:'15px'}}>
                       <Input  autoFocus size="large" placeholder="Search For Items..." suffix={<SearchOutlined style={{backgroundColor:'white',fontWeight:500,fontFamily: 'Poppins, sans-serif'}}/>} onChange={(e) => {
-                      //setUserInput(e.target.value)
-                      //getSearched();
+                      setUserInput(e.target.value)
+                      getSearched();
                       // console.log(e.target.value.length)
                       }}  />
                     </div>
@@ -182,7 +183,7 @@ return (<>
 
 
 
-{(userSearched.length > 0 && userItems.length == 0)&&
+{(userSearched.length > 0 && userInput.length > 1)&&
 userSearched.map((e,i)=>{
   return (
       <>
@@ -354,10 +355,7 @@ return (
 })
 
 }
-
-
 </div> </>}
-
 </div>
         </>);
 }

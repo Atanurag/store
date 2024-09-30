@@ -8,18 +8,16 @@ import Search from './pages/Search.jsx';
 import Category from './pages/Category.jsx';
 import Cart from './pages/Cart.jsx';
 const App = () => {
-  const isDesktop = () => {
-    const userAgent = navigator.userAgent;
-    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent);
-    return !isMobile;
-  };
-  if(isDesktop()){
-    alert('This app is designed for mobile devices only.')
-    return;
-  }
-  else{
-    
-  }
+  // const isDesktop = () => {
+  //   const userAgent = navigator.userAgent;
+  //   const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent);
+  //   return !isMobile;
+  // };
+  // if(isDesktop()){
+  //   alert('This app is designed for mobile devices only.')
+  //   return;
+  // }
+  
   return(
     <CartProvider>
     <Routes>

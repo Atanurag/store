@@ -567,3 +567,22 @@ if(cart?.length < 1){
   </>)
 }
 export default Cart;
+
+
+
+// 1. So search doesn't function. 
+
+// 2. when the item added to the cart there should 
+// option or easy click avaiable to goto cart directly.
+//  Now we need to scroll up and click on cart.
+// 3. Make Payment button should not have amount
+//  mentioned. Its should be just Pay or use Gpay logo.
+//   Currently it looks like clicking on label.
+// 4. There is no navigation to goto Home Screen. 
+
+// 5. Select category drop down does not work.
+ 
+// So overall does not look to be better integrated. Work
+//  on above items, lets have efforts shared by EOD everyday. I also want you to start on CXO mobile app we discussed in morning. Deviate your 50-50 time in both, get me daily updates here on chat on 
+// both what's happening.
+
