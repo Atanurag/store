@@ -65,16 +65,6 @@ const CartProvider = ({ children }) => {
             img: 'https://images.pexels.com/photos/17869140/pexels-photo-17869140/free-photo-of-plate-of-small-uttapam.jpeg',
           },
           {
-            name: 'Masala Dosa',
-            description: 'Dosa stuffed with spiced potato filling',
-            price: 60,
-            isVeg: true,
-            tag: 'Main Course',
-            quantity: 0,
-            gram:'20 g',
-            img: 'https://media.istockphoto.com/id/183321245/photo/south-indian-crepe-masala-dosa.jpg?s=612x612&w=0&k=20&c=c6Z7P5uovp2M9JVS0rlS8nCKRL73QkTYRyL7FK348Os=',
-          },
-          {
             name: 'Rava Dosa',
             description: 'Dosa made from semolina batter',
             price: 50,

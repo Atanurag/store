@@ -22,7 +22,8 @@ const getSearched = ()=>{
 
 setUserSearched(items.filter(e=>e.name.toLowerCase().includes(userInput.toLowerCase()) || e.name.toLowerCase() === userInput.toLowerCase()))
 // console.log(items.filter(e=>e.name.toLowerCase().includes(userInput.toLowerCase()) || e.name.toLowerCase() === userInput.toLowerCase()))
-setRecentSearch(false)
+setUserItems([]);
+setRecentSearch(false);
 
 }
 useEffect(()=>{
@@ -32,6 +33,7 @@ console.log(userSearched)
 const getRelatedItem = (userClicked)=>{
   setUserItems(items.filter((e,i)=>e.name === userClicked))
   setRecentSearch(false);
+  setUserSearched([]);
   // fetch(`https://api.disneyapi.dev/character?name=${userClicked}`).then((e)=>e.json()).then((data)=>{
   //   setUserItems(data.data)
   //   console.log(data)
@@ -62,7 +64,7 @@ const getRelatedItem = (userClicked)=>{
                       setUserInput(e.target.value)
                       getSearched();
                       // console.log(e.target.value.length)
-                      }}  />
+                      }}  value={userInput} />
                     </div>
 </div>
 
@@ -206,7 +208,7 @@ userSearched.map((e,i)=>{
       </>
   )
 })
-: (userInput.length > 0)  &&( <p style={{textAlign:'center',fontSize:'12px'}}>No Items Found</p>)
+: (userInput.length > 0 && userItems.length < 1 )  &&( <p style={{textAlign:'center',fontSize:'12px'}}>No Items Found</p>)
 }
 
 
