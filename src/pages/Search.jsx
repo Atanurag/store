@@ -123,6 +123,7 @@ return (<>
     <div className='cart-btn'>
 
 <Button type="primary" className='cart-btn-icon' onClick={()=>{
+   // this editing update is for only searched Item quantity
     setUserItems((js)=>
     js.map((si,ind)=>{
       if(si.name === e.name){
@@ -134,7 +135,7 @@ return (<>
       return si;
     })
     )
-
+ // this editing update is for only searched Item quantity
     removeFromCart(e);
     decreaseItem(e);
     }}>-</Button>
@@ -144,6 +145,7 @@ return (<>
       </div>
       <Button   type="primary" className='cart-btn-icon'  
                 onClick={()=>{
+                   // this editing update is for only searched Item quantity
                   setUserItems((js)=>
                   js.map((si,ind)=>{
                     if(si.name === e.name){
@@ -155,6 +157,7 @@ return (<>
                     return si;
                   })
                   )
+                   // this editing update is for only searched Item quantity
                   addToCart(e);
                   increaseItem(e);
 
