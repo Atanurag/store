@@ -204,8 +204,6 @@ userSearched.map((e,i)=>{
 
 
 
-
-
 { recentSearch && <>
 <div style={{display:'flex',justifyContent:'space-between',margin:'20px 15px '}}>
 <p style={{fontSize:'14px',fontWeight:600,fontFamily: 'Poppins, sans-serif'}}>Your Recent Searches</p>
