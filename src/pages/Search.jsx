@@ -183,7 +183,7 @@ return (<>
 
 
 
-{(userSearched.length > 0 && userInput.length > 1)&&
+{(userSearched.length > 0 && userInput.length > 0)&&
 userSearched.map((e,i)=>{
   return (
       <>
