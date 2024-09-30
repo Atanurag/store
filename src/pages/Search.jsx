@@ -50,8 +50,8 @@ const getRelatedItem = (userClicked)=>{
 }} />
 <div className='input-box' style={{margin:'15px'}}>
                       <Input  autoFocus size="large" placeholder="Search For Items..." suffix={<SearchOutlined style={{backgroundColor:'white',fontWeight:500,fontFamily: 'Poppins, sans-serif'}}/>} onChange={(e) => {
-                      setUserInput(e.target.value)
-                      getSearched();
+                      //setUserInput(e.target.value)
+                      //getSearched();
                       // console.log(e.target.value.length)
                       }}  />
                     </div>
@@ -63,13 +63,76 @@ const getRelatedItem = (userClicked)=>{
   userItems.length > 0 && 
   <div style={{display:'flex',justifyContent:'space-between' ,margin:'15px',flexWrap:'wrap'}}>
 
-{[userItems].map((e,i)=>{
+{userItems.map((e,i)=>{
 return (<>
-<div className='card'>
+<div key={i} className='card'>
   <div className='image-container'>
-    <div style={{position:'absolute',bottom:'3px',right:'3px'}}>
-    <Button  type="primary" size={'small'} >+</Button>
+  <img  src={e.imageUrl} alt=""  style={{display: 'block',height:'100%',width:'100%',objectFit:'cover',borderRadius:'4px'}}/>
+  {e.quantity < 1?
+     <><div style={{position:'absolute',bottom:'3px',right:'3px'}}>
+    <Button style={{paddingBottom:'0.5px',fontWeight:'bold'}} type="primary" size={'small'} onClick={()=>{
+      
+        // setItems((js)=>
+        // js.map((si,ind)=>{
+        //   if(si.name === e.name){
+        //     return {
+        //       ...si,
+        //       quantity : 1
+        //     }
+        //   }
+        //   return si;
+        // })
+        // )
+      addToCart(e);
+      increaseItemToOne(e);
+      //console.log(cart)
+    }}>+</Button>
+    </div></>:<>
+    <div className='cart-btn'>
+
+<Button type="primary" className='cart-btn-icon' onClick={()=>{
+    // setItems((js)=>
+    // js.map((si,ind)=>{
+    //   if(si.name === e.name){
+    //     return {
+    //       ...si,
+    //       quantity : si.quantity-=1
+    //     }
+    //   }
+    //   return si;
+    // })
+    // )
+
+    removeFromCart(e);
+    decreaseItem(e);
+    }}>-</Button>
+
+      <div className='cart-quantity'>
+      {e.quantity}
+      </div>
+      <Button   type="primary" className='cart-btn-icon'  
+                onClick={()=>{
+                  // setItems((js)=>
+                  // js.map((si,ind)=>{
+                  //   if(si.name === e.name){
+                  //     return {
+                  //       ...si,
+                  //       quantity : si.quantity+=1
+                  //     }
+                  //   }
+                  //   return si;
+                  // })
+                  // )
+                  addToCart(e);
+                  increaseItem(e);
+
+                }}
+>+</Button>
+
     </div>
+    </>
+    
+  }
   {/* <div className='cart-btn'>
 
 <Button  type="primary" className='cart-btn-icon' >-</Button>
@@ -85,12 +148,12 @@ return (<>
 
   </div>
 
-<div style={{width:'100px'}}>
-  <p style={{fontSize:'10px',color:'gray',fontFamily: 'Poppins, sans-serif'}}>Britiania</p>
-  <span style={{fontSize:'12px',fontWeight:500,fontFamily: 'Poppins, sans-serif'}}>Bourbon Cream Buscuits</span>
+<div style={{width:'110px'}}>
+  <p style={{fontSize:'10px',color:'gray',fontFamily: 'Poppins, sans-serif'}}>{e.tag}</p>
+  <span style={{fontSize:'12px',fontWeight:500,fontFamily: 'Poppins, sans-serif'}}>{e.name}</span>
   <div style={{display:'flex',justifyContent:'space-between'}}>
-    <span style={{fontSize:'14px',fontWeight:600,fontFamily: 'Poppins, sans-serif'}}>₹ 25</span>
-    <span style={{fontSize:'10px',color:'gray',fontWeight:600,fontFamily: 'Poppins, sans-serif'}}>100 g</span>
+    <span style={{fontSize:'14px',fontWeight:600,fontFamily: 'Poppins, sans-serif'}}>₹ {e.price}</span>
+    <span style={{fontSize:'10px',color:'gray',fontWeight:600,fontFamily: 'Poppins, sans-serif'}}>{e.gram}</span>
   </div>
 </div>
 
