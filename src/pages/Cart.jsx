@@ -438,7 +438,7 @@ const [forNowHidePayBtn, setForNowHidePayBtn] = useState(false)
       {!forNowHidePayBtn && <div style={{ padding: '0px 12px', backgroundColor: '#1677ff', height: '40px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '94%', borderRadius: '4px', margin: '12px auto' }} onClick={()=>{
         //setShowCart(false)
         onBuyClicked();
-        setCurrentProgress(2);
+       
         
       }}>
 
