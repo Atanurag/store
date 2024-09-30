@@ -97,23 +97,38 @@ return (<>
     <Button style={{paddingBottom:'0.5px',fontWeight:'bold'}} type="primary" size={'small'} onClick={()=>{
       addToCart(e);
       increaseItemToOne(e);
-      console.log(e)
+
+      // this editing update is for only searched Item quantity
+        setUserItems((js)=>
+    js.map((si,ind)=>{
+      if(si.name === e.name){
+        return {
+          ...si,
+          quantity : 1
+        }
+      }
+      return si;
+    })
+    )
+
+      // this editing update is for only searched Item quantity
+      console.log('add 1')
     }}>+</Button>
     </div></>:<>
     <div className='cart-btn'>
 
 <Button type="primary" className='cart-btn-icon' onClick={()=>{
-    // setItems((js)=>
-    // js.map((si,ind)=>{
-    //   if(si.name === e.name){
-    //     return {
-    //       ...si,
-    //       quantity : si.quantity-=1
-    //     }
-    //   }
-    //   return si;
-    // })
-    // )
+    setUserItems((js)=>
+    js.map((si,ind)=>{
+      if(si.name === e.name){
+        return {
+          ...si,
+          quantity : si.quantity-=1
+        }
+      }
+      return si;
+    })
+    )
 
     removeFromCart(e);
     decreaseItem(e);
@@ -124,17 +139,17 @@ return (<>
       </div>
       <Button   type="primary" className='cart-btn-icon'  
                 onClick={()=>{
-                  // setItems((js)=>
-                  // js.map((si,ind)=>{
-                  //   if(si.name === e.name){
-                  //     return {
-                  //       ...si,
-                  //       quantity : si.quantity+=1
-                  //     }
-                  //   }
-                  //   return si;
-                  // })
-                  // )
+                  setUserItems((js)=>
+                  js.map((si,ind)=>{
+                    if(si.name === e.name){
+                      return {
+                        ...si,
+                        quantity : si.quantity+=1
+                      }
+                    }
+                    return si;
+                  })
+                  )
                   addToCart(e);
                   increaseItem(e);
 
