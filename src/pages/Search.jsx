@@ -27,6 +27,7 @@ setRecentSearch(false)
 
 const getRelatedItem = (userClicked)=>{
   setUserItems(items.filter((e,i)=>e.name === userClicked))
+  setRecentSearch(false);
   // fetch(`https://api.disneyapi.dev/character?name=${userClicked}`).then((e)=>e.json()).then((data)=>{
   //   setUserItems(data.data)
   //   console.log(data)
