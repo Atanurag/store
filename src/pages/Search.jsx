@@ -65,8 +65,17 @@ const getRelatedItem = (userClicked)=>{
 <div  className='search-section-main' style={{marginTop:'100px'}}>
 
 {
-  userItems.length > 0 && 
+  userItems.length > 0 && <>
+  <div style={{display:'flex',justifyContent:'flex-start',margin:'20px 15px '}} onClick={()=>{
+    setRecentSearch(true);
+    setUserItems([])
+   
+  }}>
+  <p style={{fontWeight:500,fontSize:'13px',color:'#1677ff',textDecoration:'underline',fontFamily: 'Poppins, sans-serif'}}> <ArrowLeftOutlined style={{marginRight:'4px'}}/>  Recent Searches</p>
+</div>
   <div style={{display:'flex',justifyContent:'space-between' ,margin:'15px',flexWrap:'wrap'}}>
+
+
 
 {userItems.map((e,i)=>{
 return (<>
@@ -167,7 +176,8 @@ return (<>
 </>)
 })}
 
-</div>}
+</div>
+</>}
 
 
 
