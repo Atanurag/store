@@ -272,7 +272,9 @@ marginRight: '12px',
 whiteSpace: 'nowrap',
 fontFamily: 'Poppins, sans-serif',
 fontSize:'14px'
-}}>{e.name}</div>    
+}} onClick={()=>{
+  getRelatedItem(e.name);
+}}   >{e.name}</div>    
 
 
 </>
