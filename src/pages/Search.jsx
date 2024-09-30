@@ -52,11 +52,11 @@ const getRelatedItem = (userClicked)=>{
   display: 'flex',
   alignItems: 'center',
   justifyContent:'space-around',
-  background:'white',
+  backgroundColor:'#444444',
   boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)'
 }} className='search-section'>
 
-<ArrowLeftOutlined onClick={()=>{
+<ArrowLeftOutlined style={{color:'white'}} onClick={()=>{
    navigate(-1)
 }} />
 <div className='input-box' style={{margin:'15px'}}>
@@ -69,6 +69,11 @@ setRecentSearch(true);
                       // console.log(e.target.value.length)
                       }}  value={userInput} />
                     </div>
+                    {totalItems > 0 &&  <Link to='/cart' style={{marginRight:'5px'}}><span style={{position:'relative'}}>
+        <ShoppingOutlined  style={{fontSize:'22px',color:'white'}}/>
+         <div style={{ position: 'absolute', background: 'red', top:'-10px', borderRadius: '50%', color: 'white', padding: '10px', fontSize:'13px',height: '12px', width: '12px', fontWeight:600, left: '13px', display: 'flex', justifyContent: "center", alignItems: 'center' ,fontFamily: 'Poppins, sans-serif'}}>{totalItems}</div>
+
+  </span></Link>}
 </div>
 
 <div  className='search-section-main' style={{marginTop:'100px'}}>
