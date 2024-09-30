@@ -44,6 +44,16 @@ const CartProvider = ({ children }) => {
           img: 'https://c0.wallpaperflare.com/preview/879/772/974/coca-cola-the-coca-cola-company-bottle-drink.jpg',
         },
         {
+          name: 'Kesar Milk',
+          description: 'A sweet and creamy milk drink flavored with saffron and cardamom',
+          price: 25,
+          isVeg: true,
+          tag: 'Beverage',
+          quantity: 0,
+          gram: '200 ml',
+          img: 'https://www.whiskaffair.com/wp-content/uploads/2020/09/Saffron-Milk-2-3-500x500.jpg',
+        },
+        {
             name: 'Sambar',
             description: 'Lentil and vegetable stew',
             price: 40,

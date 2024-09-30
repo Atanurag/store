@@ -95,9 +95,13 @@ const Category = ()=>{
     }}
     placeholder="Select category"
     optionFilterProp="label"
-    
+    defaultValue={'Classic'}
    
     options={[
+      {
+        value: 'Classic',
+        label: 'Classic',
+      },
       {
         value: 'South Indian',
         label: 'South Indian',
@@ -106,10 +110,7 @@ const Category = ()=>{
         value: 'Beverage',
         label: 'Beverage',
       },
-      {
-        value: 'Classic',
-        label: 'Classic',
-      },
+     
     ]}
   />
 </div>
@@ -175,7 +176,7 @@ return (
 
 
 <div style={{display:'flex',justifyContent:'space-between',margin:'20px 15px '}}>
-  <p style={{fontSize:'15px',fontWeight:600,fontFamily: 'Poppins, sans-serif'}}>Abc Items</p>
+  <p style={{fontSize:'15px',fontWeight:600,fontFamily: 'Poppins, sans-serif'}}>{dummyChoice}</p>
 </div>
 {/* addToCart */}
 <div style={{display:'flex',justifyContent:'space-between' ,margin:'9px',flexWrap:'wrap'}}>
