@@ -17,10 +17,10 @@ const [userInput, setUserInput] = useState('');
 const [userSearched, setUserSearched] = useState([]);
 const [userItems, setUserItems] = useState([]);
 
-const getSearched = ()=>{
+const getSearched = (input)=>{
 
 
-setUserSearched(items.filter(e=>e.name.toLowerCase().includes(userInput.toLowerCase()) || e.name.toLowerCase() === userInput.toLowerCase()))
+setUserSearched(items.filter(e=>e.name.toLowerCase().includes(input.toLowerCase()) || e.name.toLowerCase() === input.toLowerCase()))
 // console.log(items.filter(e=>e.name.toLowerCase().includes(userInput.toLowerCase()) || e.name.toLowerCase() === userInput.toLowerCase()))
 setUserItems([]);
 setRecentSearch(false);
@@ -62,7 +62,10 @@ const getRelatedItem = (userClicked)=>{
 <div className='input-box' style={{margin:'15px'}}>
                       <Input  autoFocus size="large" placeholder="Search For Items..." suffix={<SearchOutlined style={{backgroundColor:'white',fontWeight:500,fontFamily: 'Poppins, sans-serif'}}/>} onChange={(e) => {
                       setUserInput(e.target.value)
-                      getSearched();
+                      getSearched(e.target.value);
+                      if(e.target.value.length === 0){
+setRecentSearch(true);
+                      }
                       // console.log(e.target.value.length)
                       }}  value={userInput} />
                     </div>
@@ -78,7 +81,7 @@ const getRelatedItem = (userClicked)=>{
     setUserInput('');
    
   }}>
-  <p style={{fontWeight:500,fontSize:'13px',color:'#1677ff',textDecoration:'underline',fontFamily: 'Poppins, sans-serif'}}> <ArrowLeftOutlined style={{marginRight:'4px'}}/>  Recent Searches</p>
+  <p style={{fontWeight:500,fontSize:'13px',color:'#1677ff',textDecoration:'underline',fontFamily: 'Poppins, sans-serif'}}> <ArrowLeftOutlined style={{marginRight:'4px'}}/>  Recent Search</p>
 </div>
   <div style={{display:'flex',justifyContent:'space-between' ,margin:'15px',flexWrap:'wrap'}}>
 
