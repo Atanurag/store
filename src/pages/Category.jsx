@@ -80,15 +80,15 @@ const Category = ()=>{
     <div className='category'>
     
 
-   <div style={{height:'100px',backgroundColor:'#444444',padding:'0 12px',display:'flex',alignItems:'end'}}>
+   <div style={{height:'80px',backgroundColor:'#444444',padding:'0 12px',display:'flex',alignItems:'end'}}>
 
 <div style={{padding:'4px 0',width:'100%',display:'flex',justifyContent:'space-between'}}>
 <ArrowLeftOutlined style={{color:'white',float:'left'}} onClick={()=>{
    navigate(-1)
 }} />
-<div style={{height:'40px',width:'40px',backgroundColor:'white',borderRadius:'4px',position:'absolute',left:'51px',top:'53px'}}></div>
+<div style={{height:'40px',width:'40px',backgroundColor:'white',borderRadius:'4px',position:'absolute',left:'51px',top:'36px'}}></div>
 
-<div>
+<div style={{marginLeft:'19px'}}>
 <Select
     className="select-dropdown"
   //style={{border:'none'}}

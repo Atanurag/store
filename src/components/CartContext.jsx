@@ -173,7 +173,7 @@ const CartProvider = ({ children }) => {
     tag: 'Classic',
     quantity: 0,
     gram: '200 g',
-    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Frankie.jpg/1200px-Frankie.jpg',
+    img: 'https://recipesblob.oetker.in/assets/8209ead27fae402b974b847cd8b35b63/1272x764/paneer-frankie.jpg',
   },
   {
     name: 'Kanda Poha',
