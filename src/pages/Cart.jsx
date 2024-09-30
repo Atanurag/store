@@ -56,7 +56,7 @@ const Cart = () => {
 
 
   let tx = Math.random().toString(36).slice(2, 12).toUpperCase()
-
+const [forNowHidePayBtn, setForNowHidePayBtn] = useState(false)
   /** Launches payment request flow when user taps on buy button. */
   function onBuyClicked() {
     //console.log(`user_id=${JSON.parse(localStorage.getItem('isVerified'))?.userId}&selectedItem=${selFood}`,selFood)
@@ -221,8 +221,8 @@ const Cart = () => {
           ]}
         /></div>
 
-
-      {cart.length > 0 && showCart ?  <><Card
+ 
+      {cart.length > 0 && showCart  && !forNowHidePayBtn?  <><Card
         style={{
           margin: '12px',
           boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
@@ -405,7 +405,7 @@ const Cart = () => {
 
 
 
-      <Card
+    { !forNowHidePayBtn && <Card
         style={{
           margin: '12px',
           boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)', // updated box shadow
@@ -429,10 +429,10 @@ const Cart = () => {
           <p style={{ fontWeight: 500, fontSize: '14px',fontFamily: 'Poppins, sans-serif', }}>To Pay</p>
           <p style={{ fontWeight: 500, fontSize: '14px',fontFamily: 'Poppins, sans-serif',}}>₹ {totalAmount}</p>
         </div>
-      </Card>
+      </Card>}
 
 
-      <div style={{ padding: '0px 12px', backgroundColor: '#1677ff', height: '40px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '94%', borderRadius: '4px', margin: '12px auto' }} onClick={()=>{
+      {!forNowHidePayBtn && <div style={{ padding: '0px 12px', backgroundColor: '#1677ff', height: '40px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '94%', borderRadius: '4px', margin: '12px auto' }} onClick={()=>{
         //setShowCart(false)
         onBuyClicked();
         setCurrentProgress(2);
@@ -441,17 +441,8 @@ const Cart = () => {
 
         <span style={{ color:'white',fontWeigt:500,fontFamily: 'Poppins, sans-serif' }}>Make Payment</span>
         <span style={{color:'white',fontWeigt:500,fontFamily: 'Poppins, sans-serif' }}>₹ {totalAmount}</span>
-      </div> </> :
+      </div>} </> :
       ''
-//       <div  style={{
-//   position: 'absolute',
-//   bottom: 5,
-//   left: 0,
-//   right: 0,
-//   textAlign: 'center',
-// }}>
-//   <Button type='primary' style={{margin: 'auto'}}>Please add Items to cart</Button>
-// </div>
  }
 
 {/* 
