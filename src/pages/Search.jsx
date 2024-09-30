@@ -202,7 +202,9 @@ userSearched.map((e,i)=>{
   getRelatedItem(e.name)
 }}>
 
-<div style={{  backgroundColor: "#edeef0",borderRadius:'4px',height:'50px',width:'50px'}}></div>
+<div style={{  backgroundColor: "#edeef0",borderRadius:'4px',height:'50px',width:'50px'}}>
+  
+</div>
 
 <p style={{fontSize:'10px',fontWeight:600,fontFamily: 'Poppins, sans-serif',color:'gray'}}>{e.name}</p>
 </div>
@@ -314,9 +316,14 @@ fontSize:'14px'
 
 {items.slice(4).map((e,i)=>{
 return (
-<><div  className= 'category-card' style={{ marginRight:'9px',width:'100px',display:'flex',flexDirection:'column',gap:'6px'}}>
+<><div  className= 'category-card' style={{ marginRight:'9px',width:'100px',display:'flex',flexDirection:'column',gap:'6px'}}  onClick={()=>{
+  getRelatedItem(e.name)
+}}>
 
-<div style={{  backgroundColor: "#edeef0",borderRadius:'4px',height:'50px',width:'50px'}}></div>
+<div style={{  backgroundColor: "#edeef0",borderRadius:'4px',height:'50px',width:'50px'}}>
+<img  src={e.img} alt=""  style={{display: 'block',height:'100%',width:'100%',objectFit:'cover',borderRadius:'4px'}}/>
+
+</div>
 
 <p style={{fontSize:'10px',fontWeight:600,fontFamily: 'Poppins, sans-serif',color:'gray'}}>{e.name}</p>
 </div>
@@ -343,9 +350,14 @@ return (
 
 {items.slice(4).map((e,i)=>{
 return (
-<><div  className= 'category-card' style={{ marginRight:'9px',width:'100px',display:'flex',flexDirection:'column',gap:'6px'}}>
+<><div  className= 'category-card' style={{ marginRight:'9px',width:'100px',display:'flex',flexDirection:'column',gap:'6px'}}  onClick={()=>{
+  getRelatedItem(e.name)
+}}>
 
-<div style={{  backgroundColor: "#edeef0",borderRadius:'4px',height:'50px',width:'50px'}}></div>
+<div style={{  backgroundColor: "#edeef0",borderRadius:'4px',height:'50px',width:'50px'}}>
+<img  src={e.img} alt=""  style={{display: 'block',height:'100%',width:'100%',objectFit:'cover',borderRadius:'4px'}}/>
+
+</div>
 
 <p style={{fontSize:'10px',fontWeight:600,fontFamily: 'Poppins, sans-serif',color:'gray'}}>{e.name}</p>
 </div>
