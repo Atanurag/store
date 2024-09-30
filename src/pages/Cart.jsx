@@ -14,6 +14,172 @@ const Cart = () => {
     background: '#0092ff',
     padding: '8px 0',
   };
+
+
+
+
+
+//for checking gpay installed or not 
+  /**
+   *
+   * @private
+   * @param {PaymentRequest} request The payment request object.
+   * @return {Promise} a promise containing the result of whether can make payment.
+   */
+  const canMakePaymentCache = 'canMakePaymentCache';
+
+  async function checkCanMakePayment(request) {
+    // Check canMakePayment cache, use cache result directly if it exists.
+    if (sessionStorage.hasOwnProperty(canMakePaymentCache)) {
+      return Promise.resolve(JSON.parse(sessionStorage[canMakePaymentCache]));
+    }
+    // If canMakePayment() isn't available, default to assume the method is
+    // supported.
+    var canMakePaymentPromise = Promise.resolve(true);
+
+    // Feature detect canMakePayment().
+    if (request.canMakePayment) {
+      canMakePaymentPromise = request.canMakePayment();
+    }
+
+    return canMakePaymentPromise
+      .then((result) => {
+        // Store the result in cache for future usage.
+        sessionStorage[canMakePaymentCache] = result;
+        return result;
+      })
+      .catch((err) => {
+        console.log('Error calling canMakePayment: ' + err);
+      });
+  }
+
+
+
+  let tx = Math.random().toString(36).slice(2, 12).toUpperCase()
+
+  /** Launches payment request flow when user taps on buy button. */
+  function onBuyClicked() {
+    //console.log(`user_id=${JSON.parse(localStorage.getItem('isVerified'))?.userId}&selectedItem=${selFood}`,selFood)
+    if (!window.PaymentRequest) {
+      alert('Web payments are not supported in this browser.');
+      // toast.error('Web payments are not supported in this browser.', {
+      //   style: {
+      //     color: 'red',
+      //     minWidth: '300px'
+      //   },
+      //   duration: 2200,
+      //   position: 'top-center',
+      // });
+      return;
+    }
+    
+          const supportedInstruments = [
+            {
+              supportedMethods: ['https://tez.google.com/pay'],
+              data: {
+                pa: '7875853859@pthdfc',
+                pn: 'Anurag Tiwari',
+                tr: tx,
+                //tr: 'aw43r51xkvodj5',
+                url: 'https://annapoorna.snazzy.live/contact-us',
+                mc: '5812',
+              },
+            }
+          ];
+          const details = {
+                total: {
+                  label: 'Total',
+                  amount: {
+                    currency: 'INR',
+                    value: totalAmount.toFixed(2),
+                  },
+                },
+                displayItems: [{
+                  label: 'Original Amount',
+                  amount: {
+                    currency: 'INR',
+                    value: totalAmount.toFixed(2),
+                  },
+                }],
+              };
+          let request = null;
+          try {
+            //console.log(data?.response_object, details)
+            request = new PaymentRequest(supportedInstruments, details);
+          } catch (e) {
+            console.log('Payment Request Error: ' + e.message);
+            return;
+          }
+          if (!request) {
+            console.log('Web payments are not supported in this browser.');
+            return;
+          }
+
+          var canMakePaymentPromise = checkCanMakePayment(request);
+          canMakePaymentPromise
+            .then((result) => {
+              showPaymentUI(request, result);
+            })
+            .catch((err) => {
+              console.log('Error calling checkCanMakePayment: ' + err);
+            });
+
+        }
+       
+
+
+        function showPaymentUI(request, canMakePayment) {
+          if (!canMakePayment) {
+          
+            alert('GPay is not ready to pay');
+            //handleNotReadyToPay();
+            return;
+          }
+      
+          // Set payment timeout.
+          let paymentTimeout = window.setTimeout(function () {
+            window.clearTimeout(paymentTimeout);
+            request.abort()
+              .then(function () {
+                console.log('Payment timed out after 20 minutes.');
+              })
+              .catch(function () {
+                console.log('Unable to abort, user is in the process of paying.');
+              });
+          }, 20 * 60 * 1000); /* 20 minutes */
+      
+          request.show()
+            .then(function (instrument) {
+      
+              window.clearTimeout(paymentTimeout);
+      
+              // const status = instrument.details.Status;
+              // const txnRef = instrument.details.txnRef;
+      
+              instrument.complete('success').then(function () {
+                console.log('done payment!')
+                //setPaymentState({ status, txnRef });
+               // document.body.style.overflow = 'hidden';
+                //document.getElementsByTagName('body')[0].style.background = 'inherit';
+              })
+              // BE api start
+              //https://annapoorna.snazzy.live/api/v1/items/order-validation
+             
+              //processResponse(instrument); // Handle response from browser.
+            })
+            .catch(function (err) {
+              // setPaymentState({
+              //   status: 'FAILED',
+              //   txnRef: '-'
+              // }
+              // );
+            
+              console.log(err);
+            });
+        }
+
+
+
   
   return (<>
     <div className='cart'>
@@ -266,8 +432,10 @@ const Cart = () => {
 
 
       <div style={{ padding: '0px 12px', backgroundColor: '#1677ff', height: '40px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '94%', borderRadius: '4px', margin: '12px auto' }} onClick={()=>{
-        setShowCart(false)
+        //setShowCart(false)
+        onBuyClicked();
         setCurrentProgress(2);
+        
       }}>
 
         <span style={{ color:'white',fontWeigt:500,fontFamily: 'Poppins, sans-serif' }}>Make Payment</span>
@@ -285,7 +453,7 @@ const Cart = () => {
 // </div>
  }
 
-
+{/* 
       {!showCart  && <Card
         style={{
           margin: '12px',
@@ -318,7 +486,7 @@ const Cart = () => {
       }}>
   <p style={{fontWeight:500,fontSize:'13px',color:'#1677ff',textDecoration:'underline',fontFamily: 'Poppins, sans-serif'}}> <ArrowLeftOutlined style={{marginRight:'4px'}}/>  Back to Cart</p>
 </div>
-      </Card>}
+      </Card>} */}
 
       {/* <Card
         style={{
@@ -348,7 +516,7 @@ const Cart = () => {
     </Card> */}
 
 
-<Card
+{/* <Card
         style={{
           margin: '12px',
           boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
@@ -370,9 +538,9 @@ const Cart = () => {
           <p style={{ fontWeight: 500, fontSize: '14px',fontFamily: 'Poppins, sans-serif', }}>Total</p>
           <p style={{ fontWeight: 500, fontSize: '14px',fontFamily: 'Poppins, sans-serif'}}>₹ 40</p>
         </div>
-      </Card>
+      </Card> */}
       
-      <Card
+      {/* <Card
         style={{
           margin: '12px',
           boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
@@ -394,7 +562,7 @@ const Cart = () => {
           <p style={{ fontWeight: 500, fontSize: '14px',fontFamily: 'Poppins, sans-serif', }}>Total</p>
           <p style={{ fontWeight: 500, fontSize: '14px',fontFamily: 'Poppins, sans-serif'}}>₹ 40</p>
         </div>
-      </Card>
+      </Card> */}
   </div >
 
   </>)
