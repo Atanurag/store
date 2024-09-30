@@ -439,7 +439,7 @@ if(cart?.length < 1){
       </Card>}
 
 
-      {!forNowHidePayBtn && <div style={{transition: 'transform 0.2s ease-in-out', padding: '0px 12px', backgroundColor: '#1677ff', height: '40px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '94%', borderRadius: '4px', margin: '12px auto' }} onClick={()=>{
+      {!forNowHidePayBtn && <Button style={{padding: '0px 12px', backgroundColor: '#1677ff', height: '40px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '94%', borderRadius: '4px', margin: '12px auto' }} onClick={()=>{
         //setShowCart(false)
         onBuyClicked();
        
@@ -448,7 +448,7 @@ if(cart?.length < 1){
 
         <span style={{ color:'white',fontWeigt:500,fontFamily: 'Poppins, sans-serif' }}>Make Payment</span>
         <span style={{color:'white',fontWeigt:500,fontFamily: 'Poppins, sans-serif' }}>₹ {totalAmount}</span>
-      </div>} </> :
+      </Button>} </> :
       ''
  }
 
