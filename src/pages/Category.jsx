@@ -154,13 +154,13 @@ const Category = ()=>{
 
 <div  className='category-container' style={{display:'flex',justifyContent:'space-around', overflowX:'auto',margin:'15px 20px'}}>
 
-{items.slice(3).map((e,i)=>{
+{items.slice(5).map((e,i)=>{
 return (
 <><div key={i}  className= 'category-card' style={{ marginRight:'10px',width:'100px',display:'flex',flexDirection:'column',gap:'6px',alignItems:'start'}}>
 
 <div style={{  backgroundColor: "#edeef0",borderRadius:'4px',height:'50px',width:'50px'}}></div>
 
-<p style={{fontSize:'10px',fontWeight:600,fontFamily: 'Poppins, sans-serif',color:'gray'}}>{e.tag}</p>
+<p style={{fontSize:'10px',fontWeight:600,fontFamily: 'Poppins, sans-serif',color:'gray'}}>Top Seller</p>
 </div>
 </>
 )
