@@ -14,7 +14,8 @@ const App = () => {
     return !isMobile;
   };
   if(isDesktop()){
-    alert('pepepe')
+    alert('This app is designed for Android mobile devices only')
+    return;
   }
   else{
     
