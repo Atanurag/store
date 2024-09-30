@@ -72,7 +72,8 @@ const getRelatedItem = (userClicked)=>{
   userItems.length > 0 && <>
   <div style={{display:'flex',justifyContent:'flex-start',margin:'20px 15px '}} onClick={()=>{
     setRecentSearch(true);
-    setUserItems([])
+    setUserItems([]);
+    setUserInput('');
    
   }}>
   <p style={{fontWeight:500,fontSize:'13px',color:'#1677ff',textDecoration:'underline',fontFamily: 'Poppins, sans-serif'}}> <ArrowLeftOutlined style={{marginRight:'4px'}}/>  Recent Searches</p>
@@ -205,7 +206,7 @@ userSearched.map((e,i)=>{
       </>
   )
 })
-: (userInput.length > 0 && !recentSearch)  &&( <p style={{textAlign:'center',fontSize:'12px'}}>No Items Found</p>)
+: (userInput.length > 0)  &&( <p style={{textAlign:'center',fontSize:'12px'}}>No Items Found</p>)
 }
 
 
