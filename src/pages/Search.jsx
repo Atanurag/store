@@ -203,7 +203,7 @@ userSearched.map((e,i)=>{
 }}>
 
 <div style={{  backgroundColor: "#edeef0",borderRadius:'4px',height:'50px',width:'50px'}}>
-  
+<img  src={e.img} alt=""  style={{display: 'block',height:'100%',width:'100%',objectFit:'cover',borderRadius:'4px'}}/>
 </div>
 
 <p style={{fontSize:'10px',fontWeight:600,fontFamily: 'Poppins, sans-serif',color:'gray'}}>{e.name}</p>
