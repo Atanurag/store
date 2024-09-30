@@ -132,6 +132,7 @@ const Cart = () => {
           if (!canMakePayment) {
           
             alert('GPay is not ready to pay');
+            setCurrentProgress(1);
             //handleNotReadyToPay();
             return;
           }
