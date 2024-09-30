@@ -97,7 +97,7 @@ const Category = ()=>{
     }}
     placeholder="Select category"
     optionFilterProp="label"
-    defaultValue={'Classic'}
+    value={dummyChoice}
    
     options={[
       {
@@ -145,7 +145,9 @@ const Category = ()=>{
 
 {items.slice(5).map((e,i)=>{
 return (
-<><div key={i}  className= 'category-card' style={{ marginRight:'10px',width:'100px',display:'flex',flexDirection:'column',gap:'6px',alignItems:'start'}}>
+<><div key={i}  className= 'category-card' style={{ marginRight:'10px',width:'100px',display:'flex',flexDirection:'column',gap:'6px',alignItems:'start'}} onClick={()=>{
+setDummyChoice('Beverage')
+}}>
 
 <div style={{  backgroundColor: "#edeef0",borderRadius:'4px',height:'50px',width:'50px'}}></div>
 
