@@ -159,6 +159,7 @@ const [forNowHidePayBtn, setForNowHidePayBtn] = useState(false)
       
               instrument.complete('success').then(function () {
                 console.log('done payment!')
+                setForNowHidePayBtn(true)
                 //setPaymentState({ status, txnRef });
                // document.body.style.overflow = 'hidden';
                 //document.getElementsByTagName('body')[0].style.background = 'inherit';
