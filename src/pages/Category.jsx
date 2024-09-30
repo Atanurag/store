@@ -4,92 +4,76 @@ import { Routes, Route, Link, useNavigate} from 'react-router-dom';
 import { Divider, Flex, Tag, Button, Layout, Input, Row, Col, Switch, Card, Badge, Select } from 'antd';
 import '../assests/css/Category.css'
 import { CartContext } from '../components/CartContext';
+
+let classicItems = [
+  {
+    name: 'Vada Pav',
+    description: 'Fried doughnut sandwiched between a bread bun',
+    price: 20,
+    isVeg: true,
+    tag: 'Classic',
+    quantity: 0,
+    gram: '150 g',
+    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Vada_Pav.jpg/1200px-Vada_Pav.jpg',
+  },
+  {
+    name: 'Misal Pav',
+    description: 'Curried lentil soup served with pav bread',
+    price: 50,
+    isVeg: true,
+    tag: 'Classic',
+    quantity: 0,
+    gram: '300 g',
+    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Misal_Pav.jpg/1200px-Misal_Pav.jpg',
+  },
+  {
+    name: 'Bombay Sandwich',
+    description: 'A layered sandwich with vegetables, cheese, and chutneys',
+    price: 60,
+    isVeg: true,
+    tag: 'Classic',
+    quantity: 0,
+    gram: '250 g',
+    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Bombay_Sandwich.jpg/1200px-Bombay_Sandwich.jpg',
+  },
+  {
+    name: 'Frankie',
+    description: 'A wrap filled with vegetables, eggs, and chutneys',
+    price: 70,
+    isVeg: false,
+    tag: 'Classic',
+    quantity: 0,
+    gram: '200 g',
+    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Frankie.jpg/1200px-Frankie.jpg',
+  },
+  {
+    name: 'Kanda Poha',
+    description: 'A breakfast dish made with flattened rice, onions, and chutneys',
+    price: 20,
+    isVeg: true,
+    tag: 'Classic',
+    quantity: 0,
+    gram: '120 g',
+    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Kanda_Poha.jpg/1200px-Kanda_Poha.jpg',
+  },
+  {
+    name: 'Dabeli',
+    description: 'A sandwich made with pav bread, filled with potatoes, onions, and chutneys',
+    price: 25,
+    isVeg: true,
+    tag: 'Classic',
+    quantity: 0,
+    gram: '180 g',
+    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Dabeli.jpg/1200px-Dabeli.jpg',
+  },
+]
+
+
 const Category = ()=>{
   // cart, addToCart, removeFromCart, updateQuantity 
   const {items,cart,totalItems,totalAmount,addToCart,removeFromCart,increaseItemToOne,increaseItem ,decreaseItem} = useContext(CartContext);
   console.log(cart,totalItems)
-  // const [items,setItems] = useState([{
-  //   name: 'Sambar',
-  //   description: 'Lentil and vegetable stew',
-  //   price: 40,
-  //   isVeg: true,
-  //   tag: 'Abcd tag',
-  //   quantity: 0,
-  //   img: 'https://c1.staticflickr.com/5/4610/27981857169_5234a6db7d_b.jpg',
-  // },
-  // {
-  //   name: 'Rasam',
-  //   description: 'Spicy lentil soup',
-  //   price: 35,
-  //   isVeg: true,
-  //   tag: 'Soup',
-  //   quantity: 0,
-  //   img: 'https://media.istockphoto.com/id/1076130942/photo/green-peas-curry-matar-masala-north-indian-punjabi-cuisine-vegetarian-food.jpg?s=612x612&w=0&k=20&c=MfYEe2DJGAzJ7kvNcfhWaqfW1Ci80N-rt5HLImHKlk0=',
-  // },
-  // {
-  //   name: 'Uttapam',
-  //   description:
-  //     'Thick pancake made from fermented rice and lentil batter',
-  //   price: 55,
-  //   isVeg: true,
-  //   tag: 'Main Course',
-  //   quantity: 0,
-  //   img: 'https://images.pexels.com/photos/17869140/pexels-photo-17869140/free-photo-of-plate-of-small-uttapam.jpeg',
-  // },
-  // {
-  //   name: 'Masala Dosa',
-  //   description: 'Dosa stuffed with spiced potato filling',
-  //   price: 60,
-  //   isVeg: true,
-  //   tag: 'Main Course',
-  //   quantity: 0,
-  //   img: 'https://media.istockphoto.com/id/183321245/photo/south-indian-crepe-masala-dosa.jpg?s=612x612&w=0&k=20&c=c6Z7P5uovp2M9JVS0rlS8nCKRL73QkTYRyL7FK348Os=',
-  // },
-  // {
-  //   name: 'Rava Dosa',
-  //   description: 'Dosa made from semolina batter',
-  //   price: 50,
-  //   isVeg: true,
-  //   tag: 'Main Course',
-  //   quantity: 0,
-  //   img: 'https://media.istockphoto.com/id/1460788339/photo/south-indian-vegetarian-breakfast.jpg?s=612x612&w=0&k=20&c=_h9ObiAsvzhew_Mir9JHtSOwlvIUWj8awcvl-uStEfU=',
-  // },
-  // {
-  //   name: 'Puri',
-  //   description: 'Deep-fried unleavened bread',
-  //   price: 25,
-  //   isVeg: true,
-  //   tag: 'Side Dish',
-  //   quantity: 0,
-  //   img: 'https://media.istockphoto.com/id/178612386/photo/puri-patty-curry-breakfast.jpg?s=612x612&w=0&k=20&c=NQnyqbzDfFu8o9c-PABAJH0HPEUqfFDDGxZRspoOApo=',
-  // },
-  // {
-  //   name: 'Egg Bonda',
-  //   description: 'Bonda stuffed with a boiled egg',
-  //   price: 25,
-  //   isVeg: false,
-  //   tag: 'Non-Veg',
-  //   quantity: 0,
-  //   img: 'https://media.istockphoto.com/id/1128177492/photo/potato-dumpling-stuffed-with-greaves.jpg?s=612x612&w=0&k=20&c=OkoBgV2Jeo9fUDaIl8qRoKZUAjh5Sdn9cVghSwlm60g=',
-  // },
-  // {
-  //   name: 'Medu Vada',
-  //   description: 'Urad dal fritters shaped like donuts',
-  //   price: 30,
-  //   isVeg: true,
-  //   tag: 'Side Dish',
-  //   quantity: 0,
-  //   img: 'https://media.istockphoto.com/id/1459336670/photo/image-of-asian-street-food-at-market-stall-for-sale-uludu-wade-dhal-vada-savoury-indian.jpg?s=612x612&w=0&k=20&c=mzbqFp371DUi_0PfHgymmsygTRDNVwFdeU21wtzoJXk=',
-  // },
-  // {
-  //   name: 'Chicken ',
-  //   description: 'Spicy chicken dish from the Chettinad region',
-  //   price: 80,
-  //   isVeg: false,
-  //   tag: 'Non-Veg',
-  //   quantity: 0,
-  //   img: 'https://media.istockphoto.com/id/477108743/photo/chettinad-chicken.jpg?s=612x612&w=0&k=20&c=PkKlNaLCdESAmmFyk20LYtbanJaeDn9Ym-FtmHqTV7U=',
-  // }])
+  const [dummyChoice,setDummyChoice] = useState('Classic')
     return (<>
    
     <div className='category'>
@@ -106,23 +90,25 @@ const Category = ()=>{
 <Select
     className="select-dropdown"
   //style={{border:'none'}}
-    
+    onChange={(e)=>{
+      setDummyChoice(e)
+    }}
     placeholder="Select category"
     optionFilterProp="label"
     
    
     options={[
       {
-        value: 'jack',
-        label: 'Dry Fruits',
+        value: 'South Indian',
+        label: 'South Indian',
       },
       {
-        value: 'lucy',
-        label: 'Soft Drinks',
+        value: 'Beverage',
+        label: 'Beverage',
       },
       {
-        value: 'tom',
-        label: 'Abc',
+        value: 'Classic',
+        label: 'Classic',
       },
     ]}
   />
@@ -194,7 +180,7 @@ return (
 {/* addToCart */}
 <div style={{display:'flex',justifyContent:'space-between' ,margin:'9px',flexWrap:'wrap'}}>
 
-{items.slice(3).map((e,i)=>{
+{items.filter(e=>e.tag === dummyChoice).map((e,i)=>{
   return (<>
   <div key={i} className='card'>
   <div className='image-container'>
