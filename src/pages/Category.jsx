@@ -1,5 +1,5 @@
 import React,{ useContext,useState } from 'react';
-import { InfoCircleOutlined ,CloseOutlined, MenuUnfoldOutlined, SearchOutlined, ShoppingOutlined } from '@ant-design/icons';
+import { InfoCircleOutlined ,CloseOutlined, MenuUnfoldOutlined, ArrowLeftOutlined,SearchOutlined, ShoppingOutlined } from '@ant-design/icons';
 import { Routes, Route, Link, useNavigate} from 'react-router-dom';
 import { Divider, Flex, Tag, Button, Layout, Input, Row, Col, Switch, Card, Badge, Select } from 'antd';
 import '../assests/css/Category.css'
@@ -73,7 +73,8 @@ const Category = ()=>{
   // cart, addToCart, removeFromCart, updateQuantity 
   const {items,cart,totalItems,totalAmount,addToCart,removeFromCart,increaseItemToOne,increaseItem ,decreaseItem} = useContext(CartContext);
   console.log(cart,totalItems)
-  const [dummyChoice,setDummyChoice] = useState('Classic')
+  const [dummyChoice,setDummyChoice] = useState('Classic');
+  const navigate = useNavigate();
     return (<>
    
     <div className='category'>
@@ -82,11 +83,12 @@ const Category = ()=>{
    <div style={{height:'100px',backgroundColor:'#444444',padding:'0 12px',display:'flex',alignItems:'end'}}>
 
 <div style={{padding:'4px 0',width:'100%',display:'flex',justifyContent:'space-between'}}>
+<ArrowLeftOutlined style={{color:'white',float:'left'}} onClick={()=>{
+   navigate(-1)
+}} />
+<div style={{height:'40px',width:'40px',backgroundColor:'white',borderRadius:'4px',position:'absolute',left:'51px',top:'53px'}}></div>
 
-
-<div style={{height:'40px',width:'40px',backgroundColor:'white',borderRadius:'4px'}}></div>
-
-<div style={{marginLeft:'4px'}}>
+<div>
 <Select
     className="select-dropdown"
   //style={{border:'none'}}
@@ -122,9 +124,9 @@ const Category = ()=>{
 
   </span></Link>}
     <span>
-    <svg style={{fontSize:'22px',color:'white',height:'26px'}} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+    {/* <svg style={{fontSize:'22px',color:'white',height:'26px'}} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
   <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-</svg>
+</svg> */}
 
        {/* <MenuUnfoldOutlined style={{fontSize:'22px',color:'white'}} />*/}
        </span> 
