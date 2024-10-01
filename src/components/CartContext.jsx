@@ -183,7 +183,7 @@ const CartProvider = ({ children }) => {
     tag: 'Classic',
     quantity: 0,
     gram: '120 g',
-    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Kanda_Poha.jpg/1200px-Kanda_Poha.jpg',
+    img: 'https://www.funfoodfrolic.com/wp-content/uploads/2024/04/Kanda-Poha-Blog.jpg',
   },
   {
     name: 'Dabeli',
@@ -193,7 +193,7 @@ const CartProvider = ({ children }) => {
     tag: 'Classic',
     quantity: 0,
     gram: '180 g',
-    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Dabeli.jpg/1200px-Dabeli.jpg',
+    img: 'https://recipesblob.oetker.in/assets/9447029b80054ee49f3ac21841884874/1272x764/dabeli.webp',
   },
         ])
     const [cart, setCart] = useState([]);
