@@ -88,7 +88,7 @@ const Category = ()=>{
 }} />
 <div style={{height:'43px',width:'43px',backgroundColor:'white',borderRadius:'4px',position:'absolute',left:'51px',top:'32px'}}></div>
 
-<div style={{marginLeft:'19px'}}>
+<div style={{marginLeft:'36px'}}>
 <Select
     className="select-dropdown"
   //style={{border:'none'}}
