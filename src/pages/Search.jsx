@@ -234,7 +234,7 @@ userSearched.map((e,i)=>{
       </>
   )
 })
-: (userInput.length > 0 && userItems.length < 1 )  &&( <p style={{textAlign:'center',fontSize:'12px'}}>No Items Found</p>)
+: (userInput.length > 0 && userItems.length < 1 )  &&( <p style={{textAlign:'center',fontSize:'14px',fontWeight:600,fontFamily: 'Poppins, sans-serif'}}>No Items Found</p>)
 }
 
 
