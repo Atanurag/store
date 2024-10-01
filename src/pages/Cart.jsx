@@ -528,7 +528,7 @@ style={{
     </Card> */}
 
 
- <Card
+ {/*<Card
         style={{
           margin: '12px',
           boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
@@ -550,9 +550,9 @@ style={{
           <p style={{ fontWeight: 500, fontSize: '14px',fontFamily: 'Poppins, sans-serif', }}>Total</p>
           <p style={{ fontWeight: 500, fontSize: '14px',fontFamily: 'Poppins, sans-serif'}}>₹ 40</p>
         </div>
-      </Card> 
-      
-      <Card
+      </Card> */}
+
+     {/*<Card
         style={{
           margin: '12px',
           boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
@@ -562,19 +562,44 @@ style={{
         size="small"
       title="Order IGHBE5854"
       >
-         <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '10px' }}>
-          <p style={{ fontWeight: 500, fontSize: '14px',fontFamily: 'Poppins, sans-serif', }}>Order Status</p>
-          <p style={{ fontWeight: 500, fontSize: '14px',fontFamily: 'Poppins, sans-serif'}}>Success</p>
+         {cart.map((e,i)=>{
+          return(
+            <>
+<div style={{padding:'4px',width:'100%',display:'flex',justifyContent:'space-between'}}>
+
+<div style={{display:'flex',gap:'18px',alignItems:'center',justifyContent:'space-around'}}>
+
+<div style={{height:'50px',width:'50px',backgroundColor:'black',borderRadius:'4px'}}>
+<img  src={e.img} alt=""  style={{display: 'block',height:'100%',width:'100%',objectFit:'cover',borderRadius:'4px'}}/>
+</div>
+<div style={{display:'flex',flexDirection:'column',justifyContent:'space-between'}}>
+
+<p style={{ fontSize: '12px', fontWeight:600,fontFamily: 'Poppins, sans-serif',  }}>{e.name}</p>
+<p style={{ fontSize: '10px',fontFamily: 'Poppins, sans-serif' }}>Qty {e.quantity}</p>
+</div>
+
+</div>
+
+
+<div style={{display:'flex',width:'30%',justifyContent:'flex-end',gap:'20px',alignItems:'center'}}>
+  
+<p  style={{ fontSize: '14px', fontWeight:600,fontFamily: 'Poppins, sans-serif', }}>₹ {e.quantity * e.price}</p>
+ 
+</div>
+
+
         </div>
-        <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '10px' }}>
-          <p style={{ fontWeight: 500, fontSize: '14px',fontFamily: 'Poppins, sans-serif', }}>Order Id</p>
-          <p style={{ fontWeight: 500, fontSize: '14px',fontFamily: 'Poppins, sans-serif'}}>IGHBE5854</p>
+         <Divider />
+         </>
+          )
+         }) }
+       
+
+       <div style={{padding:'4px',width:'100%',display:'flex',justifyContent:'space-between'}}>
+       <p  style={{ fontSize: '14px', fontWeight:600,fontFamily: 'Poppins, sans-serif', }}>Total</p>
+       <p  style={{ fontSize: '14px', fontWeight:600,fontFamily: 'Poppins, sans-serif', }}>₹ {totalAmount}</p>
         </div>
-        <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '10px' }}>
-          <p style={{ fontWeight: 500, fontSize: '14px',fontFamily: 'Poppins, sans-serif', }}>Total</p>
-          <p style={{ fontWeight: 500, fontSize: '14px',fontFamily: 'Poppins, sans-serif'}}>₹ 40</p>
-        </div>
-      </Card> 
+        </Card> */}
   </div >
 
   </>)
