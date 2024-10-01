@@ -86,7 +86,7 @@ const Category = ()=>{
 <ArrowLeftOutlined style={{color:'white',float:'left'}} onClick={()=>{
    navigate(-1)
 }} />
-<div style={{height:'40px',width:'40px',backgroundColor:'white',borderRadius:'4px',position:'absolute',left:'51px',top:'36px'}}></div>
+<div style={{height:'43px',width:'43px',backgroundColor:'white',borderRadius:'4px',position:'absolute',left:'51px',top:'32px'}}></div>
 
 <div style={{marginLeft:'19px'}}>
 <Select
