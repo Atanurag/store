@@ -407,7 +407,7 @@ if(cart?.length < 1){
           </Col>
         </Row>
         <Divider /> */}
-        <Link to='/' style={{ marginTop: '12px', textDecoration: 'underline',fontFamily: 'Poppins, sans-serif', }}>+ Add More Items</Link>
+        <Link to='/category' style={{ marginTop: '12px', textDecoration: 'underline',fontFamily: 'Poppins, sans-serif', }}>+ Add More Items</Link>
       </Card>
 
 
