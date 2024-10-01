@@ -192,7 +192,7 @@ if(cart?.length < 1){
   return (<>
     <div className='cart'>
       <div style={{ color: 'white', height: '100px', backgroundColor: '#444444', padding: '0 12px', display: 'flex', alignItems: 'center', justifyContent: 'start', }}>
-        <Link to='/'>
+        <Link style={{color:'white'}} to='/'>
         <ArrowLeftOutlined onClick={() => {
           //navigate(-1)
         }} />
