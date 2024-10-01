@@ -143,7 +143,7 @@ const CartProvider = ({ children }) => {
     tag: 'Classic',
     quantity: 0,
     gram: '150 g',
-    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Vada_Pav.jpg/1200px-Vada_Pav.jpg',
+    img: 'https://thejamlab.co/wp-content/uploads/2023/08/IMG_9218-1200x1200.jpg',
   },
   {
     name: 'Misal Pav',
@@ -153,7 +153,7 @@ const CartProvider = ({ children }) => {
     tag: 'Classic',
     quantity: 0,
     gram: '300 g',
-    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Misal_Pav.jpg/1200px-Misal_Pav.jpg',
+    img: 'https://thumbs.dreamstime.com/b/misal-pav-buns-smeared-butter-served-spicy-sprouts-curry-trail-mixture-chopped-onions-chilli-lemons-spicy-indian-171494111.jpg',
   },
   {
     name: 'Bombay Sandwich',
@@ -163,7 +163,7 @@ const CartProvider = ({ children }) => {
     tag: 'Classic',
     quantity: 0,
     gram: '250 g',
-    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Bombay_Sandwich.jpg/1200px-Bombay_Sandwich.jpg',
+    img: 'https://vanitascorner.com/wp-content/uploads/2023/04/Bombay-Sandwich-VC.jpg',
   },
   {
     name: 'Frankie',
