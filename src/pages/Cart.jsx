@@ -192,12 +192,13 @@ if(cart?.length < 1){
   return (<>
     <div className='cart'>
       <div style={{ color: 'white', height: '100px', backgroundColor: '#444444', padding: '0 12px', display: 'flex', alignItems: 'center', justifyContent: 'start', }}>
+        <Link to='/'>
         <ArrowLeftOutlined onClick={() => {
-          navigate(-1)
+          //navigate(-1)
         }} />
-
+</Link>
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'start', marginLeft: '19px' }}>
-          <p style={{ fontSize: '14px',fontWeight:500,fontFamily: 'Poppins, sans-serif', }}>Review Cart</p>
+          <p style={{ fontSize: '14px',fontWeight:500,fontFamily: 'Poppins, sans-serif', }}>Home</p>
           <p style={{fontSize: '12px',fontWeight:500,fontFamily: 'Poppins, sans-serif', }}>Hiramani Store | Chunabhati</p>
         </div>
       </div>
