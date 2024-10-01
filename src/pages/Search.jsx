@@ -295,7 +295,7 @@ fontSize:'14px'
 
 <div  className='category-container' style={{display:'flex',justifyContent:'space-around', overflowX:'auto',margin:'15px'}}>
 
-{items.slice(3).map((e,i)=>{
+{items.slice(3).reverse().map((e,i)=>{
 return (
 <>
 
@@ -372,7 +372,7 @@ return (
 
 <div  className='category-container' style={{display:'flex',justifyContent:'space-around', overflowX:'auto',margin:'15px'}}>
 
-{items.slice(4).map((e,i)=>{
+{items.slice(4).reverse().map((e,i)=>{
 return (
 <><div  className= 'category-card' style={{ marginRight:'9px',width:'100px',display:'flex',flexDirection:'column',gap:'6px'}}  onClick={()=>{
   getRelatedItem(e.name)
