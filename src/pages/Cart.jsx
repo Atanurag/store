@@ -440,7 +440,7 @@ if(cart?.length < 1){
       </Card>}
 
 
-      {!forNowHidePayBtn && <Button style={{position:'relative',padding: '0px 12px', backgroundColor: 'black', height: '40px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '94%', borderRadius: '4px', margin: '12px auto' }} onClick={()=>{
+      {!forNowHidePayBtn && <Button style={{position:'relative',padding: '0px 12px', backgroundColor: 'black', height: '42px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '94%', borderRadius: '4px', margin: '12px auto' }} onClick={()=>{
         //setShowCart(false)
         onBuyClicked();
        
