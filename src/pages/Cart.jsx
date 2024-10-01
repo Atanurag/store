@@ -528,7 +528,7 @@ style={{
     </Card> */}
 
 
-{/* <Card
+ <Card
         style={{
           margin: '12px',
           boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
@@ -550,9 +550,9 @@ style={{
           <p style={{ fontWeight: 500, fontSize: '14px',fontFamily: 'Poppins, sans-serif', }}>Total</p>
           <p style={{ fontWeight: 500, fontSize: '14px',fontFamily: 'Poppins, sans-serif'}}>₹ 40</p>
         </div>
-      </Card> */}
+      </Card> 
       
-      {/* <Card
+      <Card
         style={{
           margin: '12px',
           boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
@@ -574,7 +574,7 @@ style={{
           <p style={{ fontWeight: 500, fontSize: '14px',fontFamily: 'Poppins, sans-serif', }}>Total</p>
           <p style={{ fontWeight: 500, fontSize: '14px',fontFamily: 'Poppins, sans-serif'}}>₹ 40</p>
         </div>
-      </Card> */}
+      </Card> 
   </div >
 
   </>)
